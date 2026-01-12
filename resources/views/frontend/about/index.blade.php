@@ -51,7 +51,7 @@
                         </div>
     
                         <button id="readMoreBtn" class="btn1 mt-3">
-                            <span>Read More <i class="ri-arrow-right-up-line"></i></span>
+                            <span>Read Mores <i class="ri-arrow-right-up-line"></i></span>
                         </button>
                     </div>
                 </div>
