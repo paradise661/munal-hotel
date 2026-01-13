@@ -40,7 +40,6 @@
                     </div>
                     <div class="about-background"> </div>
                 </div>
-    
                 {{-- Content --}}
                 <div class="col-lg-6 d-flex align-items-center justify-content-center">
                     <div class="about-content-container">
@@ -49,7 +48,6 @@
                         <div id="aboutDesc" class="text-css-counter line-clamp-14 pt-4">
                             {!! $about_us->description !!}
                         </div>
-    
                         <button id="readMoreBtn" class="btn1 mt-3">
                             <span>Read Mores <i class="ri-arrow-right-up-line"></i></span>
                         </button>
