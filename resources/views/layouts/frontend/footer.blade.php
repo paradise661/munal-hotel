@@ -25,7 +25,6 @@
                     </a>
                 </div>
             </div>
-
             <div>
                 <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
                 <ul class="space-y-3">
@@ -38,7 +37,6 @@
                     <li><a href="#" class="text-gray-400 hover:text-luxury-gold transition-colors">Events</a></li>
                 </ul>
             </div>
-
             <div>
                 <h3 class="text-lg font-semibold mb-6">Services</h3>
                 <ul class="space-y-3">
@@ -54,7 +52,6 @@
                             Transfer</a></li>
                 </ul>
             </div>
-
             <div>
                 <h3 class="text-lg font-semibold mb-6">Contact Info</h3>
                 <div class="space-y-4">
@@ -73,7 +70,6 @@
                 </div>
             </div>
         </div>
-
         <div class="border-t border-gray-800 pt-8 text-center">
             <p class="text-gray-400">&copy; 2024 Luxoria Hotel. All rights reserved.</p>
         </div>

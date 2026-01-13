@@ -13,18 +13,17 @@
 <section id="hero" class="relative h-[700px] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0">
         <img class="w-full h-full object-cover"
-            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/104c10ded5-33e9b47f8ba5e5f9eee4.png"
-            alt="luxury hotel lobby with marble floors, crystal chandelier, elegant furniture, warm lighting, sophisticated interior design" />
+             src="{{ asset($sliders->image) }}"
+             alt="{{ $sliders->title ?? 'Hero Image' }}">
+
         <div class="absolute inset-0 bg-black/40"></div>
     </div>
     <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
         <h1 class="text-6xl lg:text-7xl font-playfair font-bold mb-6">
-            Experience <span class="text-luxury-gold">Luxury</span><br>
-            Redefined
+            {!! $sliders->title !!}
         </h1>
         <p class="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
-            Immerse yourself in unparalleled elegance where every detail is crafted for your ultimate comfort and
-            satisfaction.
+            {!! $sliders->description !!}
         </p>
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-5xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
