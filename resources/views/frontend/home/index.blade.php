@@ -256,17 +256,14 @@
     <section id="testimonials" class="py-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">What Our Guests <span
-                        class="text-luxury-gold">Say</span></h2>
+                <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">What Our Guests <span class="text-luxury-gold">Say</span></h2>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 @foreach ($testimonials as $testimonial)
-                    <div id="testimonial-{{ $testimonial->id }}"
-                        class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div id="testimonial-{{ $testimonial->id }}" class="bg-white rounded-2xl p-8 shadow-lg">
                         <!-- Profile -->
                         <div class="flex items-center mb-6">
-                            <img src="{{ asset( $testimonial->image) }}"
-                                alt="{{ $testimonial->name }}"
+                            <img src="{{ asset($testimonial->image) }}" alt="{{ $testimonial->name }}"
                                 class="w-16 h-16 rounded-full mr-4 object-cover">
                             <div>
                                 <h4 class="font-semibold text-luxury-dark">
@@ -280,7 +277,8 @@
                         <!-- Rating -->
                         <div class="flex mb-4">
                             @for ($i = 1; $i <= 5; $i++)
-                                <i class="fas fa-star {{ $i <= $testimonial->rating ? 'text-luxury-gold' : 'text-gray-300' }}"></i>
+                                <i
+                                    class="fas fa-star {{ $i <= $testimonial->rating ? 'text-luxury-gold' : 'text-gray-300' }}"></i>
                             @endfor
                         </div>
                         <!-- Message -->
@@ -289,7 +287,7 @@
                         </p>
                     </div>
                 @endforeach
-            </div>            
+            </div>
         </div>
     </section>
     <section id="cta" class="py-20 bg-luxury-dark">

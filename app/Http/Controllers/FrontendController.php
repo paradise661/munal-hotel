@@ -70,12 +70,14 @@ class FrontendController extends Controller
     public function about()
     {
         $about_us = Page::where('status', 1)->where('slug', 'about-us')->first();
+        $about_us_banner = Page::where('status', 1)->where('slug', 'about-us_banner')->first();
         $our_vision = Page::where('status', 1)->where('slug', 'our-vision')->first();
         $our_mission = Page::where('status', 1)->where('slug', 'our-mission')->first();
         $why_us = Page::where('status', 1)->where('slug', 'why-choose-us')->first();
         $teams = Team::where('status', 1)->oldest("order")->get();
         $objectives = Page::where('status', 1)->where('slug', 'objectives')->first();
-        return view('frontend.about.index', compact('about_us','objectives','our_vision','our_mission', 'why_us', 'teams'));
+        $services = Service::where('status', 1)->oldest("order")->get();
+        return view('frontend.about.index', compact('about_us','objectives','services','our_vision','our_mission', 'why_us', 'teams'));
     }
     public function service()
     {

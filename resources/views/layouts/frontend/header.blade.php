@@ -13,7 +13,7 @@
                 <a href="#" class="text-gray-600 hover:text-luxury-gold transition-colors font-medium">Amenities</a>
                 <a href="#" class="text-gray-600 hover:text-luxury-gold transition-colors font-medium">Dining</a>
                 <a href="#" class="text-gray-600 hover:text-luxury-gold transition-colors font-medium">Events</a>
-                <a href="#" class="text-gray-600 hover:text-luxury-gold transition-colors font-medium">About</a>
+                <a href="{{route('frontend.about')}}" class="text-gray-600 hover:text-luxury-gold transition-colors font-medium">About</a>
                 <a href="#" class="text-gray-600 hover:text-luxury-gold transition-colors font-medium">Contact</a>
             </nav>
             <div class="flex items-center space-x-4">
