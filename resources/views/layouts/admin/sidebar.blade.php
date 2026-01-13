@@ -3,7 +3,7 @@
         <span class="app-brand-logo demo" style="display: tableblock; width: 100%; margin: auto 2rem;">
             <a href="{{ route('admin.dashboard') }}" class="app-brand-link">
                 <img src="{{ $settings['site_main_logo'] ? asset($settings['site_main_logo']) : asset('admin/default/img/logo.png') }}"
-                    width="120px" alt="Ideal Education">
+                    width="120px" alt="Munal Hotel">
             </a>
         </span>
         {{-- <span class="app-brand-text demo menu-text fw-bolder ms-2">Paradise</span> --}}

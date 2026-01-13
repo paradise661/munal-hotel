@@ -68,11 +68,11 @@
                 
                             <p class="mb-1">
                                 <strong>Email:</strong>
-                                {{ $settings['contact_email'] ?? 'info@idealconsultancy.edu.np' }}
+                                {{ $settings['contact_email'] ?? '' }}
                             </p>
                 
                             <p class="mb-0">
-                                <strong>Skype:</strong> ideal.consultancy
+                                <strong>Skype:</strong> munal
                             </p>
                         </div>
                 

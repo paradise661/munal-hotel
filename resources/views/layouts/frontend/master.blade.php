@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -17,7 +16,6 @@
         integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-
     <!-- bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}" type="text/css">
     <!-- carousel CSS -->
@@ -51,14 +49,45 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/scroll-up.css') }}" type="text/css">
     <!-- modernizr js -->
     <script src="{{ asset('frontend/assets/js/vendor/modernizr-3.5.0.min.js') }}"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'luxury-gold': '#D4AF37',
+                        'luxury-dark': '#1A1A1A',
+                        'luxury-cream': '#FDF8F0'
+                    }
+                }
+            }
+        }
+    </script>
     @stack('css')
 </head>
-
 <body>
     @if (session('success'))
         <div aria-live="polite" aria-atomic="true" class="position-fixed top-0 end-0 p-3"
@@ -80,20 +109,12 @@
         <div class="loder-section left-section"></div>
         <div class="loder-section right-section"></div>
     </div> --}}
-
     @include('layouts.frontend.header')
-
     @yield('content')
-
     @include('layouts.frontend.footer')
-
-
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="{{ asset('frontend/assets/js/bootstrap.bundle.min.js') }}"></script>
-
     {{-- Bootstrap Toast Notification --}}
-
-
     @push('styles')
         <!-- Bootstrap CSS (only if not included already in your layout) -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">

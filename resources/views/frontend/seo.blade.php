@@ -3,7 +3,7 @@
 @endif
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<title>{{ $title ?? '' }} |  Ideal Education Educare</title>
+<title>{{ $title ?? '' }} |  Munal Hotel</title>
 @if ($description)
     <meta name="description" content="{{ $description ?? '' }}">
 @endif

@@ -58,7 +58,6 @@
             </div>
         </div>
     </section>
-    
      {{-- objectives us section --}}
      <section class="about-us-section py-5 page-bg-color ">
         <div class="container">
@@ -172,5 +171,4 @@
             }
         });
     </script>
-    
 @endsection

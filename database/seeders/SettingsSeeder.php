@@ -19,22 +19,22 @@ class SettingsSeeder extends Seeder
         $items = [
 
             // Global
-            ['site_title', 'Ideal Education'],
-            ['site_title_full', 'Ideal Education Educare'],
+            ['site_title', 'Munal Hotel'],
+            ['site_title_full', 'Munal Hotel '],
             ['site_main_logo', 'admin/assets/img/logo.png'],
             ['site_fav_icon', 'admin/assets/img/favicon.png'],
             ['site_footer_logo', 'admin/assets/img/logo.png'],
             ['site_contact_image', 'admin/assets/img/logo.png'],
-            ['site_information', 'Ideal Education Educare'],
+            ['site_information', 'Munal Hotel '],
 
             ['site_phone', '01-5907931'],
-            ['site_email', 'Ideal Education@gmail.com'],
+            ['site_email', 'Munal Hotel@gmail.com'],
             ['site_location', 'Kathmandu, Nepal'],
-            ['site_location_url', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d440.57915189381816!2d85.32309917747837!3d27.668628534399804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb193be21aea5b%3A0xaa83ef792abf1f63!2sIdeal Education%20Educare%20Consultancy!5e1!3m2!1sen!2snp!4v1744195769373!5m2!1sen!2snp'],
-            ['site_mail', 'mail.Ideal Education.com.np'],
+            ['site_location_url', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d440.57915189381816!2d85.32309917747837!3d27.668628534399804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb193be21aea5b%3A0xaa83ef792abf1f63!2sMunal Hotel%20%20Consultancy!5e1!3m2!1sen!2snp!4v1744195769373!5m2!1sen!2snp'],
+            ['site_mail', 'mail.Munal Hotel.com.np'],
             ['site_url', '/'],
 
-            ['site_copyright', 'Ideal Education'],
+            ['site_copyright', 'Munal Hotel'],
 
             // contact
 
@@ -43,17 +43,17 @@ class SettingsSeeder extends Seeder
 
             ['contact_banner_image', null],
             ['contact_section_title', 'Get In Touch'],
-            ['contact_description', 'Ideal Education'],
+            ['contact_description', 'Munal Hotel'],
 
             ['contact_location', 'Chitwan, Kathmandu'],
-            ['contact_email', 'info@Ideal Education.com'],
+            ['contact_email', 'info@Munal Hotel.com'],
             ['contact_phone', '+977 9803997680'],
             ['contact_map', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.0484157527694!2d85.30792607532406!3d27.715791376177723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18fcf0cf3907%3A0x6ef9b1f3832b778a!2sFlyeast%20Nepal!5e0!3m2!1sen!2snp!4v1716137632306!5m2!1sen!2snp'],
 
-            ['contact_seo_title', 'Ideal Education'],
-            ['contact_seo_description', 'Ideal Education'],
-            ['contact_seo_keywords', 'Ideal Education'],
-            ['contact_seo_schema', 'Ideal Education'],
+            ['contact_seo_title', 'Munal Hotel'],
+            ['contact_seo_description', 'Munal Hotel'],
+            ['contact_seo_keywords', 'Munal Hotel'],
+            ['contact_seo_schema', 'Munal Hotel'],
 
             ['contactform_title', 'Leave us your info'],
             ['contactform_description', 'Provide your details, and well schedule a call at your convenience.'],
@@ -70,10 +70,10 @@ class SettingsSeeder extends Seeder
             ['home_cta_2_text', 'View Courses'],
             ['home_cta_2_link', '/our-courses'],
 
-            ['homepage_seo_title', 'Ideal Education'],
-            ['homepage_seo_keywords', 'Ideal Education'],
-            ['homepage_meta_description', 'Ideal Education'],
-            ['homepage_seo_schema', 'Ideal Education'],
+            ['homepage_seo_title', 'Munal Hotel'],
+            ['homepage_seo_keywords', 'Munal Hotel'],
+            ['homepage_meta_description', 'Munal Hotel'],
+            ['homepage_seo_schema', 'Munal Hotel'],
 
             ['homepage_slider_cta_button', 'Get in Touch'],
             ['homepage_slider_event_button', 'Event Calendar'],
@@ -151,6 +151,26 @@ class SettingsSeeder extends Seeder
             ['blogs_button', 'See All'],
             ['home_blogs', ''],
 
+            ['Signature_Suites_title', 'Our Blogs'],
+            ['Signature_Suites_subtitle', 'Choose your next study destination!! We provide the guidelines on selecting the universities in the various destinations.'],
+            ['Signature_Suites_description', 'Choose your next study destination!! We provide the guidelines on selecting the universities in the various destinations.'],
+            ['Signature_Suites_link', '/Signature_Suites'],
+            ['Signature_Suites_button', 'See All'],
+            ['home_Signature_Suites', ''],
+
+            ['event_title', 'Our Blogs'],
+            ['event_subtitle', 'Choose your next study destination!! We provide the guidelines on selecting the universities in the various destinations.'],
+            ['event_description', 'Choose your next study destination!! We provide the guidelines on selecting the universities in the various destinations.'],
+            ['event_link', '/event'],
+            ['event_button', 'See All'],
+            ['home_event', ''],
+
+            ['gallery_title', 'Our Blogs'],
+            ['gallery_subtitle', 'Choose your next study destination!! We provide the guidelines on selecting the universities in the various destinations.'],
+            ['gallery_description', 'Choose your next study destination!! We provide the guidelines on selecting the universities in the various destinations.'],
+            ['gallery_link', '/gallery'],
+            ['gallery_button', 'See All'],
+            ['home_gallery', ''],
         ];
 
         if (count($items)) {

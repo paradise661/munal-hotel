@@ -10,7 +10,7 @@ if (! function_exists('updatesettingmedia')) {
     function updatesettingmedia($request, $name, $foldername)
     {
         if ($image = $request->file($name)) {
-            $bucket = "ideal-consultancy"; // static bucket name
+            $bucket = "munal-hotel"; // static bucket name
             $baseUrl = "https://paradises3.sgp1.digitaloceanspaces.com"; // static base URL
 
             $imageName = time() . '-' . rand(0, 99) . '-' . $image->getClientOriginalName();
@@ -73,7 +73,7 @@ if (! function_exists('fileUpload')) {
     {
         try {
             if ($request->hasFile($name)) {
-                $bucket = "ideal-consultancy"; // static bucket name
+                $bucket = "munal-hotel"; // static bucket name
                 $baseUrl = "https://paradises3.sgp1.digitaloceanspaces.com";
 
                 // Determine folder path
@@ -127,7 +127,7 @@ if (! function_exists('removeFile')) {
     function removeFile($fileUrl)
     {
         try {
-            $bucket = "ideal-consultancy"; // same static bucket name
+            $bucket = "munal-hotel"; // same static bucket name
             $baseUrl = "https://paradises3.sgp1.digitaloceanspaces.com";
 
             // Remove base URL + bucket from the full file URL to get the relative path
