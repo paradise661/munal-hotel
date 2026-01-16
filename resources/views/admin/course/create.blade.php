@@ -66,13 +66,20 @@
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
-
-
-
-
                         </div>
                     </div>
-
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <div class="mb-4 text-2xl">
+                                <label for="image2" class="form-label">Image</label>
+                                <input class="form-control dropify" type="file" id="image2" name="image2"
+                                    value="{{ old('image2') }}" data-default-file />
+                                @error('image2')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
                     <div class="card mt-4">
                         <div class="card-body">
                             <div class="mb-4 text-2xl">
@@ -87,12 +94,9 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-4">
-
                     <div class="card">
                         <div class="card-body">
-
                             <div class="mb-4">
                                 <label for="status" class="form-label">status</label>
                                 <select id="status" name="status" class="form-select">
@@ -106,7 +110,6 @@
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
-
                             <div class="mb-4">
                                 <label for="order" class="form-label">Order</label>
                                 <input type="number" class="form-control" id="order" name="order" placeholder="1"
@@ -123,12 +126,10 @@
                             </button>
                         </div>
                     </div>
-
                     @include('admin.global.form.seo.create')
 
                 </div>
             </div>
-
         </form>
     </div>
 @endsection

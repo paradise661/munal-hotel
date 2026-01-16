@@ -25,8 +25,6 @@ use App\Models\CountryLocation;
 use App\Models\Event;
 use App\Models\Gallery;
 use Illuminate\Support\Facades\Validator;
-
-
 class FrontendController extends Controller
 {
     //
@@ -74,16 +72,16 @@ class FrontendController extends Controller
         $our_vision = Page::where('status', 1)->where('slug', 'our-vision')->first();
         $our_mission = Page::where('status', 1)->where('slug', 'our-mission')->first();
         $why_us = Page::where('status', 1)->where('slug', 'why-choose-us')->first();
+        $commitment = Page::where('status', 1)->where('slug', 'commitment-to-sustainability')->first();
         $teams = Team::where('status', 1)->oldest("order")->get();
         $objectives = Page::where('status', 1)->where('slug', 'objectives')->first();
         $services = Service::where('status', 1)->oldest("order")->get();
-        return view('frontend.about.index', compact('about_us','objectives','services','our_vision','our_mission', 'why_us', 'teams'));
+        return view('frontend.about.index', compact('about_us','commitment','objectives','services','our_vision','our_mission', 'why_us', 'teams'));
     }
     public function service()
     {
         $service_page = Page::where('status', 1)->where('slug', 'service')->first();
         $services = Service::where('status', 1)->oldest("order")->get();
-
         return view('frontend.service.index', compact('service_page', 'services'));
     }
     function servicesingle($slug)
@@ -129,9 +127,12 @@ class FrontendController extends Controller
     }
     function course()
     {
-        $course_page = Page::where('status', 1)->where('slug', 'course')->first();
-        $courses = Course::get();
-        return view('frontend.course.index', compact('courses', 'course_page'));
+        $course_page = Page::where('status', 1)->where('slug', 'Ameenties')->first();
+        $amenities = Course::get();
+        $serenity_spa_wellness = Page::where('status', 1)->where('slug', 'serenity-spa-wellness')->first();
+        $complete_amenities = Member::where('status', 1)->oldest("order")->get();
+
+        return view('frontend.amenities.index', compact('amenities','complete_amenities', 'course_page','serenity_spa_wellness'));
     }
     function coursesingle($slug)
     {
@@ -140,7 +141,7 @@ class FrontendController extends Controller
         if ($coursesingle) {
             $coursesingle->save();
             $courses = Course::where('id', '!=', $coursesingle->id)->where('status', 1)->oldest("order")->limit(5)->get();
-            return view("frontend.course.show", compact('courses', 'coursesingle', 'course_page'));
+            return view("frontend.amenities.show", compact('courses', 'coursesingle', 'course_page'));
         }
     }
     function blog()
@@ -263,7 +264,6 @@ class FrontendController extends Controller
     public function registerstudent(Request $request)
     {
         $input = $request->all();
-
         $rules = [
             // Basic Info
             'full_name' => 'required|string|max:255',
@@ -311,7 +311,6 @@ class FrontendController extends Controller
             'images' => 'nullable|array',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
-
         $validator = Validator::make($input, $rules);
         if ($validator->fails()) {
             // return redirect()->route("frontend.register")->withInput()->withErrors($validator);

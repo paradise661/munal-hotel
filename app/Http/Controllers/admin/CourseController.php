@@ -18,7 +18,6 @@ class CourseController extends Controller
 
         return view('admin.course.index', compact('courses'));
     }
-
     /**
      * Show the form for creating a new resource.
      */
@@ -27,7 +26,6 @@ class CourseController extends Controller
         //
         return view('admin.course.create');
     }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -37,19 +35,15 @@ class CourseController extends Controller
         $input = $request->all();
         $input['seo_title'] = $request->seo_title ?? $request->title;
         $input['slug'] = $input['slug'] ? make_slug($input['slug']) : make_slug($input['title']);
-
         $rules = [
             'title' => 'required|min:3',
         ];
-
         $imagelist = ['image'];
-
         foreach ($imagelist as $image) {
             if ($request->$image != '') {
                 $rules[$image] = 'image';
             }
         }
-
         $validator = Validator::make($input, $rules);
 
         if ($validator->fails()) {
@@ -84,7 +78,6 @@ class CourseController extends Controller
         //
         return view('admin.course.edit', compact('course'));
     }
-
     /**
      * Update the specified resource in storage.
      */

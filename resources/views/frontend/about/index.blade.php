@@ -266,29 +266,15 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
                     <h2 class="text-4xl font-playfair font-bold text-luxury-dark mb-6">
-                        Commitment to <span class="text-luxury-gold">Sustainability</span>
+                        {{ $commitment->title }}
                     </h2>
                     <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        At Luxoria, we believe luxury and environmental responsibility go hand in hand. Our comprehensive
-                        sustainability program encompasses energy efficiency, waste reduction, and community engagement
-                        initiatives.
+                        {{ $commitment->short_description }}
                     </p>
                     <div class="space-y-4 mb-8">
                         <div class="flex items-center space-x-3">
-                            <i class="fas fa-leaf text-luxury-gold"></i>
-                            <span class="text-gray-700">100% renewable energy sources</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-recycle text-luxury-gold"></i>
-                            <span class="text-gray-700">Zero waste to landfill program</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-water text-luxury-gold"></i>
-                            <span class="text-gray-700">Advanced water conservation systems</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-seedling text-luxury-gold"></i>
-                            <span class="text-gray-700">Local sourcing and organic gardens</span>
+                            {{-- <i class="fas fa-leaf text-luxury-gold"></i> --}}
+                            <span class="text-gray-700">{!! $commitment->description !!}</span>
                         </div>
                     </div>
                     <button
@@ -298,7 +284,7 @@
                 </div>
                 <div class="relative">
                     <img class="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
-                        src="https://storage.googleapis.com/uxpilot-auth.appspot.com/49b10dc3f5-76eb0a69023e626a18f7.png"
+                        src="{{ asset($about_us->image_1) }}"
                         alt="luxury hotel rooftop garden with solar panels, green plants, sustainable architecture, eco-friendly design" />
                 </div>
             </div>

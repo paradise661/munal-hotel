@@ -17,6 +17,7 @@ class Course extends Model
         'short_description',
         'description',
         'image',
+        
 
         'seo_title',
         'seo_schema',
