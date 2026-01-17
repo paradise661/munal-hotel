@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers\admin;
 
-use App\Models\Course;
+use App\Models\RoomCategory;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
-class CourseController extends Controller
+class RoomCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
-        $courses = Course::paginate(10);
+        $roomcategorys = RoomCategory::paginate(10);
 
-        return view('admin.course.index', compact('courses'));
+        return view('admin.roomcategory.index', compact('roomcategorys'));
     }
 
     /**
@@ -25,9 +25,8 @@ class CourseController extends Controller
     public function create()
     {
         //
-        return view('admin.course.create');
+        return view('admin.roomcategory.create');
     }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -37,23 +36,19 @@ class CourseController extends Controller
         $input = $request->all();
         $input['seo_title'] = $request->seo_title ?? $request->title;
         $input['slug'] = $input['slug'] ? make_slug($input['slug']) : make_slug($input['title']);
-
         $rules = [
             'title' => 'required|min:3',
         ];
-
         $imagelist = ['image'];
-
         foreach ($imagelist as $image) {
             if ($request->$image != '') {
                 $rules[$image] = 'image';
             }
         }
-
         $validator = Validator::make($input, $rules);
 
         if ($validator->fails()) {
-            return redirect()->route('course.create')->withInput()->withErrors($validator);
+            return redirect()->route('roomcategory.create')->withInput()->withErrors($validator);
         }
 
         foreach ($imagelist as $image) {
@@ -63,9 +58,9 @@ class CourseController extends Controller
             }
         }
 
-        $course = Course::create($input);
+        $course = RoomCategory::create($input);
 
-        return redirect()->route('course.index')->with('success', 'Course added successfully.');
+        return redirect()->route('roomcategory.index')->with('success', 'Category added successfully.');
     }
 
     /**
@@ -79,16 +74,15 @@ class CourseController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Course $course)
+    public function edit(RoomCategory $roomcategory)
     {
         //
-        return view('admin.course.edit', compact('course'));
+        return view('admin.roomcategory.edit', compact('roomcategory'));
     }
-
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Course $course)
+    public function update(Request $request, RoomCategory $roomcategory)
     {
         //
         $input = $request->all();
@@ -110,41 +104,41 @@ class CourseController extends Controller
         $validator = Validator::make($input, $rules);
 
         if ($validator->fails()) {
-            return redirect()->route('course.edit', $course)->withInput()->withErrors($validator);
+            return redirect()->route('roomcategory.edit', $roomcategory)->withInput()->withErrors($validator);
         }
 
         foreach ($imagelist as $image) {
             if ($request->$image != '') {
 
-                if ($course->$image != '') {
-                    $file = $course->$image;
+                if ($roomcategory->$image != '') {
+                    $file = $roomcategory->$image;
                     removeFile($file);
                 }
 
-                $imageName = fileUpload($request, $image, 'course');
+                $imageName = fileUpload($request, $image, 'roomcategory');
                 $input[$image] = $imageName;
             }
 
             $deleteimage = 'delete' . $image;
             if (isset($input[$deleteimage]) && $input[$deleteimage] == 'on') {
 
-                if ($course->$image != '') {
-                    $file = $course->$image;
+                if ($roomcategory->$image != '') {
+                    $file = $roomcategory->$image;
                     removeFile($file);
                 }
                 $input[$image] = null;
             }
         }
 
-        $course->update($input);
+        $roomcategory->update($input);
 
-        return redirect()->route('course.index')->with('success', 'Course Updated successfully.');
+        return redirect()->route('roomcategory.index')->with('success', 'Category Updated successfully.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Course $course)
+    public function destroy(RoomCategory $course)
     {
         //
         $imagelist = ['image'];
@@ -158,6 +152,6 @@ class CourseController extends Controller
 
         $course->delete();
 
-        return redirect()->route('course.index')->with('success', 'Course Deleted successfully.');
+        return redirect()->route('roomcategory.index')->with('success', 'Category Deleted successfully.');
     }
 }

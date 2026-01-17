@@ -1,7 +1,7 @@
 @extends('layouts.admin.master')
 
 @php
-    $title = 'Room category';
+    $title = 'Courses';
     $name = 'course';
 @endphp
 
@@ -33,8 +33,8 @@
                             <div class="row">
                                 <div class="mb-4 col-md-8">
                                     <label for="title" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="title" name="title"
-                                        placeholder="title" value="{{ old('title', ${$name}->title) }}" />
+                                    <input type="text" class="form-control" id="title" name="title" placeholder="title"
+                                        value="{{ old('title', ${$name}->title) }}" />
                                     @error('title')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
@@ -42,8 +42,8 @@
 
                                 <div class="mb-4 col-md-4">
                                     <label for="slug" class="form-label">slug</label>
-                                    <input type="text" class="form-control" id="slug" name="slug"
-                                        placeholder="Slug" value="{{ old('slug', ${$name}->slug) }}" />
+                                    <input type="text" class="form-control" id="slug" name="slug" placeholder="Slug"
+                                        value="{{ old('slug', ${$name}->slug) }}" />
                                     @error('slug')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
@@ -52,7 +52,8 @@
 
                             <div class="mb-4">
                                 <label for="short_description" class="form-label">Short Description</label>
-                                <textarea class="form-control" id="short_description" name="short_description" placeholder="Short Description"
+                                <textarea class="form-control" id="short_description" name="short_description"
+                                    placeholder="Short Description"
                                     rows="4">{{ old('short_description', ${$name}->short_description) }}</textarea>
                                 @error('short_description')
                                     <p class="text-danger">{{ $message }}</p>
@@ -61,7 +62,9 @@
 
                             <div class="mb-4">
                                 <label for="description" class="form-label">Description</label>
-                                <textarea class="form-control ckeditor" id="description" name="description" placeholder="Description" rows="4">{{ old('description', ${$name}->description) }}</textarea>
+                                <textarea class="form-control ckeditor" id="description" name="description"
+                                    placeholder="Description"
+                                    rows="4">{{ old('description', ${$name}->description) }}</textarea>
                                 @error('description')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror

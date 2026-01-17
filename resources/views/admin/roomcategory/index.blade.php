@@ -1,9 +1,8 @@
 @extends('layouts.admin.master')
 @php
-    $title = 'Courses';
-    $name = 'course';
+    $title = 'Room category';
+    $name = 'roomcategory';
 @endphp
-
 @section('content')
     <div class="card mb-4">
         <div class="card-header d-flex justify-content-between align-items-center">
@@ -83,7 +82,6 @@
         @endif
     </div>
 @endsection
-
 @push('js')
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -94,7 +92,6 @@
             });
         });
     </script>
-
     <script>
         $('.delete_course').click(function (e) {
             e.preventDefault();
