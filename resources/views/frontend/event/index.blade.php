@@ -11,24 +11,22 @@
 @endsection
 @extends('layouts.frontend.master')
 @section('content')
-    <section class="about-banner">
-        @if (!empty($event_page->banner_image))
-            <img src="{{ asset($event_page->banner_image) }}" alt="{{ $event_page->title ?? 'About Us Background' }}">
-        @else
-            <img src="{{ asset('frontend/assets/image/japan.jpg') }}" alt="Default Background">
-        @endif
-        <div class="banner-content">
-            <div class="banner-content-inner">
-                <h1>{{ $event_page->title ?? 'About Us' }}</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item"><a href="{{ route('frontend.home') }}">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">{{ $event_page->title ?? 'About Us' }}</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-    </section>
+<section id="hero-about" class="relative h-[500px] flex items-center justify-center overflow-hidden mt-20">
+    <div class="absolute inset-0">
+        <img class="w-full h-full object-cover"
+            src="{{ asset($event_page->banner_image) }}"
+            alt="luxury hotel exterior facade with grand architecture, elegant entrance, manicured gardens, golden hour lighting" />
+        <div class="absolute inset-0 bg-black/50"></div>
+    </div>
+    <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
+        <h1 class="text-5xl lg:text-6xl font-playfair font-bold mb-6">
+            {{ $event_page->title ?? 'About Us' }}
+        </h1>
+        <p class="text-xl text-gray-200 max-w-2xl mx-auto">
+            {{ $event_page->short_description ?? 'About Us' }}
+        </p>
+    </div>
+</section>
     <div class="container py-5">
 
         <div class="row g-4">

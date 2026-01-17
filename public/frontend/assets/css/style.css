@@ -1473,7 +1473,7 @@ color: #1e8547;
 }
 
 .upcoming-bg {
-  background: #26b054; /* Your color */
+  background: #d4af37; /* Your color */
 }
 
 .expired-bg {
@@ -1528,13 +1528,13 @@ color: #1e8547;
 }
 
 .event-meta li i {
-  color: #26b054; /* Applied your theme */
+  color: #d4af37; /* Applied your theme */
   margin-right: 6px;
 }
 
 /* BUTTON */
 .btn-modern {
-  background: #26b054;
+  background: #d4af37;
   color: #fff;
   padding: 8px 20px;
   border-radius: 50px;
