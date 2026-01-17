@@ -1,7 +1,7 @@
 @extends('layouts.admin.master')
 
 @php
-    $title = 'Courses';
+    $title = 'Room category';
     $name = 'course';
 @endphp
 

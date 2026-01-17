@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Models\Course;
+use App\Models\RoomCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -14,7 +15,7 @@ class CourseController extends Controller
     public function index()
     {
         //
-        $courses = Course::paginate(10);
+        $courses = RoomCategory::paginate(10);
 
         return view('admin.course.index', compact('courses'));
     }
@@ -57,9 +58,9 @@ class CourseController extends Controller
             }
         }
 
-        $course = Course::create($input);
+        $course = RoomCategory::create($input);
 
-        return redirect()->route('course.index')->with('success', 'Course added successfully.');
+        return redirect()->route('course.index')->with('success', 'Category added successfully.');
     }
 
     /**
@@ -73,7 +74,7 @@ class CourseController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Course $course)
+    public function edit(RoomCategory $course)
     {
         //
         return view('admin.course.edit', compact('course'));
@@ -81,7 +82,7 @@ class CourseController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Course $course)
+    public function update(Request $request, RoomCategory $course)
     {
         //
         $input = $request->all();
@@ -114,7 +115,7 @@ class CourseController extends Controller
                     removeFile($file);
                 }
 
-                $imageName = fileUpload($request, $image, 'course');
+                $imageName = fileUpload($request, $image, 'roomcategory');
                 $input[$image] = $imageName;
             }
 
@@ -131,13 +132,13 @@ class CourseController extends Controller
 
         $course->update($input);
 
-        return redirect()->route('course.index')->with('success', 'Course Updated successfully.');
+        return redirect()->route('course.index')->with('success', 'Category Updated successfully.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Course $course)
+    public function destroy(RoomCategory $course)
     {
         //
         $imagelist = ['image'];
@@ -151,6 +152,6 @@ class CourseController extends Controller
 
         $course->delete();
 
-        return redirect()->route('course.index')->with('success', 'Course Deleted successfully.');
+        return redirect()->route('course.index')->with('success', 'Category Deleted successfully.');
     }
 }

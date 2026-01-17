@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Models\Room;
 use App\Models\Country;
+use App\Models\RoomCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -14,7 +16,7 @@ class CountryController extends Controller
     public function index()
     {
         //
-        $countrys = Country::paginate(10);
+        $countrys = Room::paginate(10);
 
         return view('admin.country.index', compact('countrys'));
     }
@@ -24,8 +26,8 @@ class CountryController extends Controller
      */
     public function create()
     {
-        //
-        return view('admin.country.create');
+        $categories = RoomCategory::where('status', 1)->orderBy('order')->get();
+        return view('admin.country.create',compact('categories'));
     }
 
     /**
@@ -58,12 +60,12 @@ class CountryController extends Controller
 
         foreach ($imagelist as $image) {
             if ($request->$image != '') {
-                $imageName = fileUpload($request, $image, 'country');
+                $imageName = fileUpload($request, $image, 'room');
                 $input[$image] = $imageName;
             }
         }
 
-        $country = Country::create($input);
+        $room = Room::create($input);
 
         return redirect()->route('country.index')->with('success', 'Country added successfully.');
     }
@@ -79,16 +81,16 @@ class CountryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Country $country)
+    public function edit(Room $country)
     {
-        //
-        return view('admin.country.edit', compact('country'));
+        $categories = RoomCategory::where('status', 1)->orderBy('order')->get();
+        return view('admin.country.edit', compact('country','categories'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Country $country)
+    public function update(Request $request, Room $country)
     {
         //
         $input = $request->all();
@@ -138,13 +140,13 @@ class CountryController extends Controller
 
         $country->update($input);
 
-        return redirect()->route('country.index')->with('success', 'Country Updated successfully.');
+        return redirect()->route('country.index')->with('success', 'Room Updated successfully.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Country $country)
+    public function destroy(Room $country)
     {
         //
         $imagelist = ['image', 'image_1', 'career_image', 'university_image', 'visa_image', 'documentation_image', 'financial_image', 'departure_image'];
@@ -158,6 +160,6 @@ class CountryController extends Controller
 
         $country->delete();
 
-        return redirect()->route('country.index')->with('success', 'Country Deleted successfully.');
+        return redirect()->route('country.index')->with('success', 'Room Deleted successfully.');
     }
 }

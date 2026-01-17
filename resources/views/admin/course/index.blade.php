@@ -1,6 +1,6 @@
 @extends('layouts.admin.master')
 @php
-    $title = 'Courses';
+    $title = 'Room category';
     $name = 'course';
 @endphp
 @section('content')
@@ -39,8 +39,7 @@
                                     <td>
                                         <a href="{{ asset(${$name}->image) }}" class="fro-dropzone-image-a fancybox"
                                             data-fancybox="images" target="_blank">
-                                            <img src="{{ asset(${$name}->image) }}" class="table_image"
-                                                alt="{{ ${$name}->title }}">
+                                            <img src="{{ asset(${$name}->image) }}" class="table_image" alt="{{ ${$name}->title }}">
                                         </a>
                                     </td>
                                     <td>{{ ${$name}->title }}</td>
@@ -58,12 +57,10 @@
                                             class="btn btn-sm btn-icon btn-primary">
                                             <i class="tf-icons bx bx-edit text-white"></i>
                                         </a>
-                                        <form action="{{ route($name . '.destroy', ${$name}->id) }}" method="post"
-                                            class="d-inline">
+                                        <form action="{{ route($name . '.destroy', ${$name}->id) }}" method="post" class="d-inline">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit"
-                                                class="btn btn-sm btn-icon btn-danger delete_{{ $name }}">
+                                            <button type="submit" class="btn btn-sm btn-icon btn-danger delete_{{ $name }}">
                                                 <i class="tf-icons bx bx-trash text-white"></i>
                                             </button>
                                         </form>
@@ -87,7 +84,7 @@
 @endsection
 @push('js')
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             Fancybox.bind("[data-fancybox='images']", {
                 // Customize your FancyBox options here
                 infinite: true,
@@ -96,7 +93,7 @@
         });
     </script>
     <script>
-        $('.delete_course').click(function(e) {
+        $('.delete_course').click(function (e) {
             e.preventDefault();
 
             Swal.fire({

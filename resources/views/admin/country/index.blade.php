@@ -1,6 +1,6 @@
 @extends('layouts.admin.master')
 @php
-    $title = 'Countries';
+    $title = 'Rooms';
     $name = 'country';
 @endphp
 
@@ -40,8 +40,7 @@
                                     <td>
                                         <a href="{{ asset(${$name}->image) }}" class="fro-dropzone-image-a fancybox"
                                             data-fancybox="images" target="_blank">
-                                            <img src="{{ asset(${$name}->image) }}" class="table_image"
-                                                alt="{{ ${$name}->title }}">
+                                            <img src="{{ asset(${$name}->image) }}" class="table_image" alt="{{ ${$name}->title }}">
                                         </a>
                                     </td>
                                     <td>{{ ${$name}->title }}</td>
@@ -60,17 +59,14 @@
                                             <i class="tf-icons bx bx-edit text-white"></i>
                                         </a>
 
-                                        <a href="{{ route('university.index', ${$name}->id) }}" type="button"
-                                            class="btn btn-sm btn-icon btn-info">
+                                        {{-- <a href="{{ route('course.index') }}" type="button" class="btn btn-sm btn-icon btn-info">
                                             <i class="tf-icons bx bxs-graduation text-white"></i>
-                                        </a>
+                                        </a> --}}
 
-                                        <form action="{{ route($name . '.destroy', ${$name}->id) }}" method="post"
-                                            class="d-inline">
+                                        <form action="{{ route($name . '.destroy', ${$name}->id) }}" method="post" class="d-inline">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit"
-                                                class="btn btn-sm btn-icon btn-danger delete_{{ $name }}">
+                                            <button type="submit" class="btn btn-sm btn-icon btn-danger delete_{{ $name }}">
                                                 <i class="tf-icons bx bx-trash text-white"></i>
                                             </button>
                                         </form>
@@ -95,7 +91,7 @@
 
 @push('js')
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             Fancybox.bind("[data-fancybox='images']", {
                 // Customize your FancyBox options here
                 infinite: true,
@@ -105,7 +101,7 @@
     </script>
 
     <script>
-        $('.delete_country').click(function(e) {
+        $('.delete_country').click(function (e) {
             e.preventDefault();
 
             Swal.fire({
@@ -125,5 +121,3 @@
         });
     </script>
 @endpush
-
-

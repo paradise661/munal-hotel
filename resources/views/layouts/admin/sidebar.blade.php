@@ -67,13 +67,13 @@
         <li class="menu-item {{ Request::segment(2) == 'country' ? 'active' : '' }}">
             <a href="{{ route('country.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-globe-alt"></i>
-                <div>Countries</div>
+                <div>Rooms</div>
             </a>
         </li>
         <li class="menu-item {{ Request::segment(2) == 'course' ? 'active' : '' }}">
             <a href="{{ route('course.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-book"></i>
-                <div>Courses</div>
+                <div>Room Category</div>
             </a>
         </li>
         <li class="menu-item {{ Request::segment(2) == 'branch' ? 'active' : '' }}">
