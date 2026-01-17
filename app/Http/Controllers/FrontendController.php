@@ -6,6 +6,7 @@ use App\Models\Faq;
 use App\Models\Blog;
 use App\Models\Member;
 use App\Models\Page;
+use App\Models\Room;
 use App\Models\Team;
 use App\Models\Branch;
 use App\Models\Course;
@@ -110,7 +111,8 @@ class FrontendController extends Controller
     {
         $abroad_page = Page::where('status', 1)->where('slug', 'abroad-studies')->first();
         $abroadstudies = Country::where('status', 1)->oldest("order")->get();
-        return view('frontend.abroad.index', compact('abroadstudies', 'abroad_page'));
+        $rooms = Room::where('status',1)->oldest('order')->get();
+        return view('frontend.room.index', compact('abroadstudies', 'abroad_page','rooms'));
     }
     function abroadstudiesingle($slug)
     {
@@ -123,7 +125,7 @@ class FrontendController extends Controller
             $abroads = Country::where('id', '!=', $abroadstudiesingle->id)->where('status', 1)->oldest("order")->limit(5)->get();
            
         }
-        return view('frontend.abroad.show', compact('abroadstudiesingle','abroads','faq', 'abroad_page', 'universities'));
+        return view('frontend.room.show', compact('abroadstudiesingle','abroads','faq', 'abroad_page', 'universities'));
     }
     function course()
     {
