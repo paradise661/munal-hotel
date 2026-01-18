@@ -32,5 +32,8 @@ Route::name('frontend.')->group(
 
         Route::get('/event', [FrontendController::class, 'event'])->name('event');
         Route::get('/event/{slug}', [FrontendController::class, 'eventsingle'])->name('eventsingle');
+
+        Route::get('/dinning', [FrontendController::class, 'dinning'])->name('dinning');
+        Route::get('/dinning/{slug}', [FrontendController::class, 'dinningsingle'])->name('dinningsingle');
     }
 );

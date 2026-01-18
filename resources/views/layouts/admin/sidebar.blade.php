@@ -156,7 +156,7 @@
         <li class="menu-item {{ Request::segment(2) == 'whychooseus' ? 'active' : '' }}">
             <a href="{{ route('whychooseus.index') }}" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-question-mark'></i>
-                Why Choose Us
+                Dinning
             </a>
         </li>
         <li class="menu-item {{ Request::segment(2) == 'event' ? 'active' : '' }}">
