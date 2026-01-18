@@ -108,10 +108,10 @@
                 <div>Gallery</div>
             </a>
         </li> --}}
-        <li class="menu-item {{ Request::segment(2) == 'success' ? 'active' : '' }}">
-            <a href="{{ route('success.index') }}" class="menu-link">
+        <li class="menu-item {{ Request::segment(2) == 'album' ? 'active' : '' }}">
+            <a href="{{ route('album.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-star"></i>
-                <div>Gallery</div>
+                <div>Album</div>
             </a>
         </li>
         <li class="menu-item {{ Request::segment(2) == 'page' ? 'active' : '' }}">

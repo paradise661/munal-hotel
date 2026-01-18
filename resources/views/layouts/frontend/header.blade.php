@@ -19,6 +19,8 @@
                     class="text-gray-600 hover:text-luxury-gold font-medium">Amenities</a>
                 <a href="#" class="text-gray-600 hover:text-luxury-gold font-medium">Dining</a>
                 <a href="#" class="text-gray-600 hover:text-luxury-gold font-medium">Events</a>
+                <a href="{{ route('frontend.gallery') }}"
+                    class="text-gray-600 hover:text-luxury-gold font-medium">Gallery</a>
                 <a href="{{ route('frontend.about') }}"
                     class="text-gray-600 hover:text-luxury-gold font-medium">About</a>
                 <a href="#" class="text-gray-600 hover:text-luxury-gold font-medium">Contact</a>

@@ -1,89 +1,54 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Gallery;
+use App\Models\Album;  // make sure you have this
 use Illuminate\Http\Request;
 
 class GalleryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    // List galleries for a specific album
+    public function index($album_id)
     {
-
-        $galleries = Gallery::all();
-
-        return view('admin.gallery.index', compact('galleries'));
+        $album = Album::findOrFail($album_id);
+        $galleries = Gallery::where('album_id', $album_id)->latest()->paginate(24);
+        return view('admin.albums.gallery.index', compact('album', 'galleries'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    // Show form to upload images for a specific album
+    public function create($album_id)
     {
-        return view('admin.gallery.create');
+        $album = Album::findOrFail($album_id);
+        return view('admin.albums.gallery.create', compact('album'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    // Store images for a specific album
+    public function store(Request $request, $album_id)
     {
-        //
-        if ($request->hasFile('file')) {
+        $request->validate([
+            'file' => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
+        ]);
 
-            $finalImageName = galleryfileUpload($request, 'file', 'gallery');
+        $album = Album::findOrFail($album_id);
+        $imagePath = fileUpload($request, 'file', 'gallery');
 
-            Gallery::create([
-                'image' => $finalImageName,
-            ]);
+        Gallery::create([
+            'album_id' => $album->id,
+            'image' => $imagePath,
+        ]);
 
-            return response()->json(['success' => 'Image Uploaded Successfully']);
-        } else {
-            return response()->json(['error' => 'File upload failed.']);
-        }
+        return response()->json(['success' => true, 'path' => $imagePath]);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Gallery $gallery)
+    // Delete gallery image
+    public function documentDelete($album_id, $id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Gallery $gallery)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Gallery $gallery)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Gallery $gallery)
-    {
-        //
-
-        if ($gallery->image != '') {
-            $file = $gallery->image;
-            removeFile($file);
-        }
-
+        $gallery = Gallery::where('album_id', $album_id)->findOrFail($id);
+        removeFile($gallery->image);
         $gallery->delete();
 
-        return redirect()->route('gallery.index')->with('success', 'Image Deleted successfully.');
+        return response()->json(['success' => true]);
     }
 }

@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Faq;
 use App\Models\Blog;
-use App\Models\Member;
 use App\Models\Page;
 use App\Models\Room;
 use App\Models\Team;
+use App\Models\Album;
+use App\Models\Event;
 use App\Models\Branch;
 use App\Models\Course;
+use App\Models\Member;
 use App\Models\Slider;
 use App\Models\Country;
+use App\Models\Gallery;
 use App\Models\Service;
 use App\Models\Success;
 use App\Models\Settings;
@@ -23,9 +26,8 @@ use Illuminate\Http\Request;
 use App\Models\DocumentImage;
 use App\Models\ContactInquiry;
 use App\Models\CountryLocation;
-use App\Models\Event;
-use App\Models\Gallery;
 use Illuminate\Support\Facades\Validator;
+
 class FrontendController extends Controller
 {
     //
@@ -117,15 +119,15 @@ class FrontendController extends Controller
     function abroadstudiesingle($slug)
     {
         $abroad_page = Page::where('status', 1)->where('slug', 'abroad-studies')->first();
-        $abroadstudiesingle = Country::where('slug', $slug)->where('status', 1)->first();
+        $roomsingle = Room::where('slug', $slug)->where('status', 1)->first();
         $faq = Faq::where('status', 1)->get();
-        $universities = University::where('country_id', $abroadstudiesingle->id)->where('status', 1)->oldest("order")->get();
-        if ($abroadstudiesingle) {
-            $abroadstudiesingle->save();
-            $abroads = Country::where('id', '!=', $abroadstudiesingle->id)->where('status', 1)->oldest("order")->limit(5)->get();
-           
+        // $universities = University::where('country_id', $abroadstudiesingle->id)->where('status', 1)->oldest("order")->get();
+        if ($roomsingle) {
+            $roomsingle->save();
+            $rooms = Room::where('id', '!=', $roomsingle->id)->where('status', 1)->oldest("order")->limit(3)->get();
+
         }
-        return view('frontend.room.show', compact('abroadstudiesingle','abroads','faq', 'abroad_page', 'universities'));
+        return view('frontend.room.show', compact('roomsingle', 'rooms', 'faq', 'abroad_page'));
     }
     function course()
     {
@@ -210,9 +212,14 @@ class FrontendController extends Controller
     }
     function visagrantes()
     {
-        $visagrantes_page = Page::where('status', 1)->where('slug', 'gallery')->first();
+        $gallery_page = Page::where('status', 1)->where('slug', 'gallery')->first();
         $visagranted = Success::get() ?? [];
-        return view('frontend.visagrant', compact('visagranted', 'visagrantes_page'));
+        $albums = Album::with('galleries')
+            ->where('status', 1)
+            ->orderBy('order', 'asc')
+            ->get();
+        // dd($albums);
+        return view('frontend.gallery.index', compact('visagranted', 'gallery_page','albums'));
     }
     function messagefromfounder()
     {

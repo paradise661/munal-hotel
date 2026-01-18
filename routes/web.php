@@ -1,32 +1,33 @@
 <?php
 
-use App\Http\Controllers\admin\BlogController;
-use App\Http\Controllers\admin\BranchController;
-use App\Http\Controllers\admin\ContactInquiryController;
-use App\Http\Controllers\admin\CountryController;
-use App\Http\Controllers\admin\CourseController;
-use App\Http\Controllers\admin\DashboardController;
-use App\Http\Controllers\admin\EventController;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\admin\FaqController;
-use App\Http\Controllers\admin\GalleryController;
-use App\Http\Controllers\admin\MemberController;
+use App\Http\Controllers\admin\BlogController;
 use App\Http\Controllers\admin\PageController;
+use App\Http\Controllers\admin\TeamController;
+use App\Http\Controllers\Admin\AlbumController;
+use App\Http\Controllers\admin\EventController;
 use App\Http\Controllers\admin\PopupController;
-use App\Http\Controllers\admin\RoomCategoryController;
-use App\Http\Controllers\admin\SEnquiriesController;
-use App\Http\Controllers\admin\ServiceController;
-use App\Http\Controllers\admin\SettingsController;
+use App\Http\Controllers\admin\BranchController;
+use App\Http\Controllers\admin\CourseController;
+use App\Http\Controllers\admin\MemberController;
 use App\Http\Controllers\admin\SliderController;
 use App\Http\Controllers\admin\SocialController;
+use App\Http\Controllers\admin\CountryController;
+use App\Http\Controllers\admin\GalleryController;
+use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\SuccessController;
-use App\Http\Controllers\admin\TeamController;
-use App\Http\Controllers\admin\TestimonialController;
-use App\Http\Controllers\admin\UniversityController;
-use App\Http\Controllers\admin\WhyChooseUsController;
 use App\Http\Controllers\Auth\PasswordController;
+use App\Http\Controllers\admin\SettingsController;
+use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\SEnquiriesController;
+use App\Http\Controllers\admin\UniversityController;
+use App\Http\Controllers\admin\TestimonialController;
+use App\Http\Controllers\admin\WhyChooseUsController;
+use App\Http\Controllers\admin\RoomCategoryController;
 use App\Http\Controllers\Auth\RegisteredUserController;
-use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\ContactInquiryController;
 
 // Route::get('/', function () 
 //     return view('welcome');
@@ -83,6 +84,13 @@ Route::group(
         Route::resource('slider', SliderController::class);
         Route::resource('member',MemberController::class);
         Route::resource('roomcategory',RoomCategoryController::class);
+        Route::resource('album', AlbumController::class);
+        Route::prefix('album/{album}/gallery')->name('album.gallery.')->group(function () {
+            Route::get('/', [GalleryController::class, 'index'])->name('index');
+            Route::get('/create', [GalleryController::class, 'create'])->name('create');
+            Route::post('/', [GalleryController::class, 'store'])->name('store');
+            Route::delete('/{gallery}/delete-file', [GalleryController::class, 'documentDelete'])->name('delete-file');
+        });
 
         Route::resource(name: 'enquiry', controller: SEnquiriesController::class);
         Route::get('/enquiry/{id}/pdf', [SEnquiriesController::class, 'generatePdf'])->name('enquiry.pdf');
