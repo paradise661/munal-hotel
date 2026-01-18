@@ -8,12 +8,12 @@
     <div class="card mb-4">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h5 class="mb-0 text-capitalize">{{ $name }} ({{ ${$name . 's'}->count() }})</h5>
-            <small class="text-muted float-end">
+            {{-- <small class="text-muted float-end">
                 <a href="{{ route($name . '.create') }}"
                     class="btn btn-sm btn-primary d-flex justify-content-between align-items-center gap-2"><i
                         class="ri-add-line ri-lg"></i>
                     Create</a>
-            </small>
+            </small> --}}
         </div>
     </div>
 
@@ -64,12 +64,10 @@
                                             <i class="tf-icons bx bx-show-alt text-white"></i>
                                         </a>
 
-                                        <form action="{{ route($name . '.destroy', ${$name}->id) }}" method="post"
-                                            class="d-inline">
+                                        <form action="{{ route($name . '.destroy', ${$name}->id) }}" method="post" class="d-inline">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit"
-                                                class="btn btn-sm btn-icon btn-danger delete_{{ $name }}">
+                                            <button type="submit" class="btn btn-sm btn-icon btn-danger delete_{{ $name }}">
                                                 <i class="tf-icons bx bx-trash text-white"></i>
                                             </button>
                                         </form>
@@ -94,7 +92,7 @@
 
 @push('js')
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             Fancybox.bind("[data-fancybox='images']", {
                 // Customize your FancyBox options here
                 infinite: true,
@@ -104,7 +102,7 @@
     </script>
 
     <script>
-        $('.delete_enquiry').click(function(e) {
+        $('.delete_enquiry').click(function (e) {
             e.preventDefault();
 
             Swal.fire({

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use App\Models\Faq;
 use App\Models\Blog;
 use App\Models\Page;
@@ -287,72 +288,32 @@ class FrontendController extends Controller
     }
     public function registerstudent(Request $request)
     {
-        $input = $request->all();
         $rules = [
-            // Basic Info
-            'full_name' => 'required|string|max:255',
-            'dob' => 'required',
+            'room_type' => 'required|string|max:100',
 
-            // Academic Qualification
-            'qualification' => 'required|string|max:255',
-            'see_school_name' => 'nullable|string|max:255',
-            'see_gpa' => 'nullable|string|max:255',
-            'see_passed_year' => 'nullable|string|max:255',
-            'plus_two_college_name' => 'nullable|string|max:255',
-            'plus_two_gpa' => 'nullable|string|max:255',
-            'plus_two_passed_year' => 'nullable|string|max:255',
-            'bachelor_college_name' => 'nullable|string|max:255',
-            'bachelor_gpa' => 'nullable|string|max:255',
-            'bachelor_passed_year' => 'nullable|string|max:255',
-            'master_college_name' => 'nullable|string|max:255',
-            'master_gpa' => 'nullable|string|max:255',
-            'master_passed_year' => 'nullable|string|max:255',
+            'checkin_date' => 'required|date|after_or_equal:today',
+            'checkout_date' => 'required|date|after:checkin_date',
 
-            // Additional Info
-            'marital_status' => 'required|string|max:255',
-            'address' => 'required|string|max:255',
-            'mobile' => 'required',
+            'adults' => 'required|integer|min:1|max:10',
+            'children' => 'nullable|integer|min:0|max:10',
+
+            'first_name' => 'required|string|max:100',
+            'last_name' => 'required|string|max:100',
+
             'email' => 'required|email|max:255',
-            'phone2' => 'nullable|string|max:255',
+            'phone' => 'required|string|max:20',
 
-            // Guardian Info
-            'parents_name' => 'required|string|max:255',
-            'g_address' => 'required|string|max:255',
-            'g_mobile' => 'required|string|max:255',
-            'g_email' => 'nullable|email|max:255',
+            'special_request' => 'nullable|string|max:1000',
 
-            // Other Details
-            'preferred_country' => 'required|string|max:255',
-            'language_test' => 'required|string|max:255',
-            'test_type' => 'nullable|string|max:255',
-            'test_score' => 'nullable|string|max:255',
-            'preferred_education' => 'required|string|max:255',
-            'preferred_institution_name' => 'nullable|string|max:255',
-            'source' => 'required|array',
-            'message' => 'nullable|string',
-
-            // File Uploads
-            'images' => 'nullable|array',
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'add_ons' => 'nullable|array',
+            'add_ons.*' => 'string|max:100',
         ];
-        $validator = Validator::make($input, $rules);
-        if ($validator->fails()) {
-            // return redirect()->route("frontend.register")->withInput()->withErrors($validator);
-        } else {
-            // Convert the 'dob' field from dd-mm-yyyy to yyyy-mm-dd format
-            // $input['dob'] = Carbon::createFromFormat('d-m-Y', $input['dob'])->format('Y-m-d');
 
-            // Convert the source array to a JSON string
-            $input['source'] = json_encode($input['source']);
+        $validated = $request->validate($rules);
 
-            $enquiry = Enquiries::create($input);
-            if ($request->hasFile('images')) {
-                foreach ($request->file('images') as $image) {
-                    $path = $image->store('enquiry_document_images', 'public');
-                }
-            }
+        Booking::create($validated);
 
-            return redirect()->back()->with('success', 'Registration successful!');
-        }
+        return redirect()->back()->with('success', 'Booking successful!');
+        
     }
 }

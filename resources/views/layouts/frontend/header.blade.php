@@ -20,6 +20,8 @@
                     class="text-gray-600 hover:text-luxury-gold font-medium">Dining</a>
                 <a href="{{route('frontend.event')}}"
                     class="text-gray-600 hover:text-luxury-gold font-medium">Events</a>
+                <a href="{{route('frontend.gallery')}}"
+                    class="text-gray-600 hover:text-luxury-gold font-medium">Gallery</a>
                 <a href="{{ route('frontend.about') }}"
                     class="text-gray-600 hover:text-luxury-gold font-medium">About</a>
                 <a href="{{route('frontend.contact')}}"
@@ -27,9 +29,11 @@
             </nav>
             <!-- Buttons -->
             <div class="flex items-center space-x-4">
-                <button class="hidden sm:block bg-luxury-gold text-white px-6 py-2 rounded-full font-medium">
-                    Book Now
-                </button>
+                <a href="{{ route('frontend.register') }}">
+                    <button class="hidden sm:block bg-luxury-gold text-white px-6 py-2 rounded-full font-medium">
+                        Book Now
+                    </button>
+                </a>
                 <!-- Toggle Button -->
                 <button id="menuToggle" class="lg:hidden">
                     <i class="fas fa-bars text-2xl"></i>
@@ -43,6 +47,7 @@
             <a href="{{ route('frontend.amenities') }}" class="text-gray-800 font-medium">Amenities</a>
             <a href="{{route('frontend.dinning')}}" class="text-gray-800 font-medium">Dining</a>
             <a href="{{route('frontend.event')}}" class="text-gray-800 font-medium">Events</a>
+            <a href="{{route('frontend.gallery')}}" class="text-gray-800 font-medium">Gallery</a>
             <a href="{{ route('frontend.about') }}" class="text-gray-800 font-medium">About</a>
             <a href="{{route('frontend.contact')}}" class="text-gray-800 font-medium">Contact</a>
             <a href="{{ route('frontend.register') }}">
