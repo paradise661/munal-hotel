@@ -42,7 +42,7 @@ class CourseController extends Controller
             'title' => 'required|min:3',
         ];
 
-        $imagelist = ['image'];
+        $imagelist = ['image','image_1'];
 
         foreach ($imagelist as $image) {
             if ($request->$image != '') {
@@ -99,7 +99,7 @@ class CourseController extends Controller
             'title' => 'required|min:3',
         ];
 
-        $imagelist = ['image'];
+        $imagelist = ['image','image_1'];
 
         foreach ($imagelist as $image) {
             if ($request->$image != '') {
@@ -147,7 +147,7 @@ class CourseController extends Controller
     public function destroy(Course $course)
     {
         //
-        $imagelist = ['image'];
+        $imagelist = ['image','image_1'];
 
         foreach ($imagelist as $image) {
             if ($course->$image != '') {

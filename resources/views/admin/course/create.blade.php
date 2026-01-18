@@ -116,6 +116,15 @@
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
+                            <div class="mb-4 text-2xl">
+                                <label for="image_1" class="form-label">Image 1</label>
+                                <input class="form-control dropify" type="file" id="image_1" name="image_1"
+                                    value="{{ old('image_1') }}" data-default-file />
+
+                                @error('image_1')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                            </div>
 
                             <button type="submit text-center"
                                 class="btn btn-sm btn-primary mt-4 d-flex align-items-center justify-content-between"><i

@@ -121,6 +121,21 @@
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
+                            <div class="mb-4">
+                                <label for="image_1" class="form-label">Image 1</label>
+                                <input class="form-control dropify" type="file" id="image_1" name="image_1"
+                                    value="{{ old('image_1', ${$name}->image_1) }}"
+                                    data-default-file="{{ asset(${$name}->image_1) }}" />
+                                @error('image_1')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
+
+                                <div class="form-check form-switch form-switch-danger">
+                                    <input class="form-check-input custom-switch-red" type="checkbox" id="delete-image_1"
+                                        name="deleteimage_1" />
+                                    <label class="form-check-label" for="delete-image_1">Delete</label>
+                                </div>
+                            </div>
 
                             <button type="submit" class="btn btn-sm btn-primary mt-4">
                                 <i class='bx bx-refresh'></i>
