@@ -28,13 +28,13 @@
             <div>
                 <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
                 <ul class="space-y-3">
-                    <li><a href="#" class="text-gray-400 hover:text-luxury-gold transition-colors">About Us</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-luxury-gold transition-colors">Rooms &
+                    <li><a href="{{ route('frontend.about') }}" class="text-gray-400 hover:text-luxury-gold transition-colors">About Us</a></li>
+                    <li><a href="{{ route('frontend.rooms') }}" class="text-gray-400 hover:text-luxury-gold transition-colors">Rooms &
                             Suites</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-luxury-gold transition-colors">Dining</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-luxury-gold transition-colors">Spa &
-                            Wellness</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-luxury-gold transition-colors">Events</a></li>
+                    <li><a href="{{route('frontend.dinning')}}" class="text-gray-400 hover:text-luxury-gold transition-colors">Dining</a></li>
+                    {{-- <li><a href="#" class="text-gray-400 hover:text-luxury-gold transition-colors">Spa &
+                            Wellness</a></li> --}}
+                    <li><a href="{{route('frontend.event')}}" class="text-gray-400 hover:text-luxury-gold transition-colors">Events</a></li>
                 </ul>
             </div>
             <div>
