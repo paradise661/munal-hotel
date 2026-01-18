@@ -3,10 +3,11 @@
         <div class="flex items-center justify-between h-20">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-luxury-gold rounded-full flex items-center justify-center">
-                    <i class="fas fa-crown text-white text-lg"></i>
+                <div class="w-16 h-12 bg-luxury-gold rounded-full flex items-center justify-center">
+                    {{-- <i class="fas fa-crown text-white text-lg"></i> --}}
+                    <img src="{{ $settings['site_main_logo'] }}">
                 </div>
-                <span class="text-2xl font-playfair font-bold text-luxury-dark">Luxoria</span>
+                {{-- <span class="text-2xl font-playfair font-bold text-luxury-dark">Luxoria</span> --}}
             </div>
             <!-- Desktop Menu -->
             <nav class="hidden lg:flex items-center space-x-8">
@@ -15,11 +16,14 @@
                     class="text-gray-600 hover:text-luxury-gold font-medium">Rooms</a>
                 <a href="{{ route('frontend.amenities') }}"
                     class="text-gray-600 hover:text-luxury-gold font-medium">Amenities</a>
-                <a href="{{route('frontend.dinning')}}" class="text-gray-600 hover:text-luxury-gold font-medium">Dining</a>
-                <a href="{{route('frontend.event')}}" class="text-gray-600 hover:text-luxury-gold font-medium">Events</a>
+                <a href="{{route('frontend.dinning')}}"
+                    class="text-gray-600 hover:text-luxury-gold font-medium">Dining</a>
+                <a href="{{route('frontend.event')}}"
+                    class="text-gray-600 hover:text-luxury-gold font-medium">Events</a>
                 <a href="{{ route('frontend.about') }}"
                     class="text-gray-600 hover:text-luxury-gold font-medium">About</a>
-                <a href="{{route('frontend.contact')}}" class="text-gray-600 hover:text-luxury-gold font-medium">Contact</a>
+                <a href="{{route('frontend.contact')}}"
+                    class="text-gray-600 hover:text-luxury-gold font-medium">Contact</a>
             </nav>
             <!-- Buttons -->
             <div class="flex items-center space-x-4">
@@ -41,9 +45,11 @@
             <a href="{{route('frontend.event')}}" class="text-gray-800 font-medium">Events</a>
             <a href="{{ route('frontend.about') }}" class="text-gray-800 font-medium">About</a>
             <a href="{{route('frontend.contact')}}" class="text-gray-800 font-medium">Contact</a>
-            <button class="mt-4 bg-luxury-gold text-white py-2 rounded-full">
-                Book Now
-            </button>
+            <a href="{{ route('frontend.register') }}">
+                <button class="mt-4 bg-luxury-gold text-white py-2 rounded-full">
+                    Book Now
+                </button>
+            </a>
         </div>
     </div>
 </header>

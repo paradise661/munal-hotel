@@ -16,13 +16,14 @@ Route::name('frontend.')->group(
         Route::get('/blogs', [FrontendController::class, 'blog'])->name('blog');
         Route::get('/blogs/{slug}', [FrontendController::class, 'blogsingle'])->name('blogsingle');
         Route::get('/contact-us', [FrontendController::class, 'contact'])->name('contact');
-        Route::get('/student-registers', [FrontendController::class, 'stregister'])->name('register');
-        Route::post('/student-registers', [FrontendController::class, 'registerstudent'])->name('register.submit');
+        Route::get('/book-now', [FrontendController::class, 'stregister'])->name('register');
+        Route::post('/book-now', [FrontendController::class, 'registerstudent'])->name('register.submit');
 
         Route::get('/our-team', [FrontendController::class, 'team'])->name('team');
         Route::get('/gallery', [FrontendController::class, 'visagrantes'])->name('gallery');
         Route::get('/message-from-founder', [FrontendController::class, 'messagefromfounder'])->name('messagefromfounder');
         Route::get('/message-from-managing-director', [FrontendController::class, 'messagefromdirector'])->name('messagefromdirector');
+        
 
         Route::get('/interview-question', [FrontendController::class, 'interviewquestion'])->name('interviewquestion');
 

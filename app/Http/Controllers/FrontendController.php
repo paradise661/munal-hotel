@@ -61,12 +61,13 @@ class FrontendController extends Controller
         $universities = University::where('status', 1)->oldest("order")->get();
 
         $abroadstudies = Country::where('status', 1)->oldest("order")->get();
+        $rooms = Room::where('status',1)->oldest("order")->limit(3)->get();
        
 
         $faq_page = Page::where('status', 1)->where('slug', 'faq')->first();
         // $members = Member::where('status', 1)->oldest("order")->get();
 
-        return view('frontend.home.index', compact('sliders','faq_page',  'faq', 'abroadstudies', 'universities', 'courses', 'countries', 'blogs', 'services', 'about_us', 'why_choose_us', 'teams', 'testimonials'));
+        return view('frontend.home.index', compact('sliders','faq_page',  'faq', 'abroadstudies', 'universities', 'courses', 'countries', 'blogs', 'services', 'about_us', 'why_choose_us', 'teams', 'testimonials','rooms'));
     }
     public function about()
     {
@@ -282,7 +283,7 @@ class FrontendController extends Controller
     function stregister()
     {
         $register_banner = Page::where('status', 1)->where('slug', 'register')->first();
-        return view("frontend.register", compact('register_banner'));
+        return view("frontend.booknow.index", compact('register_banner'));
     }
     public function registerstudent(Request $request)
     {
