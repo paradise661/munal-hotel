@@ -106,20 +106,6 @@ class FrontendController extends Controller
         $popular_events = Event::where('status', 1)->take(5)->get();
         return view('frontend.event.show', compact('eventsingle', 'event_page','popular_events'));
     }
-    public function dinning()
-    {
-        $dinning_page = Page::where('status', 1)->where('slug', 'dinning')->first();
-        $dinning = WhyChooseUs::where('status', 1)->oldest("order")->get();
-
-        return view('frontend.dinning.index', compact('dinning_page', 'dinning'));
-    }
-    function dinningsingle($slug)
-    {
-        // $event_page = Page::where('status', 1)->where('slug', 'event')->first();
-        // $eventsingle = Event::where('slug', $slug)->where('status', 1)->first();
-        // $popular_events = Event::where('status', 1)->take(5)->get();
-        // return view('frontend.dinning.show', compact('eventsingle', 'event_page','popular_events'));
-    }
     function abroadstudies()
     {
         $abroad_page = Page::where('status', 1)->where('slug', 'abroad-studies')->first();
@@ -145,6 +131,7 @@ class FrontendController extends Controller
         $amenities = Course::get();
         $serenity_spa_wellness = Page::where('status', 1)->where('slug', 'serenity-spa-wellness')->first();
         $complete_amenities = Member::where('status', 1)->oldest("order")->get();
+
         return view('frontend.amenities.index', compact('amenities','complete_amenities', 'course_page','serenity_spa_wellness'));
     }
     function coursesingle($slug)
