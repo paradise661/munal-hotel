@@ -36,7 +36,6 @@
                 </button>
             </div>
         </div>
-
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden lg:hidden flex flex-col gap-4 py-6">
             <a href="#" class="text-gray-800 font-medium">Home</a>
@@ -45,8 +44,7 @@
             <a href="#" class="text-gray-800 font-medium">Dining</a>
             <a href="#" class="text-gray-800 font-medium">Events</a>
             <a href="{{ route('frontend.about') }}" class="text-gray-800 font-medium">About</a>
-            <a href="#" class="text-gray-800 font-medium">Contact</a>
-
+            <a href="{{route('frontend.contact')}}" class="text-gray-800 font-medium">Contact</a>
             <button class="mt-4 bg-luxury-gold text-white py-2 rounded-full">
                 Book Now
             </button>
