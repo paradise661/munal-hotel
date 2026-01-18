@@ -3,7 +3,7 @@
         <div class="flex items-center justify-between h-20">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
-                <div class="w-16 h-12 bg-luxury-gold rounded-full flex items-center justify-center">
+                <div class="w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center">
                     {{-- <i class="fas fa-crown text-white text-lg"></i> --}}
                     <img src="{{ $settings['site_main_logo'] }}">
                 </div>
