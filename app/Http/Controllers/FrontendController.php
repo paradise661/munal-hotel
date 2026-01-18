@@ -165,6 +165,20 @@ class FrontendController extends Controller
             return view("frontend.blog.show", compact('blogs', 'blogsingle', 'blog_page', 'abroadstudies'));
         }
     }
+    public function dinning()
+    {
+        $dinning_page = Page::where('status', 1)->where('slug', 'dinning')->first();
+        $dinning = WhyChooseUs::where('status', 1)->oldest("order")->get();
+
+        return view('frontend.dinning.index', compact('dinning_page', 'dinning'));
+    }
+    function dinningsingle($slug)
+    {
+        // $event_page = Page::where('status', 1)->where('slug', 'event')->first();
+        // $eventsingle = Event::where('slug', $slug)->where('status', 1)->first();
+        // $popular_events = Event::where('status', 1)->take(5)->get();
+        // return view('frontend.dinning.show', compact('eventsingle', 'event_page','popular_events'));
+    }
     public function page($slug)
     {
         $page = Page::where('slug', $slug)->first();
