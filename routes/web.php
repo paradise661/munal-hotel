@@ -12,6 +12,7 @@ use App\Http\Controllers\admin\GalleryController;
 use App\Http\Controllers\admin\MemberController;
 use App\Http\Controllers\admin\PageController;
 use App\Http\Controllers\admin\PopupController;
+use App\Http\Controllers\admin\RoomCategoryController;
 use App\Http\Controllers\admin\SEnquiriesController;
 use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\SettingsController;
@@ -81,6 +82,7 @@ Route::group(
         Route::resource('success', SuccessController::class);
         Route::resource('slider', SliderController::class);
         Route::resource('member',MemberController::class);
+        Route::resource('roomcategory',RoomCategoryController::class);
 
         Route::resource(name: 'enquiry', controller: SEnquiriesController::class);
         Route::get('/enquiry/{id}/pdf', [SEnquiriesController::class, 'generatePdf'])->name('enquiry.pdf');

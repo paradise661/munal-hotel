@@ -1,8 +1,8 @@
 @extends('layouts.admin.master')
 
 @php
-    $title = 'Rooms';
-    $name = 'country';
+    $title = 'Room category';
+    $name = 'roomcategory';
 @endphp
 
 @section('content')
@@ -69,51 +69,6 @@
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
-                            <div class="mb-4">
-                                <label for="room_category_id" class="form-label">Choose Category</label>
-                                <select name="room_category_id" id="room_category_id" class="form-control">
-                                    <option value="">-- Select Category --</option>
-                                    @foreach($categories as $category)
-                                        <option value="{{ $category->id }}" {{ (old('room_category_id', $country->room_category_id) == $category->id) ? 'selected' : '' }}>
-                                            {{ $category->title }}
-                                        </option>
-                                    @endforeach
-                                </select>
-
-                                @error('room_category_id')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
-                            </div>
-                            <div class="row">
-                                <div class="mb-4 col-md-4">
-                                    <label for="area" class="form-label">Area</label>
-                                    <input type="text" class="form-control" id="area" name="area" placeholder="Area"
-                                        value="{{ old('area', $country->area) }}" />
-                                    @error('area')
-                                        <p class="text-danger">{{ $message }}</p>
-                                    @enderror
-                                </div>
-
-                                <div class="mb-4 col-md-4">
-                                    <label for="max_guest" class="form-label">Max Guest</label>
-                                    <input type="number" class="form-control" id="max_guest" name="max_guest"
-                                        placeholder="Max Guest" value="{{ old('max_guest', $country->max_guest) }}" />
-                                    @error('max_guest')
-                                        <p class="text-danger">{{ $message }}</p>
-                                    @enderror
-                                </div>
-
-                                <div class="mb-4 col-md-4">
-                                    <label for="price" class="form-label">Pricing</label>
-                                    <input type="number" class="form-control" id="price" name="price" placeholder="Price"
-                                        value="{{ old('price', $country->price) }}" />
-                                    @error('price')
-                                        <p class="text-danger">{{ $message }}</p>
-                                    @enderror
-                                </div>
-                            </div>
-
-
                         </div>
 
                     </div>
@@ -137,13 +92,6 @@
                             </div>
                         </div>
                     </div>
-
-
-                    {{-- {{- <div class="card mt-4">
-                        <div class="card-body">
-                            @include('admin.country.additional_details.edit')
-                        </div>
-                    </div> -}} --}}
                 </div>
 
                 <div class="col-md-4">
@@ -174,32 +122,10 @@
                                 @enderror
                             </div>
 
-                            <div class="mb-4">
-                                <label for="image_1" class="form-label">Image 2</label>
-                                <input class="form-control dropify" type="file" id="image_1" name="image_1"
-                                    value="{{ old('image_1', ${$name}->image_1) }}"
-                                    data-default-file="{{ asset(${$name}->image_1) }}" />
-                                @error('image_1')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
-
-                                <div class="form-check form-switch form-switch-danger">
-                                    <input class="form-check-input custom-switch-red" type="checkbox" id="delete-image_1"
-                                        name="deleteimage_1" />
-                                    <label class="form-check-label" for="delete-image_1">Delete</label>
-                                </div>
-                            </div>
-
                             <button type="submit" class="btn btn-sm btn-primary mt-4">
                                 <i class='bx bx-refresh'></i>
                                 Update
                             </button>
-
-                            <a href="{{ route('university.index', ${$name}->id) }}" type="button"
-                                class="btn btn-sm btn-info mt-4">
-                                <i class='bx bxs-graduation'></i>
-                                University
-                            </a>
                         </div>
                     </div>
 

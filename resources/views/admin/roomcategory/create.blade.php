@@ -1,7 +1,7 @@
 @extends('layouts.admin.master')
 @php
-    $title = 'Rooms';
-    $name = 'country';
+    $title = 'Room category';
+    $name = 'roomcategory';
 @endphp
 
 @section('content')
@@ -67,55 +67,20 @@
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
-                            <div class="mb-4">
-                                <label for="room_category_id" class="form-label">Choose Category</label>
-                                <select name="room_category_id" id="room_category_id" class="form-control">
-                                    <option value="">-- Select Category --</option>
-                                    @foreach($categories as $category)
-                                        <option value="{{ $category->id }}" {{ old('room_category_id') == $category->id ? 'selected' : '' }}>
-                                            {{ $category->title }}
-                                        </option>
-                                    @endforeach
-                                </select>
-
-                                @error('room_category_id')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
-                            </div>
-                            <div class="row">
-                                <div class="mb-4 col-md-4">
-                                    <label for="area" class="form-label">Area</label>
-                                    <input type="text" class="form-control" id="area" name="area" placeholder="area"
-                                        value="{{ old('area') }}" />
-                                    @error('area')
-                                        <p class="text-danger">{{ $message }}</p>
-                                    @enderror
-                                </div>
-
-                                <div class="mb-4 col-md-4">
-                                    <label for="max_guest" class="form-label">Max Guest</label>
-                                    <input type="number" class="form-control" id="max_guest" name="max_guest"
-                                        placeholder="max_guest" value="{{ old('max_guest') }}" />
-                                    @error('max_guest')
-                                        <p class="text-danger">{{ $message }}</p>
-                                    @enderror
-                                </div>
-                                <div class="mb-4 col-md-4">
-                                    <label for="price" class="form-label">Pricing</label>
-                                    <input type="number" class="form-control" id="price" name="price" placeholder="price"
-                                        value="{{ old('price') }}" />
-                                    @error('price')
-                                        <p class="text-danger">{{ $message }}</p>
-                                    @enderror
-                                </div>
-                            </div>
-
-
-
-
                         </div>
                     </div>
-
+                    {{-- <div class="card mt-4">
+                        <div class="card-body">
+                            <div class="mb-4 text-2xl">
+                                <label for="image2" class="form-label">Image</label>
+                                <input class="form-control dropify" type="file" id="image2" name="image2"
+                                    value="{{ old('image2') }}" data-default-file />
+                                @error('image2')
+                                <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                            </div>
+                        </div>
+                    </div> --}}
                     <div class="card mt-4">
                         <div class="card-body">
                             <div class="mb-4 text-2xl">
@@ -129,19 +94,10 @@
                             </div>
                         </div>
                     </div>
-
-                    {{-- <div class="card mt-4">
-                        <div class="card-body">
-                            @include('admin.country.additional_details.create')
-                        </div>
-                    </div> --}}
                 </div>
-
                 <div class="col-md-4">
-
                     <div class="card">
                         <div class="card-body">
-
                             <div class="mb-4">
                                 <label for="status" class="form-label">status</label>
                                 <select id="status" name="status" class="form-select">
@@ -155,22 +111,11 @@
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
-
                             <div class="mb-4">
                                 <label for="order" class="form-label">Order</label>
                                 <input type="number" class="form-control" id="order" name="order" placeholder="1"
                                     value="{{ old('order') }}" />
                                 @error('order')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
-                            </div>
-
-                            <div class="mb-4 text-2xl">
-                                <label for="image_1" class="form-label">Image 2</label>
-                                <input class="form-control dropify" type="file" id="image_1" name="image_1"
-                                    value="{{ old('image_1') }}" data-default-file />
-
-                                @error('image_1')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
@@ -182,12 +127,10 @@
                             </button>
                         </div>
                     </div>
-
                     @include('admin.global.form.seo.create')
 
                 </div>
             </div>
-
         </form>
     </div>
 @endsection

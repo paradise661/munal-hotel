@@ -1,9 +1,8 @@
 @extends('layouts.admin.master')
 @php
-    $title = 'Rooms';
-    $name = 'country';
+    $title = 'Room category';
+    $name = 'roomcategory';
 @endphp
-
 @section('content')
     <div class="card mb-4">
         <div class="card-header d-flex justify-content-between align-items-center">
@@ -58,11 +57,6 @@
                                             class="btn btn-sm btn-icon btn-primary">
                                             <i class="tf-icons bx bx-edit text-white"></i>
                                         </a>
-
-                                        {{-- <a href="{{ route('course.index') }}" type="button" class="btn btn-sm btn-icon btn-info">
-                                            <i class="tf-icons bx bxs-graduation text-white"></i>
-                                        </a> --}}
-
                                         <form action="{{ route($name . '.destroy', ${$name}->id) }}" method="post" class="d-inline">
                                             @csrf
                                             @method('DELETE')
@@ -88,7 +82,6 @@
         @endif
     </div>
 @endsection
-
 @push('js')
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -99,9 +92,8 @@
             });
         });
     </script>
-
     <script>
-        $('.delete_country').click(function (e) {
+        $('.delete_course').click(function (e) {
             e.preventDefault();
 
             Swal.fire({

@@ -1,7 +1,7 @@
 <header id="header" class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
     <div class="max-w-7xl mx-auto px-6">
         <div class="flex items-center justify-between h-20">
-            
+
             <!-- Logo -->
             <div class="flex items-center space-x-2">
                 <div class="w-10 h-10 bg-luxury-gold rounded-full flex items-center justify-center">
@@ -13,11 +13,14 @@
             <!-- Desktop Menu -->
             <nav class="hidden lg:flex items-center space-x-8">
                 <a href="#" class="text-gray-800 hover:text-luxury-gold font-medium">Home</a>
-                <a href="#" class="text-gray-600 hover:text-luxury-gold font-medium">Rooms</a>
-                <a href="{{ route('frontend.amenities') }}" class="text-gray-600 hover:text-luxury-gold font-medium">Amenities</a>
+                <a href="{{ route('frontend.rooms') }}"
+                    class="text-gray-600 hover:text-luxury-gold font-medium">Rooms</a>
+                <a href="{{ route('frontend.amenities') }}"
+                    class="text-gray-600 hover:text-luxury-gold font-medium">Amenities</a>
                 <a href="#" class="text-gray-600 hover:text-luxury-gold font-medium">Dining</a>
                 <a href="#" class="text-gray-600 hover:text-luxury-gold font-medium">Events</a>
-                <a href="{{ route('frontend.about') }}" class="text-gray-600 hover:text-luxury-gold font-medium">About</a>
+                <a href="{{ route('frontend.about') }}"
+                    class="text-gray-600 hover:text-luxury-gold font-medium">About</a>
                 <a href="#" class="text-gray-600 hover:text-luxury-gold font-medium">Contact</a>
             </nav>
 
