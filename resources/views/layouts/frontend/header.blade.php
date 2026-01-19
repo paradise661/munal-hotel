@@ -1,9 +1,9 @@
-<header id="header" class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+<header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm" id="header">
     <div class="max-w-7xl mx-auto px-6">
         <div class="flex items-center justify-between h-20">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
-                <div class="w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center">
+                <div class="rounded-full flex items-center justify-center">
                     {{-- <i class="fas fa-crown text-white text-lg"></i> --}}
                     <img src="{{ $settings['site_main_logo'] }}">
                 </div>
@@ -11,21 +11,20 @@
             </div>
             <!-- Desktop Menu -->
             <nav class="hidden lg:flex items-center space-x-8">
-                <a href="{{route('frontend.home')}}" class="text-gray-800 hover:text-luxury-gold font-medium">Home</a>
-                <a href="{{ route('frontend.rooms') }}"
-                    class="text-gray-600 hover:text-luxury-gold font-medium">Rooms</a>
-                <a href="{{ route('frontend.amenities') }}"
-                    class="text-gray-600 hover:text-luxury-gold font-medium">Amenities</a>
-                <a href="{{route('frontend.dinning')}}"
-                    class="text-gray-600 hover:text-luxury-gold font-medium">Dining</a>
-                <a href="{{route('frontend.event')}}"
-                    class="text-gray-600 hover:text-luxury-gold font-medium">Events</a>
-                <a href="{{route('frontend.gallery')}}"
-                    class="text-gray-600 hover:text-luxury-gold font-medium">Gallery</a>
-                <a href="{{ route('frontend.about') }}"
-                    class="text-gray-600 hover:text-luxury-gold font-medium">About</a>
-                <a href="{{route('frontend.contact')}}"
-                    class="text-gray-600 hover:text-luxury-gold font-medium">Contact</a>
+                <a class="text-gray-800 hover:text-luxury-gold font-medium" href="{{ route('frontend.home') }}">Home</a>
+                <a class="text-gray-600 hover:text-luxury-gold font-medium"
+                    href="{{ route('frontend.rooms') }}">Rooms</a>
+                <a class="text-gray-600 hover:text-luxury-gold font-medium"
+                    href="{{ route('frontend.amenities') }}">Amenities</a>
+
+                <a class="text-gray-600 hover:text-luxury-gold font-medium"
+                    href="{{ route('frontend.event') }}">Events</a>
+                <a class="text-gray-600 hover:text-luxury-gold font-medium"
+                    href="{{ route('frontend.gallery') }}">Gallery</a>
+                <a class="text-gray-600 hover:text-luxury-gold font-medium"
+                    href="{{ route('frontend.about') }}">About</a>
+                <a class="text-gray-600 hover:text-luxury-gold font-medium"
+                    href="{{ route('frontend.contact') }}">Contact</a>
             </nav>
             <!-- Buttons -->
             <div class="flex items-center space-x-4">
@@ -35,21 +34,21 @@
                     </button>
                 </a>
                 <!-- Toggle Button -->
-                <button id="menuToggle" class="lg:hidden">
+                <button class="lg:hidden" id="menuToggle">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden lg:hidden flex flex-col gap-4 py-6">
-            <a href="{{route('frontend.home')}}" class="text-gray-800 font-medium">Home</a>
-            <a href="{{ route('frontend.rooms') }}" class="text-gray-800 font-medium">Rooms</a>
-            <a href="{{ route('frontend.amenities') }}" class="text-gray-800 font-medium">Amenities</a>
-            <a href="{{route('frontend.dinning')}}" class="text-gray-800 font-medium">Dining</a>
-            <a href="{{route('frontend.event')}}" class="text-gray-800 font-medium">Events</a>
-            <a href="{{route('frontend.gallery')}}" class="text-gray-800 font-medium">Gallery</a>
-            <a href="{{ route('frontend.about') }}" class="text-gray-800 font-medium">About</a>
-            <a href="{{route('frontend.contact')}}" class="text-gray-800 font-medium">Contact</a>
+        <div class="hidden lg:hidden flex flex-col gap-4 py-6" id="mobileMenu">
+            <a class="text-gray-800 font-medium" href="{{ route('frontend.home') }}">Home</a>
+            <a class="text-gray-800 font-medium" href="{{ route('frontend.rooms') }}">Rooms</a>
+            <a class="text-gray-800 font-medium" href="{{ route('frontend.amenities') }}">Amenities</a>
+            <a class="text-gray-800 font-medium" href="{{ route('frontend.dinning') }}">Dining</a>
+            <a class="text-gray-800 font-medium" href="{{ route('frontend.event') }}">Events</a>
+            <a class="text-gray-800 font-medium" href="{{ route('frontend.gallery') }}">Gallery</a>
+            <a class="text-gray-800 font-medium" href="{{ route('frontend.about') }}">About</a>
+            <a class="text-gray-800 font-medium" href="{{ route('frontend.contact') }}">Contact</a>
             <a href="{{ route('frontend.register') }}">
                 <button class="mt-4 bg-luxury-gold text-white py-2 rounded-full">
                     Book Now
