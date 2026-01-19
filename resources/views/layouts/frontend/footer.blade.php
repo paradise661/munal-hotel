@@ -28,50 +28,62 @@
             <div>
                 <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
                 <ul class="space-y-3">
-                    <li><a href="{{ route('frontend.about') }}" class="text-gray-400 hover:text-luxury-gold transition-colors">About Us</a></li>
-                    <li><a href="{{ route('frontend.rooms') }}" class="text-gray-400 hover:text-luxury-gold transition-colors">Rooms &
+                    <li><a href="{{ route('frontend.about') }}"
+                            class="text-gray-400 hover:text-luxury-gold transition-colors">About Us</a></li>
+                    <li><a href="{{ route('frontend.rooms') }}"
+                            class="text-gray-400 hover:text-luxury-gold transition-colors">Rooms &
                             Suites</a></li>
-                    <li><a href="{{route('frontend.dinning')}}" class="text-gray-400 hover:text-luxury-gold transition-colors">Dining</a></li>
+                    <li><a href="{{ route('frontend.dinning') }}"
+                            class="text-gray-400 hover:text-luxury-gold transition-colors">Dining</a></li>
                     {{-- <li><a href="#" class="text-gray-400 hover:text-luxury-gold transition-colors">Spa &
                             Wellness</a></li> --}}
-                    <li><a href="{{route('frontend.event')}}" class="text-gray-400 hover:text-luxury-gold transition-colors">Events</a></li>
+                    <li><a href="{{ route('frontend.event') }}"
+                            class="text-gray-400 hover:text-luxury-gold transition-colors">Events</a></li>
                 </ul>
             </div>
             <div>
                 <h3 class="text-lg font-semibold mb-6">Services</h3>
-                <ul class="space-y-3">
-                    <li><a href="#" class="text-gray-400 hover:text-luxury-gold transition-colors">Concierge</a>
-                    </li>
-                    <li><a href="#" class="text-gray-400 hover:text-luxury-gold transition-colors">Room Service</a>
-                    </li>
-                    <li><a href="#" class="text-gray-400 hover:text-luxury-gold transition-colors">Business
-                            Center</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-luxury-gold transition-colors">Valet Parking</a>
-                    </li>
-                    <li><a href="#" class="text-gray-400 hover:text-luxury-gold transition-colors">Airport
-                            Transfer</a></li>
-                </ul>
+
+                @if (!empty($footer_services) && $footer_services->count())
+                    <ul class="space-y-3">
+                        @foreach ($footer_services as $service)
+                            <li>
+                                <a href="{{ route('frontend.servicesingle', $service->slug) }}"
+                                    class="text-gray-400 hover:text-luxury-gold transition-colors">
+                                    {{ $service->title }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                @else
+                    <p class="text-gray-400 text-sm">No services available</p>
+                @endif
             </div>
+
             <div>
                 <h3 class="text-lg font-semibold mb-6">Contact Info</h3>
                 <div class="space-y-4">
                     <div class="flex items-start space-x-3">
                         <i class="fas fa-map-marker-alt text-luxury-gold mt-1"></i>
-                        <span class="text-gray-400">123 Luxury Avenue, Metropolitan City, MC 10001</span>
+                        <span class="text-gray-400">
+                            {{ $settings['contact_location'] ?? 'Adwait Marg, Bagbazar-28, Kathmandu, Nepal' }}
+                        </span>
                     </div>
                     <div class="flex items-center space-x-3">
                         <i class="fas fa-phone text-luxury-gold"></i>
-                        <span class="text-gray-400">+1 (555) 123-4567</span>
+                        <span class="text-gray-400"> 
+                            {{ $settings['contact_phone'] ?? '+977-1-5342055' }}</span>
                     </div>
                     <div class="flex items-center space-x-3">
                         <i class="fas fa-envelope text-luxury-gold"></i>
-                        <span class="text-gray-400">info@luxoria.com</span>
+                        <span class="text-gray-400"> 
+                             {{ $settings['contact_email'] ?? '' }}</span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="border-t border-gray-800 pt-8 text-center">
-            <p class="text-gray-400">&copy; 2024 Luxoria Hotel. All rights reserved.</p>
+            <p class="text-gray-400"> {{ $settings['site_copyright'] ?? '' }}</p>
         </div>
     </div>
 </footer>

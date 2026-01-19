@@ -10,32 +10,42 @@
 @endsection
 @extends('layouts.frontend.master')
 @section('content')
-    <section id="hero" class="relative h-[700px] flex items-center justify-center overflow-hidden">
+    <section id="hero"
+        class="relative min-h-[80vh] lg:h-[700px] flex items-start lg:items-center justify-center overflow-hidden">
+        <!-- Background -->
         <div class="absolute inset-0">
             <img class="w-full h-full object-cover" src="{{ asset($sliders->image) }}"
                 alt="{{ $sliders->title ?? 'Hero Image' }}">
-
-            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 bg-black/50"></div>
         </div>
-        <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-            <h1 class="text-6xl lg:text-7xl font-playfair font-bold mb-6">
+        <!-- Content -->
+        <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 lg:pt-0">
+
+            <!-- Title -->
+            <h1 class="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-playfair font-bold mb-4 sm:mb-6 leading-tight">
                 {!! $sliders->title !!}
             </h1>
-            <p class="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
+
+            <!-- Description -->
+            <p class="text-sm sm:text-base md:text-xl mb-6 sm:mb-8 text-gray-200 max-w-2xl mx-auto">
                 {!! $sliders->description !!}
             </p>
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-5xl mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <!-- Booking Form -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+
                     <div>
                         <label class="block text-sm font-medium mb-2">Check In</label>
                         <input type="date"
-                            class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300">
+                            class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white">
                     </div>
+
                     <div>
                         <label class="block text-sm font-medium mb-2">Check Out</label>
                         <input type="date"
-                            class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300">
+                            class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white">
                     </div>
+
                     <div>
                         <label class="block text-sm font-medium mb-2">Guests</label>
                         <select class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white">
@@ -45,12 +55,14 @@
                             <option>4+ Guests</option>
                         </select>
                     </div>
+
                     <div class="flex items-end">
                         <button
-                            class="w-full bg-luxury-gold text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+                            class="w-full bg-luxury-gold text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition">
                             Search Rooms
                         </button>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -256,7 +268,8 @@
     <section id="testimonials" class="py-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">What Our Guests <span class="text-luxury-gold">Say</span></h2>
+                <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">What Our Guests <span
+                        class="text-luxury-gold">Say</span></h2>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 @foreach ($testimonials as $testimonial)
