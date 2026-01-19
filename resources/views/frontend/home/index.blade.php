@@ -22,30 +22,27 @@
         <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 lg:pt-0">
 
             <!-- Title -->
-            <h1 class="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-playfair font-bold mb-4 sm:mb-6 leading-tight">
+            <h1 class="text-2xl sm:text-4xl  md:text-6xl lg:text-7xl font-playfair font-bold mb-4 sm:mb-6 leading-tight">
                 {!! $sliders->title !!}
             </h1>
 
             <!-- Description -->
-            <p class="text-sm sm:text-base md:text-xl mb-6 sm:mb-8 text-gray-200 max-w-2xl mx-auto">
+            <p class="text-sm sm:text-base md:text-xl mb-6 sm:mb-8 text-gray-200 max-w-2xl mx-auto ">
                 {!! $sliders->description !!}
             </p>
             <!-- Booking Form -->
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 max-w-5xl mx-auto">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 max-w-5xl mx-auto mt-3">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-
                     <div>
                         <label class="block text-sm font-medium mb-2">Check In</label>
                         <input type="date"
                             class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white">
                     </div>
-
                     <div>
                         <label class="block text-sm font-medium mb-2">Check Out</label>
                         <input type="date"
                             class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white">
                     </div>
-
                     <div>
                         <label class="block text-sm font-medium mb-2">Guests</label>
                         <select class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white">
@@ -55,14 +52,12 @@
                             <option class="text-[#cbab4e]">4+ Guests</option>
                         </select>
                     </div>
-
                     <div class="flex items-end">
                         <button
                             class="w-full bg-luxury-gold text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition">
                             Search Rooms
                         </button>
                     </div>
-
                 </div>
             </div>
         </div>
