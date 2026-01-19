@@ -143,8 +143,9 @@
                             <div class="flex items-center justify-between mb-4">
                                 <div class="flex items-center space-x-4 text-sm text-gray-500">
                                     {{-- <span><i class="fas fa-bed mr-1"></i> King Bed</span> --}}
-                                    <span><i class="fas fa-users mr-1"></i> {{ $room->max_guest }} Guests</span>
-                                    <span><i class="fas fa-expand mr-1"></i> {{ $room->area }}</span>
+                                    <span><i class="text-luxury-gold fas fa-users mr-1"></i> {{ $room->max_guest }}
+                                        Guests</span>
+                                    <span><i class="text-luxury-gold fas fa-expand mr-1"></i> {{ $room->area }}</span>
                                 </div>
                             </div>
                             <div class="flex items-center justify-between">
@@ -154,8 +155,8 @@
                                 </div> --}}
                                 <a class="w-full" href="{{ route('frontend.singleroom', $room->slug) }}">
                                     <button
-                                        class="w-full bg-luxury-dark text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-colors">
-                                        Book Now
+                                        class="w-full bg-luxury-gold text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-colors">
+                                        View Details
                                     </button>
                                 </a>
                             </div>

@@ -60,6 +60,7 @@
                                         View Details
                                     </button>
                                 </a>
+
                             </div>
 
                         </div>
