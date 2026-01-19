@@ -25,7 +25,6 @@
                         <thead>
                             <tr>
                                 <th>SN</th>
-                                <th>Icon</th>
                                 <th>Title</th>
                                 <th>Order</th>
                                 <th>Status</th>
@@ -38,7 +37,6 @@
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
 
-                                    <td>{{ ${$name}->featured_icon }}</td>
                                     <td>{{ ${$name}->title }}</td>
 
                                     <td>{{ ${$name}->order }}</td>
@@ -54,12 +52,10 @@
                                             class="btn btn-sm btn-icon btn-primary">
                                             <i class="tf-icons bx bx-edit text-white"></i>
                                         </a>
-                                        <form action="{{ route($name . '.destroy', ${$name}->id) }}" method="post"
-                                            class="d-inline">
+                                        <form action="{{ route($name . '.destroy', ${$name}->id) }}" method="post" class="d-inline">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit"
-                                                class="btn btn-sm btn-icon btn-danger delete_{{ $name }}">
+                                            <button type="submit" class="btn btn-sm btn-icon btn-danger delete_{{ $name }}">
                                                 <i class="tf-icons bx bx-trash text-white"></i>
                                             </button>
                                         </form>
@@ -84,7 +80,7 @@
 
 @push('js')
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             Fancybox.bind("[data-fancybox='images']", {
                 // Customize your FancyBox options here
                 infinite: true,
@@ -94,7 +90,7 @@
     </script>
 
     <script>
-        $('.delete_service').click(function(e) {
+        $('.delete_service').click(function (e) {
             e.preventDefault();
 
             Swal.fire({
