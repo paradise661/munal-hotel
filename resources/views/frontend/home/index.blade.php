@@ -303,9 +303,9 @@
     <section class="py-20 bg-luxury-dark" id="cta">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-5xl font-playfair font-bold text-white mb-6">Ready for Your <span
-                    class="text-luxury-gold">Luxury Escape?</span></h2>
+                    class="text-luxury-gold">Munal?</span></h2>
             <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your stay today and experience the epitome of luxury hospitality at Luxoria.
+                Book your stay today and experience the epitome of luxury hospitality at Munal Hotel.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center mt-3">
                 <a class="bg-luxury-gold text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors"
