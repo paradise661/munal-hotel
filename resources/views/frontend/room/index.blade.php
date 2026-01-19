@@ -41,7 +41,12 @@
                         <img class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" src="{{ $room->image }}" alt="luxury executive suite bedroom, elegant design, king bed, modern furniture, city view, sophisticated interior" />
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-playfair font-bold text-luxury-dark mb-2">{{ $room->title }}</h3>
+                        <h3 class="text-2xl font-playfair font-bold mb-3">
+                            <a href="{{ route('frontend.singleroom', $room->slug) }}"
+                               class="text-luxury-dark hover:text-luxury-gold transition-colors">
+                                {{ $room->title }}
+                            </a>
+                        </h3>
                         <div class="flex items-center space-x-4 text-sm text-gray-600 mb-4">
                             <span><i class="fas fa-ruler-combined text-luxury-gold mr-1"></i>{{ $room->area }}</span>
                             <span><i class="fas fa-users text-luxury-gold mr-1"></i>{{ $room->max_guest }} guests</span>

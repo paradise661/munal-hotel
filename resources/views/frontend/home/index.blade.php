@@ -142,7 +142,12 @@
 
                         </div>
                         <div class="p-6">
-                            <h3 class="text-2xl font-playfair font-bold text-luxury-dark mb-3">{{ $room->title }}</h3>
+                            <h3 class="text-2xl font-playfair font-bold mb-3">
+                                <a href="{{ route('frontend.singleroom', $room->slug) }}"
+                                   class="text-luxury-dark hover:text-luxury-gold transition-colors">
+                                    {{ $room->title }}
+                                </a>
+                            </h3>
                             <p class="text-gray-600 mb-4">{{ $room->short_description }}</p>
                             <div class="flex items-center justify-between mb-4">
                                 <div class="flex items-center space-x-4 text-sm text-gray-500">
