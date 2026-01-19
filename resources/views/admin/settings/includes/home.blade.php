@@ -25,50 +25,50 @@
             </li> --}}
 
             {{-- <li class="nav-item">
-                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
-                    data-bs-target="#universities" aria-controls="universities" aria-selected="false">
+                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#universities"
+                    aria-controls="universities" aria-selected="false">
                     Universities
                 </button>
             </li> --}}
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#countries"
                     aria-controls="countries" aria-selected="false">
                     Countries
                 </button>
-            </li>
+            </li> --}}
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#services"
                     aria-controls="services" aria-selected="false">
                     Services
                 </button>
-            </li>
+            </li> --}}
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#teams"
                     aria-controls="countries" aria-selected="false">
                     Teams
                 </button>
-            </li>
+            </li> --}}
 
             <li class="nav-item">
                 <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#courses"
                     aria-controls="countries" aria-selected="false">
-                    Courses
+                    Amenities
                 </button>
             </li>
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#blogs"
                     aria-controls="blogs" aria-selected="false">
                     Blogs
                 </button>
-            </li>
+            </li> --}}
 
             <li class="nav-item">
-                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
-                    data-bs-target="#testimonials" aria-controls="testimonials" aria-selected="false">
+                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#testimonials"
+                    aria-controls="testimonials" aria-selected="false">
                     Testimonials
                 </button>
             </li>
@@ -92,21 +92,21 @@
             {{-- @include('admin.settings.includes.home.universities') --}}
 
             {{-- Countries --}}
-            @include('admin.settings.includes.home.countries')
+            {{-- @include('admin.settings.includes.home.countries') --}}
 
 
             {{-- Services --}}
-            @include('admin.settings.includes.home.services')
+            {{-- @include('admin.settings.includes.home.services') --}}
 
             {{-- Teams --}}
-            @include('admin.settings.includes.home.teams')
+            {{-- @include('admin.settings.includes.home.teams') --}}
 
             {{-- Course --}}
             @include('admin.settings.includes.home.courses')
 
 
             {{-- Blogs --}}
-            @include('admin.settings.includes.home.blog')
+            {{-- @include('admin.settings.includes.home.blog') --}}
 
             {{-- Testimonials --}}
             @include('admin.settings.includes.home.testimonials')
