@@ -449,7 +449,7 @@ ul .dropdown-menu {
     transition: all 2s ease-in-out;
 }
 .btn1:hover{
-  background-color: red;
+  background-color: white;
 }
 .btn11{
   border-radius: 8px;
@@ -1544,7 +1544,7 @@ color: #1e8547;
 }
 
 .btn-modern:hover {
-  background: #1e8c44;
+  background: #d1b358;
   color: #fff;
 }
 /* MAIN CARD */
@@ -1569,7 +1569,7 @@ color: #1e8547;
 }
 
 .event-info-icon {
-  color: #26b054;
+  color: #d4af37;
   font-size: 22px;
   margin-bottom: 4px;
 }

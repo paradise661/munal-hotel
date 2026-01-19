@@ -11,19 +11,22 @@
 @endsection
 @extends('layouts.frontend.master')
 @section('content')
-<section id="hero-about" class="relative h-[500px] flex items-center justify-center overflow-hidden mt-20">
+<section id="amenities-hero" class="relative h-[600px] flex items-center overflow-hidden mt-20">
     <div class="absolute inset-0">
-        <img class="w-full h-full object-cover"
-            src="{{ asset($dinning_page->banner_image) }}"
-            alt="luxury hotel exterior facade with grand architecture, elegant entrance, manicured gardens, golden hour lighting" />
-        <div class="absolute inset-0 bg-black/50"></div>
+        <img class="w-full h-full object-cover" src="{{ asset( $dinning_page->banner_image) }}" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
     </div>
-    <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-        <h1 class="text-5xl lg:text-6xl font-playfair font-bold mb-6">
-            {{ $dinning_page->title ?? 'About Us' }}
+    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+        <div class="flex items-center space-x-2 text-white/80 mb-4">
+            <a href="#" class="hover:text-luxury-gold transition-colors">Home</a>
+            <i class="fas fa-chevron-right text-xs"></i>
+            <span class="text-white">{{ $dinning_page->title ?? 'About Us' }}</span>
+        </div>
+        <h1 class="text-5xl lg:text-6xl font-playfair font-bold text-white mb-6">
+          <span class="text-luxury-gold">{{ $dinning_page->short_description ?? 'About Us' }}</span>
         </h1>
-        <p class="text-xl text-gray-200 max-w-2xl mx-auto">
-            {{ $dinning_page->short_description ?? 'About Us' }}
+        <p class="text-xl text-white/90 max-w-2xl leading-relaxed">
+            {!! $dinning_page->description ?? 'About Us' !!}
         </p>
     </div>
 </section>
@@ -81,5 +84,4 @@
         </div>
     </div>
 </section>
-
 @endsection

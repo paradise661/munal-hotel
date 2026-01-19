@@ -1,12 +1,12 @@
 @section('seo')
     @include('frontend.seo', [
-    'name' => $settings['homepage_title'] ?? '',
-    'title' => $settings['homepage_seo_title'] ?? '',
-    'description' => $settings['home_seo_description'] ?? '',
-    'keyword' => $settings['homepage_seo_keywords'] ?? '',
-    'created_at' => '2024-04-26T08:09:15+00:00',
-    'updated_at' => '2024-04-26T10:54:05+00:00',
-])
+        'name' => $settings['homepage_title'] ?? '',
+        'title' => $settings['homepage_seo_title'] ?? '',
+        'description' => $settings['home_seo_description'] ?? '',
+        'keyword' => $settings['homepage_seo_keywords'] ?? '',
+        'created_at' => '2024-04-26T08:09:15+00:00',
+        'updated_at' => '2024-04-26T10:54:05+00:00',
+    ])
 @endsection
 @extends('layouts.frontend.master')
 @section('content')
@@ -20,12 +20,10 @@
         </div>
         <!-- Content -->
         <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 lg:pt-0">
-
             <!-- Title -->
             <h1 class="text-2xl sm:text-4xl  md:text-6xl lg:text-7xl font-playfair font-bold mb-4 sm:mb-6 leading-tight">
                 {!! $sliders->title !!}
             </h1>
-
             <!-- Description -->
             <p class="text-sm sm:text-base md:text-xl mb-6 sm:mb-8 text-gray-200 max-w-2xl mx-auto ">
                 {!! $sliders->description !!}
@@ -131,14 +129,13 @@
                     <div id="deluxe-suite"
                         class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                         <div class="relative h-64">
-                            <img class="w-full h-full object-cover"
-                                src="{{ $room->image }}"
+                            <img class="w-full h-full object-cover" src="{{ $room->image }}"
                                 alt="deluxe hotel suite bedroom with king bed, modern furniture, city view, elegant lighting" />
                         </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-playfair font-bold mb-3">
                                 <a href="{{ route('frontend.singleroom', $room->slug) }}"
-                                   class="text-luxury-dark hover:text-luxury-gold transition-colors">
+                                    class="text-luxury-dark hover:text-luxury-gold transition-colors">
                                     {{ $room->title }}
                                 </a>
                             </h3>
@@ -156,10 +153,10 @@
                                     <span class="text-gray-500">/night</span>
                                 </div>
                                 <a href="{{ route('frontend.singleroom', $room->slug) }}">
-                                <button
-                                    class="bg-luxury-dark text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition-colors">
-                                    Book Now
-                                </button>
+                                    <button
+                                        class="bg-luxury-dark text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition-colors">
+                                        Book Now
+                                    </button>
                                 </a>
                             </div>
                         </div>

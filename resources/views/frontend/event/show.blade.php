@@ -11,24 +11,23 @@
 @endsection
 @extends('layouts.frontend.master')
 @section('content')
-<section class="about-banner">
-    @if(!empty($event_page->banner_image))
-        <img src="{{ asset($event_page->banner_image) }}" alt="{{ $event_page->title ?? 'Blog Background' }}">
-    @else
-        <img src="{{ asset('frontend/assets/image/japan.jpg') }}" alt="Default Background">
-    @endif
-
-    <div class="banner-content">
-        <div class="banner-content-inner">
-            <h1>{{ $event_page->title ?? 'Blog' }}</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center">
-                    <li class="breadcrumb-item"><a href="{{ route('frontend.home') }}">Home</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('frontend.blog') }}">{{ $event_page->title ?? 'Blog' }}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{ $eventsingle->name ?? 'Blog Detail' }}</li>
-                </ol>
-            </nav>
+<section id="amenities-hero" class="relative h-[600px] flex items-center overflow-hidden mt-20">
+    <div class="absolute inset-0">
+        <img class="w-full h-full object-cover" src="{{ asset( $event_page->banner_image) }}" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+        <div class="flex items-center space-x-2 text-white/80 mb-4">
+            <a href="#" class="hover:text-luxury-gold transition-colors">Home</a>
+            <i class="fas fa-chevron-right text-xs"></i>
+            <span class="text-white">{{ $eventsingle->title ?? 'About Us' }}</span>
         </div>
+        <h1 class="text-5xl lg:text-6xl font-playfair font-bold text-white mb-6">
+          <span class="text-luxury-gold">{{ $event_page->short_description ?? 'About Us' }}</span>
+        </h1>
+        <p class="text-xl text-white/90 max-w-2xl leading-relaxed">
+            {!! $event_page->description ?? 'About Us' !!}
+        </p>
     </div>
 </section>
 <div class="container py-5">
@@ -58,47 +57,37 @@
                 <!-- Event Info -->
                 <div class="event-info-box rounded-4 shadow-sm p-4 mb-4">
                     <div class="row text-center gy-3">
-
                         <div class="col-6 col-md-3">
                             <i class="fas fa-calendar-alt event-info-icon"></i>
                             <p class="small mb-0">{{ $formattedDate }}</p>
                         </div>
-
                         <div class="col-6 col-md-3">
                             <i class="fas fa-clock event-info-icon"></i>
                             <p class="small mb-0">{{ $formattedTime }}</p>
                         </div>
-
                         <div class="col-6 col-md-3">
                             <i class="fas fa-map-marker-alt event-info-icon"></i>
                             <p class="small mb-0">{{ $eventsingle->location ?? 'N/A' }}</p>
                         </div>
-
                         <div class="col-6 col-md-3">
                             <i class="fas fa-info-circle event-info-icon"></i>
                             <span class="badge status-pill {{ $isExpired ? 'expired' : 'upcoming' }}">
                                 {{ $isExpired ? 'Expired' : 'Upcoming' }}
                             </span>
                         </div>
-
                     </div>
                 </div>
-
                 <!-- Description -->
                 <div class="event-description">
                     <p class="lead">{!! $eventsingle->description !!}</p>
                 </div>
-
             </div>
         </div>
-
         <!-- Sidebar -->
         <div class="col-lg-4" data-aos="fade-left" data-aos-duration="1500">
             <div class="sidebar sticky-sidebar">
-
                 <div class="recent-events-box bg-white rounded-4 shadow-sm p-4">
-                    <h4 class="sidebar-title text-center mb-4" style="color: #26b054;">Recent Events</h4>
-
+                    <h4 class="sidebar-title text-center mb-4" style="color: #d4af37;">Recent Events</h4>
                     <ul class="list-unstyled recent-list">
                         @foreach ($popular_events as $popular_posts)
                             <li class="recent-item d-flex mb-3">
@@ -114,13 +103,9 @@
                             </li>
                         @endforeach
                     </ul>
-
                 </div>
-
             </div>
         </div>
-
     </div>
 </div>
-
 @endsection    
