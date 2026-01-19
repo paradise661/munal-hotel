@@ -12,16 +12,16 @@
             <nav class="hidden lg:flex items-center space-x-8">
                 <a class="text-gray-800 hover:text-luxury-gold font-medium" href="{{ route('frontend.home') }}">Home</a>
                 <a class="text-gray-600 hover:text-luxury-gold font-medium"
+                    href="{{ route('frontend.about') }}">About</a>
+                <a class="text-gray-600 hover:text-luxury-gold font-medium"
                     href="{{ route('frontend.rooms') }}">Rooms</a>
                 <a class="text-gray-600 hover:text-luxury-gold font-medium"
                     href="{{ route('frontend.amenities') }}">Amenities</a>
-
                 <a class="text-gray-600 hover:text-luxury-gold font-medium"
                     href="{{ route('frontend.event') }}">Events</a>
                 <a class="text-gray-600 hover:text-luxury-gold font-medium"
                     href="{{ route('frontend.gallery') }}">Gallery</a>
-                <a class="text-gray-600 hover:text-luxury-gold font-medium"
-                    href="{{ route('frontend.about') }}">About</a>
+
                 <a class="text-gray-600 hover:text-luxury-gold font-medium"
                     href="{{ route('frontend.contact') }}">Contact</a>
             </nav>

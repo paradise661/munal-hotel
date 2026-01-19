@@ -11,7 +11,7 @@
 @endsection
 @extends('layouts.frontend.master')
 @section('content')
-    <section id="hero-about" class="relative h-[500px] flex items-center justify-center overflow-hidden mt-20">
+    <section class="relative h-[500px] flex items-center justify-center overflow-hidden mt-20" id="hero-about">
         <div class="absolute inset-0">
             <img class="w-full h-full object-cover"
                 src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7fc5e578e1-ab2b3369a2e5b31b82f9.png"
@@ -28,7 +28,7 @@
         </div>
     </section>
     {{-- About us section --}}
-    <section id="welcome" class="py-20 bg-luxury-cream">
+    <section class="py-20 bg-luxury-cream" id="welcome">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
@@ -80,14 +80,14 @@
             </div>
         </div>
     </section>
-    <section id="mission-vision" class="py-20 bg-luxury-cream">
+    <section class="py-20 bg-luxury-cream" id="mission-vision">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-playfair font-bold text-luxury-dark mb-6">Our Mission & <span
                         class="text-luxury-gold">Vision</span></h2>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div id="mission-card" class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="bg-white rounded-2xl p-8 shadow-lg" id="mission-card">
                     <div class="w-16 h-16 bg-luxury-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-bullseye text-luxury-gold text-2xl"></i>
                     </div>
@@ -97,7 +97,7 @@
                         {{ $our_mission->short_description }}
                     </p>
                 </div>
-                <div id="vision-card" class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="bg-white rounded-2xl p-8 shadow-lg" id="vision-card">
                     <div class="w-16 h-16 bg-luxury-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-eye text-luxury-gold text-2xl"></i>
                     </div>
@@ -111,7 +111,7 @@
         </div>
     </section>
     {{-- core value/service --}}
-    <section id="values" class="py-20">
+    <section class="py-20" id="values">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-playfair font-bold text-luxury-dark mb-6">Our Core <span
@@ -123,13 +123,13 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 @foreach ($services as $service)
-                    <div id="service-{{ $service->id }}"
-                        class="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
+                        id="service-{{ $service->id }}">
                         <!-- Image instead of icon -->
                         <div
                             class="w-16 h-16 bg-luxury-gold/10 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
-                            <img src="{{ asset($service->image) }}" alt="{{ $service->title }}"
-                                class="w-10 h-10 object-contain">
+                            <img class="w-10 h-10 object-contain" src="{{ asset($service->image) }}"
+                                alt="{{ $service->title }}">
                         </div>
                         <h3 class="text-xl font-semibold text-luxury-dark mb-3">
                             {{ $service->title }}
@@ -142,7 +142,7 @@
             </div>
         </div>
     </section>
-    <section id="leadership-team" class="py-20 bg-luxury-cream">
+    {{-- <section id="leadership-team" class="py-20 bg-luxury-cream">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-playfair font-bold text-luxury-dark mb-6">Our Leadership <span
@@ -260,8 +260,8 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section id="sustainability" class="py-20 bg-luxury-cream">
+    </section> --}}
+    <section class="py-20 bg-luxury-cream" id="sustainability">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
@@ -283,14 +283,13 @@
                     </button>
                 </div>
                 <div class="relative">
-                    <img class="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
-                        src="{{ asset($about_us->image_1) }}"
+                    <img class="w-full h-[400px] object-cover rounded-2xl shadow-2xl" src="{{ asset($about_us->image_1) }}"
                         alt="luxury hotel rooftop garden with solar panels, green plants, sustainable architecture, eco-friendly design" />
                 </div>
             </div>
         </div>
     </section>
-    <section id="cta-about" class="py-20 bg-luxury-dark">
+    <section class="py-20 bg-luxury-dark" id="cta-about">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-playfair font-bold text-white mb-6">Experience the <span
                     class="text-luxury-gold">Luxoria Difference</span></h2>

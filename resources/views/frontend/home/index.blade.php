@@ -307,15 +307,11 @@
             <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Book your stay today and experience the epitome of luxury hospitality at Luxoria.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                    class="bg-luxury-gold text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors">
-                    Book Your Stay
-                </button>
-                <button
-                    class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-luxury-dark transition-colors">
-                    View All Rooms
-                </button>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-3">
+                <a class="bg-luxury-gold text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors"
+                    href="{{ route('frontend.register') }}"> Book Your Stay</a>
+                <a class="bg-luxury-gold text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors"
+                    href="{{ route('frontend.rooms') }}"> View All Rooms</a>
             </div>
         </div>
     </section>

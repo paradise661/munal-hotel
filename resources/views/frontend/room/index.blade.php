@@ -33,7 +33,6 @@
     <section class="py-16" id="similar-rooms">
         <div class="max-w-7xl mx-auto px-6">
             {{-- <h2 class="text-3xl font-playfair font-bold text-luxury-dark text-center mb-12">Similar <span class="text-luxury-gold">Rooms</span></h2> --}}
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 @foreach ($rooms as $room)
                     <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow"

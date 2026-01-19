@@ -62,13 +62,13 @@ class FrontendController extends Controller
         $universities = University::where('status', 1)->oldest("order")->get();
 
         $abroadstudies = Country::where('status', 1)->oldest("order")->get();
-        $rooms = Room::where('status',1)->oldest("order")->limit(3)->get();
-       
+        $rooms = Room::where('status', 1)->oldest("order")->limit(6)->get();
+
 
         $faq_page = Page::where('status', 1)->where('slug', 'faq')->first();
         // $members = Member::where('status', 1)->oldest("order")->get();
 
-        return view('frontend.home.index', compact('sliders','faq_page',  'faq', 'abroadstudies', 'universities', 'courses', 'countries', 'blogs', 'services', 'about_us', 'why_choose_us', 'teams', 'testimonials','rooms'));
+        return view('frontend.home.index', compact('sliders', 'faq_page',  'faq', 'abroadstudies', 'universities', 'courses', 'countries', 'blogs', 'services', 'about_us', 'why_choose_us', 'teams', 'testimonials', 'rooms'));
     }
     public function about()
     {
@@ -81,7 +81,7 @@ class FrontendController extends Controller
         $teams = Team::where('status', 1)->oldest("order")->get();
         $objectives = Page::where('status', 1)->where('slug', 'objectives')->first();
         $services = Service::where('status', 1)->oldest("order")->get();
-        return view('frontend.about.index', compact('about_us','commitment','objectives','services','our_vision','our_mission', 'why_us', 'teams'));
+        return view('frontend.about.index', compact('about_us', 'commitment', 'objectives', 'services', 'our_vision', 'our_mission', 'why_us', 'teams'));
     }
     public function service()
     {
@@ -109,14 +109,14 @@ class FrontendController extends Controller
         $event_page = Page::where('status', 1)->where('slug', 'event')->first();
         $eventsingle = Event::where('slug', $slug)->where('status', 1)->first();
         $popular_events = Event::where('status', 1)->take(5)->get();
-        return view('frontend.event.show', compact('eventsingle', 'event_page','popular_events'));
+        return view('frontend.event.show', compact('eventsingle', 'event_page', 'popular_events'));
     }
     function abroadstudies()
     {
         $abroad_page = Page::where('status', 1)->where('slug', 'abroad-studies')->first();
         $abroadstudies = Country::where('status', 1)->oldest("order")->get();
-        $rooms = Room::where('status',1)->oldest('order')->get();
-        return view('frontend.room.index', compact('abroadstudies', 'abroad_page','rooms'));
+        $rooms = Room::where('status', 1)->oldest('order')->get();
+        return view('frontend.room.index', compact('abroadstudies', 'abroad_page', 'rooms'));
     }
     function abroadstudiesingle($slug)
     {
@@ -127,7 +127,6 @@ class FrontendController extends Controller
         if ($roomsingle) {
             $roomsingle->save();
             $rooms = Room::where('id', '!=', $roomsingle->id)->where('status', 1)->oldest("order")->limit(3)->get();
-
         }
         return view('frontend.room.show', compact('roomsingle', 'rooms', 'faq', 'abroad_page'));
     }
@@ -138,7 +137,7 @@ class FrontendController extends Controller
         $serenity_spa_wellness = Page::where('status', 1)->where('slug', 'serenity-spa-wellness')->first();
         $complete_amenities = Member::where('status', 1)->oldest("order")->get();
 
-        return view('frontend.amenities.index', compact('amenities','complete_amenities', 'course_page','serenity_spa_wellness'));
+        return view('frontend.amenities.index', compact('amenities', 'complete_amenities', 'course_page', 'serenity_spa_wellness'));
     }
     function coursesingle($slug)
     {
@@ -209,7 +208,7 @@ class FrontendController extends Controller
     function studentvoice()
     {
         $gallery_page = Page::where('status', 1)->where('slug', 'testimonial')->first();
-      
+
         return view('frontend.studentvoice', compact('gallery_page'));
     }
     function visagrantes()
@@ -221,7 +220,7 @@ class FrontendController extends Controller
             ->orderBy('order', 'asc')
             ->get();
         // dd($albums);
-        return view('frontend.gallery.index', compact('visagranted', 'gallery_page','albums'));
+        return view('frontend.gallery.index', compact('visagranted', 'gallery_page', 'albums'));
     }
     function messagefromfounder()
     {
@@ -233,13 +232,13 @@ class FrontendController extends Controller
     function messagefromdirector()
     {
         $message_page_director = Page::where('status', 1)->where('slug', 'message-from-director')->first();
-       
+
         return view('frontend.messagefromdirector', compact('message_page_director'));
     }
     function interviewquestion()
     {
         $interviewquestion = Page::where('status', 1)->where('slug', 'interview-questions')->first();
-       
+
         return view('frontend.interviewquestion', compact('interviewquestion'));
     }
     public function contact()
@@ -314,6 +313,5 @@ class FrontendController extends Controller
         Booking::create($validated);
 
         return redirect()->back()->with('success', 'Booking successful!');
-        
     }
 }
