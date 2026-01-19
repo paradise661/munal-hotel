@@ -10,8 +10,8 @@
 @endsection
 @extends('layouts.frontend.master')
 @section('content')
-    <section id="hero"
-        class="relative min-h-[80vh] lg:h-[700px] flex items-start lg:items-center justify-center overflow-hidden">
+    <section class="relative min-h-[80vh] lg:h-[700px] flex items-start lg:items-center justify-center overflow-hidden"
+        id="hero">
         <!-- Background -->
         <div class="absolute inset-0">
             <img class="w-full h-full object-cover" src="{{ asset($sliders->image) }}"
@@ -33,13 +33,13 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                     <div>
                         <label class="block text-sm font-medium mb-2">Check In</label>
-                        <input type="date"
-                            class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white">
+                        <input class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white"
+                            type="date">
                     </div>
                     <div>
                         <label class="block text-sm font-medium mb-2">Check Out</label>
-                        <input type="date"
-                            class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white">
+                        <input class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white"
+                            type="date">
                     </div>
                     <div>
                         <label class="block text-sm font-medium mb-2">Guests</label>
@@ -61,7 +61,7 @@
         </div>
     </section>
     {{-- About us section --}}
-    <section id="welcome" class="py-20 bg-luxury-cream">
+    <section class="py-20 bg-luxury-cream" id="welcome">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
@@ -114,7 +114,7 @@
         </div>
     </section>
     {{-- Room section --}}
-    <section id="rooms" class="py-20">
+    <section class="py-20" id="rooms">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">Our Signature <span
@@ -126,16 +126,16 @@
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 @foreach ($rooms as $room)
-                    <div id="deluxe-suite"
-                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                        id="deluxe-suite">
                         <div class="relative h-64">
                             <img class="w-full h-full object-cover" src="{{ $room->image }}"
                                 alt="deluxe hotel suite bedroom with king bed, modern furniture, city view, elegant lighting" />
                         </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-playfair font-bold mb-3">
-                                <a href="{{ route('frontend.singleroom', $room->slug) }}"
-                                    class="text-luxury-dark hover:text-luxury-gold transition-colors">
+                                <a class="text-luxury-dark hover:text-luxury-gold transition-colors"
+                                    href="{{ route('frontend.singleroom', $room->slug) }}">
                                     {{ $room->title }}
                                 </a>
                             </h3>
@@ -230,7 +230,7 @@
         </div>
     </section>
     {{-- service section --}}
-    <section id="amenities" class="py-20 bg-luxury-cream">
+    {{-- <section id="amenities" class="py-20 bg-luxury-cream">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">World-Class <span
@@ -259,9 +259,9 @@
                 @endforeach
             </div>
         </div>
-    </section>
+    </section> --}}
     {{-- testimonail section --}}
-    <section id="testimonials" class="py-20">
+    <section class="py-20 bg-luxury-cream" id="testimonials">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">What Our Guests <span
@@ -269,11 +269,11 @@
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 @foreach ($testimonials as $testimonial)
-                    <div id="testimonial-{{ $testimonial->id }}" class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg" id="testimonial-{{ $testimonial->id }}">
                         <!-- Profile -->
                         <div class="flex items-center mb-6">
-                            <img src="{{ asset($testimonial->image) }}" alt="{{ $testimonial->name }}"
-                                class="w-16 h-16 rounded-full mr-4 object-cover">
+                            <img class="w-16 h-16 rounded-full mr-4 object-cover" src="{{ asset($testimonial->image) }}"
+                                alt="{{ $testimonial->name }}">
                             <div>
                                 <h4 class="font-semibold text-luxury-dark">
                                     {{ $testimonial->name }}
@@ -299,7 +299,7 @@
             </div>
         </div>
     </section>
-    <section id="cta" class="py-20 bg-luxury-dark">
+    <section class="py-20 bg-luxury-dark" id="cta">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-5xl font-playfair font-bold text-white mb-6">Ready for Your <span
                     class="text-luxury-gold">Luxury Escape?</span></h2>
