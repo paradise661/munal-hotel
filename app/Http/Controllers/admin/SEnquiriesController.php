@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Models\Booking;
 use App\Models\DocumentImage;
 use App\Models\Enquiries;
 
@@ -17,7 +18,7 @@ class SEnquiriesController extends Controller
     public function index()
     {
         //
-        $enquirys = Enquiries::paginate(10);
+        $enquirys = Booking::paginate(10);
 
         return view('admin.enquiry.index', compact('enquirys'));
     }
@@ -118,16 +119,8 @@ class SEnquiriesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Enquiries $enquiry)
+    public function show(Booking $enquiry)
     {
-        //
-        // $enquiry = $enquiries;
-        if ($enquiry['source'] != null || $enquiry['source'] != '{}' || $enquiry['source'] != '') {
-            $enquiry['source'] = json_decode($enquiry['source']);
-        } else {
-            $enquiry['source'] = null;
-        }
-        // dd($enquiry['source']);
 
         return view('admin.enquiry.show', compact('enquiry'));
     }
@@ -141,23 +134,23 @@ class SEnquiriesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Enquiries $enquiry)
+    public function update(Request $request, Booking $enquiry)
     {
         //
         $input = $request->all();
         $enquiry->update($input);
 
-        return redirect()->back()->with('success', 'Student Enquiry Updated successfully.');
+        return redirect()->back()->with('success', 'Booking Updated successfully.');
     }
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Enquiries $enquiry)
+    public function destroy(Booking $enquiry)
     {
         //
         $enquiry->delete();
 
-        return redirect()->route('enquiry.index')->with('success', 'Student Enquiry Delete Successfully');
+        return redirect()->route('enquiry.index')->with('success', 'Booking Delete Successfully');
     }
     public function update_admin(Request $request, Enquiries $enquiry)
     {

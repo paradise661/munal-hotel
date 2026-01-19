@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,7 +9,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    {{-- <link rel="icon" type="image/png" sizes="56x56" href="{{ asset('frontend/assets/images/fav-icon/icon.png') }}"> --}}
+    {{--
+    <link rel="icon" type="image/png" sizes="56x56" href="{{ asset('frontend/assets/images/fav-icon/icon.png') }}"> --}}
     <link rel="icon" type="image/x-icon"
         href="{{ $settings['site_fav_icon'] ? asset($settings['site_fav_icon']) : 'Bright Mind Education Hub' }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -44,8 +46,7 @@
     <!-- responsive CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}" type="text/css">
     <!-- Coustom Animation CSS -->
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/coustom-animation.css') }}" type="text/css"
-        media="all">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/coustom-animation.css') }}" type="text/css" media="all">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/scroll-up.css') }}" type="text/css">
     <!-- modernizr js -->
     <script src="{{ asset('frontend/assets/js/vendor/modernizr-3.5.0.min.js') }}"></script>
@@ -88,6 +89,7 @@
     </script>
     @stack('css')
 </head>
+
 <body>
     @if (session('success'))
         <div aria-live="polite" aria-atomic="true" class="position-fixed top-0 end-0 p-3"
@@ -103,6 +105,19 @@
             </div>
         </div>
     @endif
+    @if (session('error'))
+        <div aria-live="polite" aria-atomic="true" class="position-fixed top-0 end-0 p-3" style="z-index:1055;">
+            <div class="toast align-items-center text-white bg-danger border-0 fade show" role="alert">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        {{ session('error') }}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                </div>
+            </div>
+        </div>
+    @endif
+
     <!-- loader -->
     {{-- <div class="loader-wrapper">
         <div class="loader"></div>
@@ -120,7 +135,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     @endpush
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const toastEl = document.querySelector('.toast');
             if (toastEl) {
                 const bsToast = new bootstrap.Toast(toastEl, {
@@ -160,7 +175,7 @@
         });
     </script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             new Swiper('.partner-swiper', {
                 slidesPerView: 1,
                 loop: true,

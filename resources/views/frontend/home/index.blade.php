@@ -1,12 +1,12 @@
 @section('seo')
     @include('frontend.seo', [
-        'name' => $settings['homepage_title'] ?? '',
-        'title' => $settings['homepage_seo_title'] ?? '',
-        'description' => $settings['home_seo_description'] ?? '',
-        'keyword' => $settings['homepage_seo_keywords'] ?? '',
-        'created_at' => '2024-04-26T08:09:15+00:00',
-        'updated_at' => '2024-04-26T10:54:05+00:00',
-    ])
+    'name' => $settings['homepage_title'] ?? '',
+    'title' => $settings['homepage_seo_title'] ?? '',
+    'description' => $settings['home_seo_description'] ?? '',
+    'keyword' => $settings['homepage_seo_keywords'] ?? '',
+    'created_at' => '2024-04-26T08:09:15+00:00',
+    'updated_at' => '2024-04-26T10:54:05+00:00',
+])
 @endsection
 @extends('layouts.frontend.master')
 @section('content')
@@ -132,41 +132,41 @@
                 </p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div id="deluxe-suite"
-                    class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <div class="relative h-64">
-                        <img class="w-full h-full object-cover"
-                            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/c4c415dc59-e9fab97a3d2d67cbf05d.png"
-                            alt="deluxe hotel suite bedroom with king bed, modern furniture, city view, elegant lighting" />
-                        <div
-                            class="absolute top-4 left-4 bg-luxury-gold text-white px-3 py-1 rounded-full text-sm font-medium">
-                            Most Popular
+                @foreach ($rooms as $room)
+                    <div id="deluxe-suite"
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="relative h-64">
+                            <img class="w-full h-full object-cover"
+                                src="{{ $room->image }}"
+                                alt="deluxe hotel suite bedroom with king bed, modern furniture, city view, elegant lighting" />
+
                         </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-playfair font-bold text-luxury-dark mb-3">Deluxe Suite</h3>
-                        <p class="text-gray-600 mb-4">Spacious suite with panoramic city views, marble bathroom, and
-                            premium amenities.</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span><i class="fas fa-bed mr-1"></i> King Bed</span>
-                                <span><i class="fas fa-users mr-1"></i> 2 Guests</span>
-                                <span><i class="fas fa-expand mr-1"></i> 45m²</span>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-playfair font-bold text-luxury-dark mb-3">{{ $room->title }}</h3>
+                            <p class="text-gray-600 mb-4">{{ $room->short_description }}</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                    {{-- <span><i class="fas fa-bed mr-1"></i> King Bed</span> --}}
+                                    <span><i class="fas fa-users mr-1"></i> {{ $room->max_guest }} Guests</span>
+                                    <span><i class="fas fa-expand mr-1"></i> {{ $room->area }}</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-3xl font-bold text-luxury-gold">Rs. {{ $room->price }}</span>
+                                    <span class="text-gray-500">/night</span>
+                                </div>
+                                <a href="{{ route('frontend.singleroom', $room->slug) }}">
+                                <button
+                                    class="bg-luxury-dark text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition-colors">
+                                    Book Now
+                                </button>
+                                </a>
                             </div>
                         </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-3xl font-bold text-luxury-gold">$299</span>
-                                <span class="text-gray-500">/night</span>
-                            </div>
-                            <button
-                                class="bg-luxury-dark text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition-colors">
-                                Book Now
-                            </button>
-                        </div>
                     </div>
-                </div>
-                <div id="executive-suite"
+                @endforeach
+                {{-- <div id="executive-suite"
                     class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                     <div class="relative h-64">
                         <img class="w-full h-full object-cover"
@@ -195,8 +195,8 @@
                             </button>
                         </div>
                     </div>
-                </div>
-                <div id="presidential-suite"
+                </div> --}}
+                {{-- <div id="presidential-suite"
                     class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                     <div class="relative h-64">
                         <img class="w-full h-full object-cover"
@@ -229,7 +229,7 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>

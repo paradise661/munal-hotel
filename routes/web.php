@@ -6,7 +6,7 @@ use App\Http\Controllers\admin\FaqController;
 use App\Http\Controllers\admin\BlogController;
 use App\Http\Controllers\admin\PageController;
 use App\Http\Controllers\admin\TeamController;
-use App\Http\Controllers\Admin\AlbumController;
+use App\Http\Controllers\admin\AlbumController;
 use App\Http\Controllers\admin\EventController;
 use App\Http\Controllers\admin\PopupController;
 use App\Http\Controllers\admin\BranchController;
