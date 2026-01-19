@@ -1,4 +1,5 @@
-<header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm" id="header">
+<header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm" id="header"
+    style="background-color: #f6f2d9">
     <div class="max-w-7xl mx-auto px-6">
         <div class="flex items-center justify-between h-20">
             <!-- Logo -->
