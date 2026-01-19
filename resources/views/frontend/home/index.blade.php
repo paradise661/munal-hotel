@@ -21,15 +21,15 @@
         <!-- Content -->
         <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 lg:pt-0">
             <!-- Title -->
-            <h1 class="text-2xl sm:text-4xl  md:text-6xl lg:text-7xl font-playfair font-bold mb-4 sm:mb-6 leading-tight">
+            {{-- <h1 class="text-2xl sm:text-4xl  md:text-6xl lg:text-7xl font-playfair font-bold mb-4 sm:mb-6 leading-tight">
                 {!! $sliders->title !!}
-            </h1>
+            </h1> --}}
             <!-- Description -->
-            <p class="text-sm sm:text-base md:text-xl mb-6 sm:mb-8 text-gray-200 max-w-2xl mx-auto ">
+            {{-- <p class="text-sm sm:text-base md:text-xl mb-6 sm:mb-8 text-gray-200 max-w-2xl mx-auto ">
                 {!! $sliders->description !!}
-            </p>
+            </p> --}}
             <!-- Booking Form -->
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 max-w-5xl mx-auto mt-3">
+            {{-- <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 max-w-5xl mx-auto mt-3">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                     <div>
                         <label class="block text-sm font-medium mb-2">Check In</label>
@@ -57,7 +57,7 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
     {{-- About us section --}}
@@ -148,13 +148,13 @@
                                 </div>
                             </div>
                             <div class="flex items-center justify-between">
-                                <div>
+                                {{-- <div>
                                     <span class="text-3xl font-bold text-luxury-gold">Rs. {{ $room->price }}</span>
                                     <span class="text-gray-500">/night</span>
-                                </div>
-                                <a href="{{ route('frontend.singleroom', $room->slug) }}">
+                                </div> --}}
+                                <a class="w-full" href="{{ route('frontend.singleroom', $room->slug) }}">
                                     <button
-                                        class="bg-luxury-dark text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition-colors">
+                                        class="w-full bg-luxury-dark text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-colors">
                                         Book Now
                                     </button>
                                 </a>
