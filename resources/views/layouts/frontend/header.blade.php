@@ -4,11 +4,9 @@
         <div class="flex items-center justify-between h-20">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
-                <div class="rounded-full flex items-center justify-center">
-                    {{-- <i class="fas fa-crown text-white text-lg"></i> --}}
-                    <img src="{{ $settings['site_main_logo'] }}" style="height: 60px">
-                </div>
-                {{-- <span class="text-2xl font-playfair font-bold text-luxury-dark">Luxoria</span> --}}
+                <a class="rounded-full flex items-center justify-center" href="{{ url('/') }}">
+                    <img src="{{ $settings['site_main_logo'] }}" style="height: 60px" alt="Site Logo">
+                </a>
             </div>
             <!-- Desktop Menu -->
             <nav class="hidden lg:flex items-center space-x-8">
