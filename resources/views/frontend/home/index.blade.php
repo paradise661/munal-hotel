@@ -49,10 +49,10 @@
                     <div>
                         <label class="block text-sm font-medium mb-2">Guests</label>
                         <select class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white">
-                            <option>1 Guest</option>
-                            <option>2 Guests</option>
-                            <option>3 Guests</option>
-                            <option>4+ Guests</option>
+                            <option class="text-[#cbab4e]">1 Guest</option>
+                            <option class="text-[#cbab4e]">2 Guests</option>
+                            <option class="text-[#cbab4e]">3 Guests</option>
+                            <option class="text-[#cbab4e]">4+ Guests</option>
                         </select>
                     </div>
 
@@ -139,7 +139,6 @@
                             <img class="w-full h-full object-cover"
                                 src="{{ $room->image }}"
                                 alt="deluxe hotel suite bedroom with king bed, modern furniture, city view, elegant lighting" />
-
                         </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-playfair font-bold mb-3">
