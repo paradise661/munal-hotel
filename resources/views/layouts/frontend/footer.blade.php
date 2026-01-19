@@ -2,14 +2,10 @@
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div>
-                <div class="flex items-center space-x-2 mb-6">
-                    <div class="w-10 h-10 bg-luxury-gold rounded-full flex items-center justify-center">
-                        <i class="fas fa-crown text-white text-lg"></i>
-                    </div>
-                    <span class="text-2xl font-playfair font-bold">Luxoria</span>
-                </div>
-                <p class="text-gray-400 mb-6">Experience unparalleled luxury and exceptional service at the world's
-                    finest hotel destination.</p>
+                     <img src="{{ $settings['site_main_logo'] }}" style="height: 100px"  alt="">
+                <p class="text-gray-400 mb-6">
+                    {{ $settings['site_information'] ?? 'Adwait Marg, Bagbazar-28, Kathmandu, Nepal' }}
+                </p>
                 <div class="flex space-x-4">
                     <a href="#"
                         class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors">
@@ -43,7 +39,6 @@
             </div>
             <div>
                 <h3 class="text-lg font-semibold mb-6">Services</h3>
-
                 @if (!empty($footer_services) && $footer_services->count())
                     <ul class="space-y-3">
                         @foreach ($footer_services as $service)
@@ -59,7 +54,6 @@
                     <p class="text-gray-400 text-sm">No services available</p>
                 @endif
             </div>
-
             <div>
                 <h3 class="text-lg font-semibold mb-6">Contact Info</h3>
                 <div class="space-y-4">
