@@ -52,14 +52,14 @@
                             <div class="flex items-center space-x-4 text-sm text-gray-600 ">
                                 <span><i class="fas fa-ruler-combined text-luxury-gold mr-1"></i>{{ $room->area }}</span>
                                 <span><i class="fas fa-users text-luxury-gold mr-1"></i>{{ $room->max_guest }} guests</span>
-
-                                <a href="{{ route('frontend.singleroom', $room->slug) }}">
+                            </div>
+                            <div class="flex items-center justify-between mt-3">
+                            <a class="w-full" href="{{ route('frontend.singleroom', $room->slug) }}">
                                     <button
-                                        class="bg-luxury-gold text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors">
+                                        class="w-full rounded-full bg-luxury-gold text-white px-4 py-3 font-medium hover:bg-opacity-90 transition-colors">
                                         View Details
                                     </button>
-                                </a>
-
+                            </a>
                             </div>
 
                         </div>
