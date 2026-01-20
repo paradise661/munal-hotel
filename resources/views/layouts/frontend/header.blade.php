@@ -43,7 +43,6 @@
             <a class="text-gray-800 font-medium" href="{{ route('frontend.home') }}">Home</a>
             <a class="text-gray-800 font-medium" href="{{ route('frontend.rooms') }}">Rooms</a>
             <a class="text-gray-800 font-medium" href="{{ route('frontend.amenities') }}">Amenities</a>
-            <a class="text-gray-800 font-medium" href="{{ route('frontend.dinning') }}">Dining</a>
             <a class="text-gray-800 font-medium" href="{{ route('frontend.event') }}">Events</a>
             <a class="text-gray-800 font-medium" href="{{ route('frontend.gallery') }}">Gallery</a>
             <a class="text-gray-800 font-medium" href="{{ route('frontend.about') }}">About</a>
