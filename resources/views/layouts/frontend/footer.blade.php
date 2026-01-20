@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div>
                 <img src="{{ $settings['site_footer_logo'] }}" alt="">
-                <p class="text-gray-400 mb-6">
+                <p class="text-gray-400 mb-6 mt-3">
                     {{ $settings['site_information'] ?? 'Adwait Marg, Bagbazar-28, Kathmandu, Nepal' }}
                 </p>
                 <div class="flex space-x-4 mt-4 mt-2">
