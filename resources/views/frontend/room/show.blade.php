@@ -49,34 +49,44 @@
             </div>
         </div>
     </section>
-
     <section class="py-12 bg-gray-50" id="room-gallery">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="col-span-2 row-span-2 h-[400px] overflow-hidden rounded-xl">
-                    <img class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                
+                <!-- Main Image -->
+                <div class="lg:col-span-2 h-[420px] relative overflow-hidden rounded-2xl group">
+                    <img
                         src="{{ $roomsingle->image }}"
-                        alt="luxury suite living room, elegant furniture, panoramic windows, modern design, golden accents, sophisticated interior" />
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        alt="Luxury room interior"
+                    />
+        
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+        
+                    <!-- Accent Border -->
+                    <div class="absolute inset-0 border border-white/20 rounded-2xl pointer-events-none"></div>
                 </div>
-                <div class="h-48 overflow-hidden rounded-xl">
-                    <img class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+        
+                <!-- Secondary Image -->
+                <div class="h-[420px] relative overflow-hidden rounded-2xl group">
+                    <img
                         src="{{ $roomsingle->image_1 }}"
-                        alt="luxury hotel bathroom, marble surfaces, rain shower, soaking tub, premium fixtures, spa-like ambiance" />
-                </div>{{--
-                    <div class="h-48 overflow-hidden rounded-xl">
-                        <img class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/493e9d46e5-d6c1b0c97a8b4f0c73a3.png" alt="luxury hotel dining area, elegant table setting, chandelier, modern chairs, sophisticated atmosphere" />
-                    </div>
-                    <div class="h-48 overflow-hidden rounded-xl">
-                        <img class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b429efeb62-550e4769fc15f4401ea4.png" alt="luxury hotel bedroom detail, plush bedding, decorative pillows, bedside lamps, elegant headboard" />
-                    </div>
-                    <div class="h-48 overflow-hidden rounded-xl">
-                        <img class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/667dbafe9c-fb1666cc13d163e4f1d7.png" alt="luxury hotel balcony view, outdoor seating, city skyline, evening atmosphere, elegant furniture" />
-                    </div> --}}
-
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        alt="Luxury bathroom"
+                    />
+        
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black/20"></div>
+        
+                    <!-- Accent Border -->
+                    <div class="absolute inset-0 border border-white/20 rounded-2xl pointer-events-none"></div>
+                </div>
+        
             </div>
         </div>
+        
     </section>
-
     <section class="py-16" id="room-overview">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -91,9 +101,6 @@
                     {!! $roomsingle->bathroom !!}
                 </div>
                 </div>
-
-
-
                 <div>
                     <div class="bg-luxury-cream rounded-2xl p-8 shadow-lg sticky top-32" id="booking-card">
                         <div class="space-y-4 mb-6">
@@ -129,7 +136,6 @@
                             class="w-full bg-luxury-gold text-white py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mb-4">
                             Reserve Now
                         </button>
-
                         <div class="text-center text-sm text-gray-600 mb-4">
                             <i class="fas fa-info-circle text-luxury-gold mr-1"></i>
                             Free cancellation within 24 hours
