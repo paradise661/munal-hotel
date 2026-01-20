@@ -34,10 +34,10 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl lg:text-4xl font-playfair font-bold text-luxury-dark mb-4">
-                    Signature <span class="text-luxury-gold">Experiences</span>
+                    Luxury <span class="text-luxury-gold">comforts</span>
                 </h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Indulge in our premium amenities crafted to provide exceptional experiences for our discerning guests
+                    The hotel’s luxury comforts ensure guests enjoy ultimate relaxation and convenience with every stay.
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -68,7 +68,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h2 class="text-3xl font-playfair font-bold text-luxury-dark mb-6">
-                        Serenity <span class="text-luxury-gold">Spa & Wellness</span>
+                        The place of <span class="text-luxury-gold">relaxation</span>
                     </h2>
                     <p class="text-lg text-gray-600 mb-6 leading-relaxed">
                         {{ $serenity_spa_wellness->short_description }}
