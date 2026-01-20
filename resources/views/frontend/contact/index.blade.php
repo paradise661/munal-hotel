@@ -21,7 +21,7 @@
         </div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
             <div class="flex items-center space-x-2 text-white/80 mb-4">
-                <a class="hover:text-luxury-gold transition-colors" href="#">Home</a>
+                <a class="hover:text-luxury-gold transition-colors" href="{{ route('frontend.home') }}">Home</a>
                 <i class="fas fa-chevron-right text-xs"></i>
                 <span class="text-white">{{ $contact_page->title ?? 'About Us' }}</span>
             </div>
@@ -77,7 +77,7 @@
                         Whether you have questions about our services, need assistance with bookings, or want to plan a
                         special event, our dedicated team is ready to help.
                     </p>
-                    <div class="space-y-6 mt-3">
+                    <div class="space-y-6 mt-5">
                         <div class="flex items-start space-x-3" id="response-time">
                             <div class="w-6 h-6 bg-luxury-gold rounded-full flex items-center justify-center mt-1">
                                 <i class="fas fa-clock text-white text-xs"></i>
@@ -165,9 +165,10 @@
             </div>
             <div class="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
                 <div class="text-center">
-                    <i class="fas fa-map-marked-alt text-4xl text-gray-400 mb-4"></i>
-                    <p class="text-gray-600 font-medium">Interactive Map</p>
-                    <p class="text-sm text-gray-500">123 Luxury Avenue, Downtown District</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4226.455375721654!2d85.30913797602172!3d27.71695942506652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb194c6c187511%3A0x90398cc153754317!2sParadise%20InfoTech%20-%20IT%20Company%20in%20Nepal!5e1!3m2!1sen!2snp!4v1768885307161!5m2!1sen!2snp"
+                        width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
