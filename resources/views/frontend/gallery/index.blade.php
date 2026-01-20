@@ -34,10 +34,10 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl lg:text-4xl font-playfair font-bold text-luxury-dark mb-4">
-                    Discover <span class="text-luxury-gold">Excellence</span>
+                    Experience <span class="text-luxury-gold">Munal Hotel</span>
                 </h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Browse through our collection showcasing the finest aspects of luxury hospitality
+                    Explore our gallery showcasing the elegance, comfort, and warm hospitality that define Munal Hotel.
                 </p>
             </div>
 
