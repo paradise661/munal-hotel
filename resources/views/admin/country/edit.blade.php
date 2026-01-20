@@ -112,6 +112,46 @@
                                     @enderror
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="mb-4 col-md-4">
+                                    <label for="view" class="form-label">View</label>
+                                    <input type="text" class="form-control" id="view" name="view" placeholder="view"
+                                        value="{{ old('view', $country->view) }}" />
+                                    @error('view')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
+                                </div>
+
+                                <div class="mb-4 col-md-4">
+                                    <label for="smoking" class="form-label">Smoking</label>
+                                    <input type="text" class="form-control" id="smoking" name="smoking"
+                                        placeholder="smoking" value="{{ old('smoking', $country->smoking) }}" />
+                                    @error('smoking')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="facilities" class="form-label">Facilities</label>
+                                <textarea class="form-control ckeditor1" id="facilities" name="facilities"
+                                    rows="10">{{ old('facilities', $country->facilities) }}</textarea>
+
+                                @error('facilities')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="bathroom" class="form-label">Bathroom</label>
+                                <textarea class="form-control ckeditor2" id="bathroom" name="bathroom"
+                                    rows="10">{{ old('bathroom', $country->bathroom) }}</textarea>
+
+                                @error('bathroom')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                            </div>
+
 
 
                         </div>
