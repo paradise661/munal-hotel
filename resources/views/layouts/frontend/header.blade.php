@@ -49,7 +49,7 @@
             <a class="text-gray-800 font-medium" href="{{ route('frontend.about') }}">About</a>
             <a class="text-gray-800 font-medium" href="{{ route('frontend.contact') }}">Contact</a>
             <a href="{{ route('frontend.register') }}">
-                <button class="mt-4 bg-luxury-gold text-white py-2 rounded-full">
+                <button class="mt-4 bg-luxury-gold text-white px-6 py-2  rounded-full">
                     Book Now
                 </button>
             </a>
