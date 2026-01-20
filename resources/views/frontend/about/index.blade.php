@@ -22,7 +22,7 @@
             <h1 class="text-5xl lg:text-6xl font-playfair font-bold mb-6">
                 Our <span class="text-luxury-gold">Story</span>
             </h1>
-            <p class="text-xl text-gray-200 max-w-2xl mx-auto">
+            <p class="text-white/90 max-w-2xl leading-relaxed">
                 {{ $about_us->short_description }}
             </p>
         </div>

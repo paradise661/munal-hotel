@@ -28,7 +28,7 @@
             <h1 class="text-5xl lg:text-6xl font-playfair font-bold text-white mb-6">
                 Get In <span class="text-luxury-gold">Touch</span>
             </h1>
-            <p class="text-xl text-white/90 max-w-2xl leading-relaxed">
+            <p class="text-white/90 max-w-2xl leading-relaxed">
                 We're here to assist you with reservations, inquiries, and creating unforgettable experiences
             </p>
         </div>
