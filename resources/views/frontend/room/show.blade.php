@@ -154,8 +154,7 @@
                                 </div>
                             </div> --}}
                     </div>
-
-                    <div class="bg-white rounded-2xl p-6 shadow-lg mt-6" id="contact-card">
+                    {{-- <div class="bg-white rounded-2xl p-6 shadow-lg mt-6" id="contact-card">
                         <h4 class="font-semibold text-luxury-dark mb-4">Need Assistance?</h4>
                         <div class="space-y-3 text-sm">
                             <div class="flex items-center space-x-3">
@@ -171,7 +170,7 @@
                             class="w-full mt-4 border-2 border-luxury-gold text-luxury-gold py-2 rounded-lg font-medium hover:bg-luxury-gold hover:text-white transition-colors">
                             Contact Concierge
                         </button>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

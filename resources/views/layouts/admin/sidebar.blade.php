@@ -12,11 +12,8 @@
             <i class="bx bx-chevron-left bx-sm align-middle"></i>
         </a>
     </div>
-
     <div class="menu-inner-shadow my-4"></div>
-
     <ul class="menu-inner py-4">
-
         <!-- Dashboard -->
         <li class="menu-item {{ Request::segment(2) == '' || Request::segment(2) == 'dashboard' ? 'active' : '' }}">
             <a class="menu-link" href="{{ route('admin.dashboard') }}">

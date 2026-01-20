@@ -47,9 +47,9 @@
                             src="{{ asset($amenity->image) }}" alt="{{ $amenity->title }}" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                            <div class="w-12 h-12 bg-luxury-gold rounded-full flex items-center justify-center mb-3">
+                            {{-- <div class="w-12 h-12 bg-luxury-gold rounded-full flex items-center justify-center mb-3">
                                 <img src="" alt="">
-                            </div>
+                            </div> --}}
                             <h3 class="text-xl font-playfair font-bold mb-2">
                                 {{ $amenity->title }}
                             </h3>
@@ -62,7 +62,6 @@
             </div>
         </div>
     </section>
-
     <section class="py-16" id="spa-details">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -98,7 +97,6 @@
             </div>
         </div>
     </section>
-
     <section class="py-20 bg-luxury-dark" id="cta-section">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-playfair font-bold text-white mb-6">
