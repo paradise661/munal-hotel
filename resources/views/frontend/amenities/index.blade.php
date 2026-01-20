@@ -25,7 +25,7 @@
             <h1 class="text-5xl lg:text-6xl font-playfair font-bold text-white mb-6">
                 <span class="text-luxury-gold">{{ $course_page->short_description ?? 'About Us' }}</span>
             </h1>
-            <p class="text-xl text-white/90 max-w-2xl leading-relaxed">
+            <p class="text-xl text-white max-w-2xl leading-relaxed">
                 {!! $course_page->description ?? 'About Us' !!}
             </p>
         </div>
@@ -74,14 +74,12 @@
                         {{ $serenity_spa_wellness->short_description }}
                     </p>
 
-                    <div class="space-y-4 mb-8">
+                    <div class="space-y-4 mb-8 mt-3">
                         {!! $serenity_spa_wellness->description !!}
                     </div>
 
-                    <button
-                        class="bg-luxury-gold text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
-                        Book Us
-                    </button>
+                    <a class="bg-luxury-gold text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                        href="{{ route('frontend.register') }}"> Book Us</a>
                 </div>
                 <div class="grid grid-cols-2 gap-4">
                     <div class="h-64 overflow-hidden rounded-xl">
