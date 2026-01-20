@@ -24,6 +24,10 @@ class Room extends Model
         'seo_schema',
         'meta_keywords',
         'meta_description',
+        'view',
+        'smoking',
+        'facilities',
+        'bathroom'
     ];
     public function category()
     {

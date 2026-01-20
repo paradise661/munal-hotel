@@ -1,13 +1,13 @@
 @section('seo')
     @include('frontend.seo', [
-        'name' => $roomsingle->seo_title ?? '',
-        'title' => $roomsingle->seo_title ?? $roomsingle->title,
-        'description' => $roomsingle->meta_description ?? '',
-        'keyword' => $roomsingle->meta_keywords ?? '',
-        'schema' => $roomsingle->seo_schema ?? '',
-        'created_at' => $roomsingle->created_at,
-        'updated_at' => $roomsingle->updated_at,
-    ])
+    'name' => $roomsingle->seo_title ?? '',
+    'title' => $roomsingle->seo_title ?? $roomsingle->title,
+    'description' => $roomsingle->meta_description ?? '',
+    'keyword' => $roomsingle->meta_keywords ?? '',
+    'schema' => $roomsingle->seo_schema ?? '',
+    'created_at' => $roomsingle->created_at,
+    'updated_at' => $roomsingle->updated_at,
+])
 @endsection
 @extends('layouts.frontend.master')
 @section('content')
@@ -38,14 +38,14 @@
                     <i class="fas fa-users text-luxury-gold"></i>
                     <span> {{ $roomsingle->max_guest }} guests</span>
                 </div>
-                {{-- <div class="flex items-center space-x-2">
-                            <i class="fas fa-bed text-luxury-gold"></i>
-                            <span>1 King Bed</span>
+                <div class="flex items-center space-x-2">
+                            <i class="fas fa-smoking text-luxury-gold"></i>
+                            <span>{{ $roomsingle->smoking }}</span>
                         </div>
                         <div class="flex items-center space-x-2">
                             <i class="fas fa-eye text-luxury-gold"></i>
-                            <span>City View</span>
-                        </div> --}}
+                            <span>{{ $roomsingle->view }}</span>
+                        </div>
             </div>
         </div>
     </section>
@@ -82,7 +82,17 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 <div class="lg:col-span-2">
                     {!! $roomsingle->description !!}
+                    <div class="mt-4">
+                        {{-- <h3 class="text-2xl font-playfair font-bold text-luxury-dark mb-3">Facilities <span class="text-luxury-gold"></span></h3> --}}
+                    {!! $roomsingle->facilities !!}
                 </div>
+                <div class="mt-4">
+                        {{-- <h3 class="text-2xl font-playfair font-bold text-luxury-dark mb-3">Bathroom <span class="text-luxury-gold"></span></h3> --}}
+                    {!! $roomsingle->bathroom !!}
+                </div>
+                </div>
+
+
 
                 <div>
                     <div class="bg-luxury-cream rounded-2xl p-8 shadow-lg sticky top-32" id="booking-card">
