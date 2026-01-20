@@ -2,11 +2,11 @@
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div>
-                <img src="{{ $settings['site_footer_logo'] }}" style="height: 100px" alt="">
+                <img src="{{ $settings['site_footer_logo'] }}" alt="">
                 <p class="text-gray-400 mb-6">
                     {{ $settings['site_information'] ?? 'Adwait Marg, Bagbazar-28, Kathmandu, Nepal' }}
                 </p>
-                <div class="flex space-x-4">
+                <div class="flex space-x-4 mt-4 mt-2">
                     <a class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors"
                         href="#">
                         <i class="fab fa-facebook-f"></i>
