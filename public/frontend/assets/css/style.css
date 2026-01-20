@@ -1650,6 +1650,13 @@ color: #1e8547;
     border-radius: 50%;
     transition: all 0.3s ease;
 }
+@media (max-width: 560px) {
+  .heroSwiper .swiper-button-next,
+    .heroSwiper .swiper-button-prev {
+          width: 40px;
+            height: 40px;
+    }
+}
 
 .heroSwiper .swiper-button-next:hover,
 .heroSwiper .swiper-button-prev:hover {

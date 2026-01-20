@@ -166,7 +166,7 @@
             <div class="rounded-2xl h-96 flex items-center justify-center">
                 <div class="text-center">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4226.455375721654!2d85.30913797602172!3d27.71695942506652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb194c6c187511%3A0x90398cc153754317!2sParadise%20InfoTech%20-%20IT%20Company%20in%20Nepal!5e1!3m2!1sen!2snp!4v1768885307161!5m2!1sen!2snp"
+                        src="{{ $settings['site_location_url'] }}"
                         width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>

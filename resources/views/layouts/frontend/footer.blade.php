@@ -7,18 +7,21 @@
                     {{ $settings['site_information'] ?? 'Adwait Marg, Bagbazar-28, Kathmandu, Nepal' }}
                 </p>
                 <div class="flex space-x-4 mt-4 mt-2">
-                    <a class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors"
-                        href="#">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors"
+                    @foreach ($socials as $social)
+                        <a class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors"
+                            href="{{ $social->link }}">
+                            <i class="{{ $social->icon }}"></i>
+                        </a>
+                    @endforeach
+                    {{-- <a
+                        class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors"
                         href="#">
                         <i class="fab fa-instagram"></i>
                     </a>
                     <a class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors"
                         href="#">
                         <i class="fab fa-twitter"></i>
-                    </a>
+                    </a> --}}
                 </div>
             </div>
             <div>
