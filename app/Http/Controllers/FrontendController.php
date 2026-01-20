@@ -113,10 +113,10 @@ class FrontendController extends Controller
     }
     function abroadstudies()
     {
-        $abroad_page = Page::where('status', 1)->where('slug', 'abroad-studies')->first();
+        $room_page = Page::where('status', 1)->where('slug', 'rooms')->first();
         $abroadstudies = Country::where('status', 1)->oldest("order")->get();
         $rooms = Room::where('status', 1)->oldest('order')->get();
-        return view('frontend.room.index', compact('abroadstudies', 'abroad_page', 'rooms'));
+        return view('frontend.room.index', compact('abroadstudies', 'room_page', 'rooms'));
     }
     function abroadstudiesingle($slug)
     {

@@ -30,7 +30,7 @@
             </p>
         </div>
     </section>
-    <section class="py-16" id="gallery-categories">
+    <section class="py-16 bg-luxury-cream" id="gallery-categories">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl lg:text-4xl font-playfair font-bold text-luxury-dark mb-4">
@@ -86,58 +86,6 @@
                 @endforeach
             </div>
 
-        </div>
-    </section>
-    <section class="py-16 bg-luxury-cream" id="featured-gallery">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-playfair font-bold text-luxury-dark mb-4">
-                    Featured <span class="text-luxury-gold">Moments</span>
-                </h2>
-                <p class="text-lg text-gray-600">Capturing the essence of luxury and elegance</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-                <div class="space-y-6">
-                    <div class="h-96 overflow-hidden rounded-2xl group cursor-pointer">
-                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ad0f2ecacc-7ba558b77bf49e92ef6c.png"
-                            alt="luxury hotel grand lobby entrance, marble columns, crystal chandelier, elegant reception area, sophisticated interior design" />
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="h-48 overflow-hidden rounded-xl group cursor-pointer">
-                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/fc662fdce6-bd4dd027f185e1d0e188.png"
-                                alt="luxury hotel business center, modern workspace, conference room, professional meeting environment" />
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-xl group cursor-pointer">
-                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/71ca3efcb9-c55572f1a398247bb24f.png"
-                                alt="luxury hotel fitness center, modern gym equipment, floor to ceiling windows, premium wellness facilities" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="space-y-6">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="h-48 overflow-hidden rounded-xl group cursor-pointer">
-                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/5149130331-a058dbc0c2dc3ccf4eaf.png"
-                                alt="luxury hotel garden terrace, outdoor seating area, landscaped gardens, peaceful environment" />
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-xl group cursor-pointer">
-                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b0a1e5090f-dc2aa1291fe37649f77b.png"
-                                alt="luxury hotel concierge desk, professional staff, elegant lobby service area, premium hospitality" />
-                        </div>
-                    </div>
-                    <div class="h-96 overflow-hidden rounded-2xl group cursor-pointer">
-                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8ad2163fb0-8a4d048de2aaf7831593.png"
-                            alt="luxury hotel private dining room, intimate setting, elegant table presentation, sophisticated atmosphere" />
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
