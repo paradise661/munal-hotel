@@ -13,7 +13,7 @@
 @section('content')
     <section class="relative h-[600px] flex items-center overflow-hidden mt-20" id="amenities-hero">
         <div class="absolute inset-0">
-            <img class="w-full h-full object-cover" src="{{ asset($abroaroom_paged_page->banner_image) }}" />
+            <img class="w-full h-full object-cover" src="{{ asset($room_page->banner_image) }}" />
             <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
         </div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
