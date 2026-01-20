@@ -32,7 +32,6 @@
 </section>
 <div class="container py-5">
     <div class="row">
-
         <!-- Main Content -->
         <div class="col-lg-8" data-aos="fade-right" data-aos-duration="1500">
             <div class="event-single-card shadow-sm bg-white rounded-4 p-4">
