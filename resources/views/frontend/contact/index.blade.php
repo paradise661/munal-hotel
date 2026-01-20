@@ -21,7 +21,7 @@
         </div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
             <div class="flex items-center space-x-2 text-white/80 mb-4">
-                <a class="hover:text-luxury-gold transition-colors" href="#">Home</a>
+                <a class="hover:text-luxury-gold transition-colors" href="{{ route('frontend.home') }}">Home</a>
                 <i class="fas fa-chevron-right text-xs"></i>
                 <span class="text-white">{{ $contact_page->title ?? 'About Us' }}</span>
             </div>

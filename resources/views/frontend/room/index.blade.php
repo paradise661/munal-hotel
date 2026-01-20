@@ -18,7 +18,7 @@
         </div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
             <div class="flex items-center space-x-2 text-white/80 mb-4">
-                <a class="hover:text-luxury-gold transition-colors" href="#">Home</a>
+                <a class="hover:text-luxury-gold transition-colors" href="{{ route('frontend.home') }}">Home</a>
                 <i class="fas fa-chevron-right text-xs"></i>
                 <span class="text-white">{{ $abroad_page->title ?? 'About Us' }}</span>
             </div>
@@ -54,12 +54,12 @@
                                 <span><i class="fas fa-users text-luxury-gold mr-1"></i>{{ $room->max_guest }} guests</span>
                             </div>
                             <div class="flex items-center justify-between mt-3">
-                            <a class="w-full" href="{{ route('frontend.singleroom', $room->slug) }}">
+                                <a class="w-full" href="{{ route('frontend.singleroom', $room->slug) }}">
                                     <button
                                         class="w-full rounded-full bg-luxury-gold text-white px-4 py-3 font-medium hover:bg-opacity-90 transition-colors">
                                         View Details
                                     </button>
-                            </a>
+                                </a>
                             </div>
 
                         </div>

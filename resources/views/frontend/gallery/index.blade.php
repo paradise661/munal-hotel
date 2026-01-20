@@ -18,7 +18,7 @@
         </div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
             <div class="flex items-center space-x-2 text-white/80 mb-4">
-                <a class="hover:text-luxury-gold transition-colors" href="#">Home</a>
+                <a class="hover:text-luxury-gold transition-colors" href="{{ route('frontend.home') }}">Home</a>
                 <i class="fas fa-chevron-right text-xs"></i>
                 <span class="text-white">{{ $gallery_page->title ?? 'About Us' }}</span>
             </div>
@@ -147,17 +147,15 @@
                 Create Your Own <span class="text-luxury-gold">Memories</span>
             </h2>
             <p class="text-xl text-white/80 mb-8">
-                Book your stay at Luxoria and become part of our gallery of unforgettable experiences
+                Book your stay at Munal and become part of our gallery of unforgettable experiences
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                    class="bg-luxury-gold text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-colors">
-                    Book Your Stay
-                </button>
-                <button
-                    class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-luxury-dark transition-colors">
-                    Contact Us
-                </button>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-4">
+                <a class="bg-luxury-gold text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-colors"
+                    href="{{ route('frontend.register') }}"> Book Your Stay</a>
+                <a class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-luxury-dark transition-colors"
+                    href="{{ route('frontend.contact') }}">Contact
+                    Us</a>
+
             </div>
         </div>
     </section>
