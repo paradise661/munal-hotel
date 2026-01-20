@@ -10,56 +10,70 @@
 @endsection
 @extends('layouts.frontend.master')
 @section('content')
-    <section class="relative min-h-[80vh] lg:h-[700px] flex items-start lg:items-center justify-center overflow-hidden"
-        id="hero">
-        <!-- Background -->
-        <div class="absolute inset-0">
-            <img class="w-full h-full object-cover" src="{{ asset($sliders->image) }}"
-                alt="{{ $sliders->title ?? 'Hero Image' }}">
-            <div class="absolute inset-0 bg-black/50"></div>
-        </div>
-        <!-- Content -->
-        <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 lg:pt-0">
-            <!-- Title -->
-            {{-- <h1 class="text-2xl sm:text-4xl  md:text-6xl lg:text-7xl font-playfair font-bold mb-4 sm:mb-6 leading-tight">
-                {!! $sliders->title !!}
-            </h1> --}}
-            <!-- Description -->
-            {{-- <p class="text-sm sm:text-base md:text-xl mb-6 sm:mb-8 text-gray-200 max-w-2xl mx-auto ">
-                {!! $sliders->description !!}
-            </p> --}}
-            <!-- Booking Form -->
-            {{-- <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 max-w-5xl mx-auto mt-3">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Check In</label>
-                        <input class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white"
-                            type="date">
+    <section id="hero" class="relative min-h-[80vh] lg:h-[700px] overflow-hidden">
+        <div class="swiper heroSwiper h-full">
+            <div class="swiper-wrapper">
+                @foreach ($sliders as $slider)
+                    <div class="swiper-slide relative h-full flex items-start lg:items-center justify-center">
+                        <!-- Background -->
+                        <div class="absolute inset-0">
+                            <img class="w-full h-full object-cover" src="{{ asset($slider->image) }}"
+                                alt="{{ $slider->title ?? 'Hero Image' }}">
+                            <div class="absolute inset-0 bg-black/50"></div>
+                        </div>
+                        <!-- Content -->
+                        <div
+                            class="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 lg:pt-0">
+                            <h1
+                                class="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-playfair font-bold mb-4 sm:mb-6 leading-tight">
+                                {!! $slider->title !!}
+                            </h1>
+                            <p class="text-sm sm:text-base md:text-xl mb-6 sm:mb-8 text-gray-200 max-w-2xl mx-auto">
+                                {!! $slider->description !!}
+                            </p>
+                            <!-- Booking Form (same for all slides) -->
+                            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 max-w-5xl mx-auto mt-3">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2">Check In</label>
+                                        <input type="date"
+                                            class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2">Check Out</label>
+                                        <input type="date"
+                                            class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2">Guests</label>
+                                        <select
+                                            class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white">
+                                            <option class="text-[#cbab4e]">1 Guest</option>
+                                            <option class="text-[#cbab4e]">2 Guests</option>
+                                            <option class="text-[#cbab4e]">3 Guests</option>
+                                            <option class="text-[#cbab4e]">4+ Guests</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex items-end">
+                                        <button
+                                            class="w-full bg-luxury-gold text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition">
+                                            Search Rooms
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Check Out</label>
-                        <input class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white"
-                            type="date">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Guests</label>
-                        <select class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white">
-                            <option class="text-[#cbab4e]">1 Guest</option>
-                            <option class="text-[#cbab4e]">2 Guests</option>
-                            <option class="text-[#cbab4e]">3 Guests</option>
-                            <option class="text-[#cbab4e]">4+ Guests</option>
-                        </select>
-                    </div>
-                    <div class="flex items-end">
-                        <button
-                            class="w-full bg-luxury-gold text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition">
-                            Search Rooms
-                        </button>
-                    </div>
-                </div>
-            </div> --}}
+                @endforeach
+            </div>
+
+            <!-- Optional controls -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
+
     {{-- About us section --}}
     <section class="py-20 bg-luxury-cream" id="welcome">
         <div class="max-w-7xl mx-auto px-6">
@@ -315,4 +329,24 @@
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        new Swiper(".heroSwiper", {
+            loop: true,
+            speed: 1200,
+            effect: "fade",
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 @endsection

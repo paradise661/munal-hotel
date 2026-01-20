@@ -1640,3 +1640,36 @@ color: #1e8547;
 .contacts-title{
   color:#25b053 ;
 }
+/* Navigation arrows */
+.heroSwiper .swiper-button-next,
+.heroSwiper .swiper-button-prev {
+    width: 52px;
+    height: 52px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.heroSwiper .swiper-button-next:hover,
+.heroSwiper .swiper-button-prev:hover {
+    background: rgba(0, 0, 0, 0.75);
+    transform: scale(1.1);
+}
+
+/* Arrow icon */
+.heroSwiper .swiper-button-next::after,
+.heroSwiper .swiper-button-prev::after {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Position tweak */
+.heroSwiper .swiper-button-prev {
+    left: 30px;
+}
+
+.heroSwiper .swiper-button-next {
+    right: 30px;
+}
