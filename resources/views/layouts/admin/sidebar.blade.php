@@ -1,14 +1,14 @@
-<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-    <div class="app-brand demo my-4">
+<aside class="layout-menu menu-vertical menu bg-menu-theme" id="layout-menu">
+    <div class="app-brand demo">
         <span class="app-brand-logo demo" style="display: tableblock; width: 100%; margin: auto 2rem;">
-            <a href="{{ route('admin.dashboard') }}" class="app-brand-link">
+            <a class="app-brand-link" href="{{ route('admin.dashboard') }}">
                 <img src="{{ $settings['site_main_logo'] ? asset($settings['site_main_logo']) : asset('admin/default/img/logo.png') }}"
                     width="120px" alt="Munal Hotel">
             </a>
         </span>
         {{-- <span class="app-brand-text demo menu-text fw-bolder ms-2">Paradise</span> --}}
 
-        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+        <a class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none" href="javascript:void(0);">
             <i class="bx bx-chevron-left bx-sm align-middle"></i>
         </a>
     </div>
@@ -19,7 +19,7 @@
 
         <!-- Dashboard -->
         <li class="menu-item {{ Request::segment(2) == '' || Request::segment(2) == 'dashboard' ? 'active' : '' }}">
-            <a href="{{ route('admin.dashboard') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('admin.dashboard') }}">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div>Dashboard</div>
             </a>
@@ -27,13 +27,12 @@
 
         <li
             class="menu-item {{ Request::segment(2) == 'inquiry' || Request::segment(2) == 'contactinquiry' ? 'active' : '' }} ">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <a class="menu-link menu-toggle" href="javascript:void(0);">
                 <i class="menu-icon tf-icons bx bx-support"></i>
                 <div data-i18n="Layouts">Inquries</div>
             </a>
 
             <ul class="menu-sub ">
-
 
                 {{-- <li class="menu-item {{ Request::segment(2) == 'inquiry' ? 'active' : '' }}">
                     <a href="{{ route('inquiry.index') }}" class="menu-link">
@@ -42,7 +41,7 @@
                 </li> --}}
 
                 <li class="menu-item {{ Request::segment(2) == 'contactinquiry' ? 'active' : '' }}">
-                    <a href="{{ route('contactinquiry.index') }}" class="menu-link">
+                    <a class="menu-link" href="{{ route('contactinquiry.index') }}">
                         <div>Contact Inquiries</div>
                     </a>
                 </li>
@@ -54,7 +53,7 @@
                 </li> --}}
             </ul>
         <li class="menu-item {{ Request::segment(2) == 'enquiry' ? 'active' : '' }}">
-            <a href="{{ route('enquiry.index') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('enquiry.index') }}">
                 <i class='menu-icon tf-icons bx bx-question-mark'></i>
                 Students Enquiry
             </a>
@@ -65,19 +64,19 @@
             <span class="menu-header-text"> <i class="ri-admin-line"></i> Cms</span>
         </li>
         <li class="menu-item {{ Request::segment(2) == 'country' ? 'active' : '' }}">
-            <a href="{{ route('country.index') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('country.index') }}">
                 <i class="menu-icon tf-icons bx bx-globe-alt"></i>
                 <div>Rooms</div>
             </a>
         </li>
         <li class="menu-item {{ Request::segment(2) == 'roomcategory' ? 'active' : '' }}">
-            <a href="{{ route('roomcategory.index') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('roomcategory.index') }}">
                 <i class="menu-icon tf-icons bx bx-book"></i>
                 <div>Room Category</div>
             </a>
         </li>
         <li class="menu-item {{ Request::segment(2) == 'course' ? 'active' : '' }}">
-            <a href="{{ route('course.index') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('course.index') }}">
                 <i class="menu-icon tf-icons bx bx-book"></i>
                 <div>Amenities</div>
             </a>
@@ -95,7 +94,7 @@
             </a>
         </li> --}}
         <li class="menu-item {{ Request::segment(2) == 'blog' ? 'active' : '' }}">
-            <a href="{{ route('blog.index') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('blog.index') }}">
                 <i class="menu-icon tf-icons bx bx-news"></i>
                 <div>Blogs</div>
             </a>
@@ -108,25 +107,25 @@
             </a>
         </li> --}}
         <li class="menu-item {{ Request::segment(2) == 'album' ? 'active' : '' }}">
-            <a href="{{ route('album.index') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('album.index') }}">
                 <i class="menu-icon tf-icons bx bx-star"></i>
                 <div>Album</div>
             </a>
         </li>
         <li class="menu-item {{ Request::segment(2) == 'page' ? 'active' : '' }}">
-            <a href="{{ route('page.index') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('page.index') }}">
                 <i class="menu-icon tf-icons bx bx-copy-alt"></i>
                 <div>Pages</div>
             </a>
         </li>
         <li class="menu-item {{ Request::segment(2) == 'team' ? 'active' : '' }}">
-            <a href="{{ route('team.index') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('team.index') }}">
                 <i class="menu-icon tf-icons bx bx-group"></i>
                 <div>Teams</div>
             </a>
         </li>
         <li class="menu-item {{ Request::segment(2) == 'service' ? 'active' : '' }}">
-            <a href="{{ route('service.index') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('service.index') }}">
                 <i class="menu-icon tf-icons bx bx-server"></i>
                 <div>Services</div>
             </a>
@@ -139,40 +138,40 @@
         </li> --}}
 
         <li class="menu-item {{ Request::segment(2) == 'slider' ? 'active' : '' }}">
-            <a href="{{ route('slider.index') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('slider.index') }}">
                 <i class="menu-icon tf-icons bx bx-slider"></i>
                 <div>Sliders</div>
             </a>
         </li>
 
         <li class="menu-item {{ Request::segment(2) == 'faq' ? 'active' : '' }}">
-            <a href="{{ route('faq.index') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('faq.index') }}">
                 <i class="menu-icon tf-icons bx bx-help-circle"></i>
                 <div>Faqs</div>
             </a>
         </li>
 
         <li class="menu-item {{ Request::segment(2) == 'testimonial' ? 'active' : '' }}">
-            <a href="{{ route('testimonial.index') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('testimonial.index') }}">
                 <i class="menu-icon tf-icons bx bx-message-dots"></i>
                 <div>Testimonials</div>
             </a>
         </li>
 
         <li class="menu-item {{ Request::segment(2) == 'whychooseus' ? 'active' : '' }}">
-            <a href="{{ route('whychooseus.index') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('whychooseus.index') }}">
                 <i class='menu-icon tf-icons bx bx-question-mark'></i>
                 Dinning
             </a>
         </li>
         <li class="menu-item {{ Request::segment(2) == 'event' ? 'active' : '' }}">
-            <a href="{{ route('event.index') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('event.index') }}">
                 <i class="menu-icon tf-icons bx bx-slider"></i>
                 <div>Event</div>
             </a>
         </li>
         <li class="menu-item {{ Request::segment(2) == 'member' ? 'active' : '' }}">
-            <a href="{{ route('member.index') }}" class="menu-link">
+            <a class="menu-link" href="{{ route('member.index') }}">
                 <i class="menu-icon tf-icons bx bx-user"></i>
 
                 <div>Member</div>
@@ -189,14 +188,14 @@
 
         <li
             class="menu-item {{ Request::segment(2) == 'payment' || Request::segment(2) == 'social' || Request::segment(2) == 'popup' || Request::segment(2) == 'setting' ? 'active' : '' }} ">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <a class="menu-link menu-toggle" href="javascript:void(0);">
                 <i class="menu-icon tf-icons bx bx-cog"></i>
                 <div data-i18n="Layouts">Settings</div>
             </a>
 
             <ul class="menu-sub">
                 <li class="menu-item {{ Request::segment(2) == 'setting' ? 'active' : '' }}">
-                    <a href="{{ route('admin.setting.index') }}" class="menu-link">
+                    <a class="menu-link" href="{{ route('admin.setting.index') }}">
                         <div>Global Settings</div>
                     </a>
                 </li>
@@ -208,13 +207,13 @@
                 </li> --}}
 
                 <li class="menu-item {{ Request::segment(2) == 'popup' ? 'active' : '' }}">
-                    <a href="{{ route('popup.index') }}" class="menu-link">
+                    <a class="menu-link" href="{{ route('popup.index') }}">
                         <div>PopUps</div>
                     </a>
                 </li>
 
                 <li class="menu-item {{ Request::segment(2) == 'social' ? 'active' : '' }}">
-                    <a href="{{ route('social.index') }}" class="menu-link">
+                    <a class="menu-link" href="{{ route('social.index') }}">
                         <div>Social Medias</div>
                     </a>
                 </li>
