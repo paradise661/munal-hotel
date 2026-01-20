@@ -194,13 +194,10 @@
             'error': 'Ooops, something wrong happened.'
         }; */
     </script>
-
     <!-- Main JS -->
     <script src="{{ asset('admin/assets/js/main.js') }}"></script>
-
     <!-- CkEditor-->
     <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/super-build/ckeditor.js"></script>
-
     <script>
         // let table = new DataTable('#myTable');
         ckeditor("ckeditor");

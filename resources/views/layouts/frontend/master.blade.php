@@ -89,7 +89,6 @@
     </script>
     @stack('css')
 </head>
-
 <body>
     @if (session('success'))
         <div aria-live="polite" aria-atomic="true" class="position-fixed top-0 end-0 p-3"
@@ -117,7 +116,6 @@
             </div>
         </div>
     @endif
-
     <!-- loader -->
     {{-- <div class="loader-wrapper">
         <div class="loader"></div>
@@ -151,7 +149,7 @@
             spaceBetween: 10, // Default for small screens
             loop: true,
             autoplay: {
-                delay: 2100,
+                delay: 1100,
             },
             // Responsive breakpoints
             breakpoints: {
@@ -190,6 +188,4 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
-
-
 </html>
