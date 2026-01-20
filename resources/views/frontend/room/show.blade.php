@@ -52,7 +52,7 @@
     <section class="py-12 bg-gray-50" id="room-gallery">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                
+
                 <!-- Main Image -->
                 <div class="lg:col-span-2 h-[420px] relative overflow-hidden rounded-2xl group">
                     <img
@@ -60,14 +60,14 @@
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         alt="Luxury room interior"
                     />
-        
+
                     <!-- Overlay -->
                     <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-        
+
                     <!-- Accent Border -->
                     <div class="absolute inset-0 border border-white/20 rounded-2xl pointer-events-none"></div>
                 </div>
-        
+
                 <!-- Secondary Image -->
                 <div class="h-[420px] relative overflow-hidden rounded-2xl group">
                     <img
@@ -75,17 +75,17 @@
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         alt="Luxury bathroom"
                     />
-        
+
                     <!-- Overlay -->
                     <div class="absolute inset-0 bg-black/20"></div>
-        
+
                     <!-- Accent Border -->
                     <div class="absolute inset-0 border border-white/20 rounded-2xl pointer-events-none"></div>
                 </div>
-        
+
             </div>
         </div>
-        
+
     </section>
     <section class="py-16" id="room-overview">
         <div class="max-w-7xl mx-auto px-6">
@@ -163,11 +163,11 @@
                         <div class="space-y-3 text-sm">
                             <div class="flex items-center space-x-3">
                                 <i class="fas fa-phone text-luxury-gold"></i>
-                                <span class="text-gray-700">+1 (555) 123-4567</span>
+                                <span class="text-gray-700">{{ $settings['contact_phone'] }}</span>
                             </div>
                             <div class="flex items-center space-x-3">
                                 <i class="fas fa-envelope text-luxury-gold"></i>
-                                <span class="text-gray-700">reservations@luxoria.com</span>
+                                <span class="text-gray-700">{{ $settings['contact_email'] }}</span>
                             </div>
                         </div>
                         <button
