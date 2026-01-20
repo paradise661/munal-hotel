@@ -177,7 +177,7 @@
         </div>
     </section>
 
-    <section class="py-16 bg-gray-50" id="room-features">
+    {{-- <section class="py-16 bg-gray-50" id="room-features">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-3xl font-playfair font-bold text-luxury-dark text-center mb-12">Exclusive <span
                     class="text-luxury-gold">Features</span></h2>
@@ -216,7 +216,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section class="py-16 bg-luxury-cream" id="similar-rooms">
         <div class="max-w-7xl mx-auto px-6">
@@ -241,13 +241,13 @@
                                     guests</span>
                             </div>
                             <div class="flex items-center justify-between">
-                                <div>
+                                {{-- <div>
                                     <span class="text-2xl font-bold text-luxury-dark">Rs. {{ $room->price }}</span>
                                     <span class="text-gray-600">/night</span>
-                                </div>
-                                <a href="{{ route('frontend.singleroom', $room->slug) }}">
+                                </div> --}}
+                                <a class="w-full" href="{{ route('frontend.singleroom', $room->slug) }}">
                                     <button
-                                        class="bg-luxury-gold text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors">
+                                        class="w-full bg-luxury-gold text-white px-4 py-3 rounded-full font-medium hover:bg-opacity-90 transition-colors">
                                         View Details
                                     </button>
                                 </a>

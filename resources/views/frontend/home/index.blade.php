@@ -1,16 +1,16 @@
 @section('seo')
     @include('frontend.seo', [
-        'name' => $settings['homepage_title'] ?? '',
-        'title' => $settings['homepage_seo_title'] ?? '',
-        'description' => $settings['home_seo_description'] ?? '',
-        'keyword' => $settings['homepage_seo_keywords'] ?? '',
-        'created_at' => '2024-04-26T08:09:15+00:00',
-        'updated_at' => '2024-04-26T10:54:05+00:00',
-    ])
+    'name' => $settings['homepage_title'] ?? '',
+    'title' => $settings['homepage_seo_title'] ?? '',
+    'description' => $settings['home_seo_description'] ?? '',
+    'keyword' => $settings['homepage_seo_keywords'] ?? '',
+    'created_at' => '2024-04-26T08:09:15+00:00',
+    'updated_at' => '2024-04-26T10:54:05+00:00',
+])
 @endsection
 @extends('layouts.frontend.master')
 @section('content')
-    <section class="relative min-h-[80vh] lg:h-[700px] overflow-hidden" id="hero">
+    <section class="relative min-h-[80vh] lg:h-[700px] overflow-hidden" id="hero" style="display: contents;">
         <div class="swiper heroSwiper h-full">
             <div class="swiper-wrapper">
                 @foreach ($sliders as $slider)
