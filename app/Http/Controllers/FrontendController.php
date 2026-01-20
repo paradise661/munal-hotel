@@ -34,7 +34,7 @@ class FrontendController extends Controller
     //
     public function home()
     {
-        $sliders = Slider::where('status', 1)->oldest("order")->first();
+        $sliders = Slider::where('status', 1)->oldest("order")->get();
         $about_us = Page::where('status', 1)->where('slug', 'about-us')->first();
         $why_choose_us = WhyChooseUs::where('status', 1)->first();
         $teams = Team::where('status', 1)->oldest("order")->get();

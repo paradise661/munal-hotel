@@ -82,7 +82,6 @@
                 <div>Amenities</div>
             </a>
         </li>
-
         <li class="menu-item {{ Request::segment(2) == 'branch' ? 'active' : '' }}">
             <a class="menu-link" href="{{ route('branch.index') }}">
                 <i class="menu-icon tf-icons bx bx-buildings"></i>
