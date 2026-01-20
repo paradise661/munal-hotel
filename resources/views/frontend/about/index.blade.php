@@ -111,38 +111,7 @@
             </div>
         </div>
     </section>
-    {{-- core value/service --}}
-    <section class="py-20" id="values">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-playfair font-bold text-luxury-dark mb-6">Our Core <span
-                        class="text-luxury-gold">Values</span></h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    These fundamental principles guide every aspect of our service and define who we are as a luxury
-                    hospitality brand.
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                @foreach ($services as $service)
-                    <div class="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
-                        id="service-{{ $service->id }}">
-                        <!-- Image instead of icon -->
-                        <div
-                            class="w-16 h-16 bg-luxury-gold/10 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
-                            <img class="w-10 h-10 object-contain" src="{{ asset($service->image) }}"
-                                alt="{{ $service->title }}">
-                        </div>
-                        <h3 class="text-xl font-semibold text-luxury-dark mb-3">
-                            {{ $service->title }}
-                        </h3>
-                        <p class="text-gray-600 line-clamp-3">
-                            {!! $service->description !!}
-                        </p>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
+
     {{-- <section id="leadership-team" class="py-20 bg-luxury-cream">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">

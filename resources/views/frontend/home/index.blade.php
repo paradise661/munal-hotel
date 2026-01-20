@@ -261,7 +261,7 @@
                         <div class="flex mb-4">
                             @for ($i = 1; $i <= 5; $i++)
                                 <i
-                                    class="fas fa-star {{ $i <= $testimonial->rating ? 'text-luxury-gold' : 'text-gray-300' }}"></i>
+                                    class="fas fa-star {{ $i <= $testimonial->rating ? 'text-luxury-gold' : 'text-luxury-gold' }}"></i>
                             @endfor
                         </div>
                         <!-- Message -->
