@@ -104,8 +104,8 @@
                                 <i class="fas fa-award text-white"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-luxury-dark">World's Best Hotel</div>
-                                <div class="text-sm text-gray-600">Travel Awards 2024</div>
+                                <div class="font-semibold text-luxury-dark">Your choice for</div>
+                                <div class="text-sm text-gray-600">comfortable stay</div>
                             </div>
                         </div>
                     </div>
@@ -117,11 +117,11 @@
     <section class="py-20" id="rooms">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">Our Signature <span
-                        class="text-luxury-gold">Suites</span></h2>
+                <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">Our Collection of <span
+                        class="text-luxury-gold">Dynamic Rooms</span></h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Each suite is meticulously designed to provide an unforgettable experience with breathtaking views
-                    and world-class amenities.
+                    Each suite is thoughtfully crafted to deliver an unforgettable stay, featuring breathtaking views and
+                    exceptional, world-class amenities.
                 </p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -302,7 +302,7 @@
     </section>
     <section class="py-20 bg-luxury-dark" id="cta">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-5xl font-playfair font-bold text-white mb-6">Ready for Your <span
+            <h2 class="text-5xl font-playfair font-bold text-white mb-6">Ready for your stay at <span
                     class="text-luxury-gold">Munal?</span></h2>
             <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Book your stay today and experience the epitome of luxury hospitality at Munal Hotel.

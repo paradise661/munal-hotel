@@ -36,9 +36,9 @@
                         {{ $about_us->title ?? 'About us' }} <span class="text-luxury-gold">Munal</span>
                     </h2>
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        {!! $about_us->description !!}
+                        {{ $about_us->short_description }}
                     </p>
-                    <div class="grid grid-cols-2 gap-8 mb-8">
+                    <div class="grid grid-cols-2 gap-8 mb-8 mt-3">
                         <div class="text-center">
                             <div class="text-3xl font-bold text-luxury-gold mb-2">150+</div>
                             <div class="text-gray-600">Luxury Suites</div>
@@ -71,8 +71,8 @@
                                 <i class="fas fa-award text-white"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-luxury-dark">World's Best Hotel</div>
-                                <div class="text-sm text-gray-600">Travel Awards 2024</div>
+                                <div class="font-semibold text-luxury-dark">Your choice for</div>
+                                <div class="text-sm text-gray-600">comfortable stay</div>
                             </div>
                         </div>
                     </div>
@@ -80,6 +80,7 @@
             </div>
         </div>
     </section>
+
     <section class="py-20 bg-luxury-cream" id="mission-vision">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">

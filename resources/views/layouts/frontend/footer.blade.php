@@ -1,22 +1,22 @@
-<footer id="footer" class="bg-luxury-dark text-white py-16">
+<footer class="bg-luxury-dark text-white py-16" id="footer">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div>
-                     <img src="{{ $settings['site_main_logo'] }}" style="height: 100px"  alt="">
+                <img src="{{ $settings['site_footer_logo'] }}" style="height: 100px" alt="">
                 <p class="text-gray-400 mb-6">
                     {{ $settings['site_information'] ?? 'Adwait Marg, Bagbazar-28, Kathmandu, Nepal' }}
                 </p>
                 <div class="flex space-x-4">
-                    <a href="#"
-                        class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors">
+                    <a class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors"
+                        href="#">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#"
-                        class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors">
+                    <a class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors"
+                        href="#">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#"
-                        class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors">
+                    <a class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors"
+                        href="#">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </div>
@@ -24,17 +24,17 @@
             <div>
                 <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
                 <ul class="space-y-3">
-                    <li><a href="{{ route('frontend.about') }}"
-                            class="text-gray-400 hover:text-luxury-gold transition-colors">About Us</a></li>
-                    <li><a href="{{ route('frontend.rooms') }}"
-                            class="text-gray-400 hover:text-luxury-gold transition-colors">Rooms &
+                    <li><a class="text-gray-400 hover:text-luxury-gold transition-colors"
+                            href="{{ route('frontend.about') }}">About Us</a></li>
+                    <li><a class="text-gray-400 hover:text-luxury-gold transition-colors"
+                            href="{{ route('frontend.rooms') }}">Rooms &
                             Suites</a></li>
-                    <li><a href="{{ route('frontend.dinning') }}"
-                            class="text-gray-400 hover:text-luxury-gold transition-colors">Dining</a></li>
+                    <li><a class="text-gray-400 hover:text-luxury-gold transition-colors"
+                            href="{{ route('frontend.dinning') }}">Dining</a></li>
                     {{-- <li><a href="#" class="text-gray-400 hover:text-luxury-gold transition-colors">Spa &
                             Wellness</a></li> --}}
-                    <li><a href="{{ route('frontend.event') }}"
-                            class="text-gray-400 hover:text-luxury-gold transition-colors">Events</a></li>
+                    <li><a class="text-gray-400 hover:text-luxury-gold transition-colors"
+                            href="{{ route('frontend.event') }}">Events</a></li>
                 </ul>
             </div>
             <div>
@@ -43,8 +43,8 @@
                     <ul class="space-y-3">
                         @foreach ($footer_services as $service)
                             <li>
-                                <a href="{{ route('frontend.servicesingle', $service->slug) }}"
-                                    class="text-gray-400 hover:text-luxury-gold transition-colors">
+                                <a class="text-gray-400 hover:text-luxury-gold transition-colors"
+                                    href="{{ route('frontend.servicesingle', $service->slug) }}">
                                     {{ $service->title }}
                                 </a>
                             </li>
@@ -65,13 +65,13 @@
                     </div>
                     <div class="flex items-center space-x-3">
                         <i class="fas fa-phone text-luxury-gold"></i>
-                        <span class="text-gray-400"> 
+                        <span class="text-gray-400">
                             {{ $settings['contact_phone'] ?? '+977-1-5342055' }}</span>
                     </div>
                     <div class="flex items-center space-x-3">
                         <i class="fas fa-envelope text-luxury-gold"></i>
-                        <span class="text-gray-400"> 
-                             {{ $settings['contact_email'] ?? '' }}</span>
+                        <span class="text-gray-400">
+                            {{ $settings['contact_email'] ?? '' }}</span>
                     </div>
                 </div>
             </div>
