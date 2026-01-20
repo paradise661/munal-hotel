@@ -259,23 +259,21 @@
             </div>
         </div>
     </section>
-    <section class="py-20 bg-luxury-dark" id="cta-about">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-playfair font-bold text-white mb-6">Experience the <span
-                    class="text-luxury-gold">Luxoria Difference</span></h2>
-            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join us and become part of our story. Discover why discerning travelers choose Luxoria for their most
-                important moments.
+    <section class="py-20 bg-luxury-dark" id="cta-section">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-playfair font-bold text-white mb-6">
+                Create Your Own <span class="text-luxury-gold">Memories</span>
+            </h2>
+            <p class="text-xl text-white/80 mb-8">
+                Book your stay at Munal & unforgettable experiences
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                    class="bg-luxury-gold text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors">
-                    Book Your Stay
-                </button>
-                <button
-                    class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-luxury-dark transition-colors">
-                    Contact Us
-                </button>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-4">
+                <a class="bg-luxury-gold text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-colors"
+                    href="{{ route('frontend.register') }}"> Book Your Stay</a>
+                <a class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-luxury-dark transition-colors"
+                    href="{{ route('frontend.contact') }}">Contact
+                    Us</a>
+
             </div>
         </div>
     </section>
