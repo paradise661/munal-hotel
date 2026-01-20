@@ -102,8 +102,8 @@
                 </div>
                 </div>
                 <div>
-                    <div class="bg-luxury-cream rounded-2xl p-8 shadow-lg sticky top-32" id="booking-card">
-                        <div class="space-y-4 mb-6">
+                    <div class=" sticky top-32" id="booking-card">
+                        {{-- <div class="space-y-4 mb-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Check-in</label>
                                 <div class="flex items-center border-2 border-gray-200 rounded-lg px-4 py-3 bg-white">
@@ -131,7 +131,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <button
                             class="w-full bg-luxury-gold text-white py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mb-4">
                             Reserve Now
@@ -139,8 +138,7 @@
                         <div class="text-center text-sm text-gray-600 mb-4">
                             <i class="fas fa-info-circle text-luxury-gold mr-1"></i>
                             Free cancellation within 24 hours
-                        </div>
-
+                        </div> --}}
                         {{-- <div class="border-t border-gray-300 pt-4 space-y-3">
                                 <div class="flex justify-between text-gray-700">
                                     <span>$899 x 3 nights</span>
@@ -160,7 +158,7 @@
                                 </div>
                             </div> --}}
                     </div>
-                    {{-- <div class="bg-white rounded-2xl p-6 shadow-lg mt-6" id="contact-card">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg mt-6" id="contact-card">
                         <h4 class="font-semibold text-luxury-dark mb-4">Need Assistance?</h4>
                         <div class="space-y-3 text-sm">
                             <div class="flex items-center space-x-3">
@@ -176,7 +174,7 @@
                             class="w-full mt-4 border-2 border-luxury-gold text-luxury-gold py-2 rounded-lg font-medium hover:bg-luxury-gold hover:text-white transition-colors">
                             Contact Concierge
                         </button>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </div>
