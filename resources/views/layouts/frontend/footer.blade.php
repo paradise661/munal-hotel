@@ -41,14 +41,14 @@
                 </ul>
             </div>
             <div>
-                <h3 class="text-lg font-semibold mb-6">Services</h3>
-                @if (!empty($footer_services) && $footer_services->count())
+                <h3 class="text-lg font-semibold mb-6">Our Rooms</h3>
+                @if (!empty($footer_rooms) && $footer_rooms->count())
                     <ul class="space-y-3">
-                        @foreach ($footer_services as $service)
+                        @foreach ($footer_rooms as $room)
                             <li>
                                 <a class="text-gray-400 hover:text-luxury-gold transition-colors"
-                                    href="{{ route('frontend.servicesingle', $service->slug) }}">
-                                    {{ $service->title }}
+                                    href="{{ route('frontend.singleroom', $room->slug) }}">
+                                    {{ $room->title ?? '' }}
                                 </a>
                             </li>
                         @endforeach

@@ -1,12 +1,12 @@
 @section('seo')
     @include('frontend.seo', [
-    'name' => $settings['homepage_title'] ?? '',
-    'title' => $settings['homepage_seo_title'] ?? '',
-    'description' => $settings['home_seo_description'] ?? '',
-    'keyword' => $settings['homepage_seo_keywords'] ?? '',
-    'created_at' => '2024-04-26T08:09:15+00:00',
-    'updated_at' => '2024-04-26T10:54:05+00:00',
-])
+        'name' => $settings['homepage_title'] ?? '',
+        'title' => $settings['homepage_seo_title'] ?? '',
+        'description' => $settings['home_seo_description'] ?? '',
+        'keyword' => $settings['homepage_seo_keywords'] ?? '',
+        'created_at' => '2024-04-26T08:09:15+00:00',
+        'updated_at' => '2024-04-26T10:54:05+00:00',
+    ])
 @endsection
 @extends('layouts.frontend.master')
 @section('content')
@@ -42,31 +42,8 @@
                         {{ $about_us->title ?? 'About us' }} <span class="text-luxury-gold">Munal</span>
                     </h2>
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        {{ $about_us->short_description }}
+                        {!! $about_us->description ?? '' !!}
                     </p>
-                    <div class="grid grid-cols-2 gap-8 mb-8 mt-3">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-luxury-gold mb-2">{{ $settings['home_counter_students'] }}</div>
-                            <div class="text-gray-600">{{ $settings['home_counter_students_title'] }}</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-luxury-gold mb-2">{{ $settings['home_counter_scholarship'] }}</div>
-                            <div class="text-gray-600">{{ $settings['home_counter_scholarship_title'] }}</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-luxury-gold mb-2">{{ $settings['home_counter_enrolled'] }}</div>
-                            <div class="text-gray-600">{{ $settings['home_counter_enrolled_title'] }}</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-luxury-gold mb-2">{{ $settings['home_counter_affilated'] }}</div>
-                            <div class="text-gray-600">{{ $settings['home_counter_affilated_title'] }}</div>
-                        </div>
-                    </div>
-                    <a href="{{ route('frontend.about') }}">
-                        <button
-                            class="bg-luxury-dark text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-colors">
-                            Discover Our Story
-                        </button></a>
                 </div>
                 <div class="relative">
                     <img class="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
@@ -77,8 +54,8 @@
                                 <i class="{{ $settings['aboutus_subtitle'] }}"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-luxury-dark">{{ $settings['aboutus_button'] }}</div>
-                                <div class="text-sm text-gray-600">{{ $settings['aboutus_link'] }}</div>
+                                <div class="font-semibold text-luxury-dark">24/7</div>
+                                <div class="text-sm text-gray-600">Concierge Service</div>
                             </div>
                         </div>
                     </div>
@@ -86,6 +63,7 @@
             </div>
         </div>
     </section>
+
     {{-- Room section --}}
     <section class="py-20" id="rooms">
         <div class="max-w-7xl mx-auto px-6">
@@ -237,8 +215,9 @@
     <section class="py-20 bg-luxury-cream" id="testimonials">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">{{ $settings['testioninal_title'] }} <span
-                        class="text-luxury-gold">{{ $settings['testioninal_subtitle'] }}</span></h2>
+                <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">{{ $settings['testioninal_title'] }}
+                    <span class="text-luxury-gold">{{ $settings['testioninal_subtitle'] }}</span>
+                </h2>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 @foreach ($testimonials as $testimonial)

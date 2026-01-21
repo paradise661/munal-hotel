@@ -36,31 +36,8 @@
                         {{ $about_us->title ?? 'About us' }} <span class="text-luxury-gold">Munal</span>
                     </h2>
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        {{ $about_us->short_description }}
+                        {!! $about_us->description ?? '' !!}
                     </p>
-                    <div class="grid grid-cols-2 gap-8 mb-8 mt-3">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-luxury-gold mb-2">150+</div>
-                            <div class="text-gray-600">Luxury Suites</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-luxury-gold mb-2">5★</div>
-                            <div class="text-gray-600">Award Winning</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-luxury-gold mb-2">24/7</div>
-                            <div class="text-gray-600">Concierge Service</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-luxury-gold mb-2">30+</div>
-                            <div class="text-gray-600">Years Experience</div>
-                        </div>
-                    </div>
-                    <a href="{{ route('frontend.about') }}">
-                        <button
-                            class="bg-luxury-dark text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-colors">
-                            Discover Our Story
-                        </button></a>
                 </div>
                 <div class="relative">
                     <img class="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
@@ -68,11 +45,11 @@
                     <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-lg">
                         <div class="flex items-center space-x-3">
                             <div class="w-12 h-12 bg-luxury-gold rounded-full flex items-center justify-center">
-                                <i class="fas fa-award text-white"></i>
+                                <i class="{{ $settings['aboutus_subtitle'] }}"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-luxury-dark">Your choice for</div>
-                                <div class="text-sm text-gray-600">comfortable stay</div>
+                                <div class="font-semibold text-luxury-dark">24/7</div>
+                                <div class="text-sm text-gray-600">Concierge Service</div>
                             </div>
                         </div>
                     </div>

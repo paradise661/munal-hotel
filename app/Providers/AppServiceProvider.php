@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\Country;
 use App\Models\Course;
 use App\Models\Member;
+use App\Models\Room;
 use App\Models\Service;
 use App\Models\Settings;
 use App\Models\Social;
@@ -34,7 +35,7 @@ class AppServiceProvider extends ServiceProvider
 
         $footer_countries = Country::where('status', 1)->orderBy('order')->get() ?? [];
         View::Share('footer_countries', $footer_countries);
-        
+
         $footer_countries_1 = Country::where('status', 1)->orderBy('order')->limit(5)->get() ?? [];
         View::Share('footer_countries_1', $footer_countries_1);
 
@@ -43,10 +44,9 @@ class AppServiceProvider extends ServiceProvider
         $footer_services = Service::where('status', 1)->orderBy('order')->get() ?? [];
         View::Share('footer_services', $footer_services);
 
-        // $footerpartner = Member::where('status', 1)->orderBy('order')->limit(5)->get() ?? [];
-        // View::Share('footerpartner', $footerpartner);
+        $rooms = Room::where('status', 1)->inRandomOrder()->take(4)->get();
+        View::Share('footer_rooms', $rooms);
 
-     
         Paginator::useBootstrapFive();
     }
 }
