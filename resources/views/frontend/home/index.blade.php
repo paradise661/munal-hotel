@@ -274,16 +274,16 @@
     </section>
     <section class="py-20 bg-luxury-dark" id="cta">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-5xl font-playfair font-bold text-white mb-6">Ready for your stay at <span
-                    class="text-luxury-gold">Munal?</span></h2>
+            <h2 class="text-5xl font-playfair font-bold text-white mb-6">{{ $settings['universities_title'] }}<span
+                    class="ml-1 text-luxury-gold">{{ $settings['universities_subtitle'] }}</span></h2>
             <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your stay today and experience the epitome of luxury hospitality at Munal Hotel.
+                {{ $settings['universities_description'] }}
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center mt-3">
                 <a class="bg-luxury-gold text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors"
-                    href="{{ route('frontend.register') }}"> Book Your Stay</a>
+                    href="{{ route('frontend.register') }}"> {{ $settings['universities_button'] }}</a>
                 <a class="bg-luxury-gold text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors"
-                    href="{{ route('frontend.rooms') }}"> View All Rooms</a>
+                    href="{{ route('frontend.rooms') }}"> {{ $settings['universities_link'] }}</a>
             </div>
         </div>
     </section>

@@ -24,13 +24,6 @@
                 </button>
             </li>
 
-            {{-- <li class="nav-item">
-                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#universities"
-                    aria-controls="universities" aria-selected="false">
-                    Universities
-                </button>
-            </li> --}}
-
             <li class="nav-item">
                 <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#countries"
                     aria-controls="countries" aria-selected="false">
@@ -72,6 +65,12 @@
                     Testimonials
                 </button>
             </li>
+            <li class="nav-item">
+                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#universities"
+                    aria-controls="universities" aria-selected="false">
+                    Footer Banner
+                </button>
+            </li>
 
         </ul>
 
@@ -89,7 +88,7 @@
             @include('admin.settings.includes.home.aboutus')
 
             {{-- Universities --}}
-            {{-- @include('admin.settings.includes.home.universities') --}}
+            @include('admin.settings.includes.home.universities')
 
             {{-- Countries --}}
             @include('admin.settings.includes.home.countries')
