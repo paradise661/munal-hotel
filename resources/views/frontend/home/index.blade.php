@@ -46,20 +46,20 @@
                     </p>
                     <div class="grid grid-cols-2 gap-8 mb-8 mt-3">
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-luxury-gold mb-2">150+</div>
-                            <div class="text-gray-600">Luxury Suites</div>
+                            <div class="text-3xl font-bold text-luxury-gold mb-2">{{ $settings['home_counter_students'] }}</div>
+                            <div class="text-gray-600">{{ $settings['home_counter_students_title'] }}</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-luxury-gold mb-2">5★</div>
-                            <div class="text-gray-600">Award Winning</div>
+                            <div class="text-3xl font-bold text-luxury-gold mb-2">{{ $settings['home_counter_scholarship'] }}</div>
+                            <div class="text-gray-600">{{ $settings['home_counter_scholarship_title'] }}</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-luxury-gold mb-2">24/7</div>
-                            <div class="text-gray-600">Concierge Service</div>
+                            <div class="text-3xl font-bold text-luxury-gold mb-2">{{ $settings['home_counter_enrolled'] }}</div>
+                            <div class="text-gray-600">{{ $settings['home_counter_enrolled_title'] }}</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-luxury-gold mb-2">30+</div>
-                            <div class="text-gray-600">Years Experience</div>
+                            <div class="text-3xl font-bold text-luxury-gold mb-2">{{ $settings['home_counter_affilated'] }}</div>
+                            <div class="text-gray-600">{{ $settings['home_counter_affilated_title'] }}</div>
                         </div>
                     </div>
                     <a href="{{ route('frontend.about') }}">
@@ -74,11 +74,11 @@
                     <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-lg">
                         <div class="flex items-center space-x-3">
                             <div class="w-12 h-12 bg-luxury-gold rounded-full flex items-center justify-center">
-                                <i class="fas fa-award text-white"></i>
+                                <i class="{{ $settings['aboutus_subtitle'] }}"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-luxury-dark">Your choice for</div>
-                                <div class="text-sm text-gray-600">comfortable stay</div>
+                                <div class="font-semibold text-luxury-dark">{{ $settings['aboutus_button'] }}</div>
+                                <div class="text-sm text-gray-600">{{ $settings['aboutus_link'] }}</div>
                             </div>
                         </div>
                     </div>

@@ -17,12 +17,12 @@
                 </button>
             </li>
 
-            {{-- <li class="nav-item">
+            <li class="nav-item">
                 <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#aboutus"
                     aria-controls="aboutus" aria-selected="false">
                     About Us
                 </button>
-            </li> --}}
+            </li>
 
             {{-- <li class="nav-item">
                 <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#universities"
@@ -86,7 +86,7 @@
             @include('admin.settings.includes.home.counter')
 
             {{-- About Us --}}
-            {{-- @include('admin.settings.includes.home.aboutus') --}}
+            @include('admin.settings.includes.home.aboutus')
 
             {{-- Universities --}}
             {{-- @include('admin.settings.includes.home.universities') --}}
