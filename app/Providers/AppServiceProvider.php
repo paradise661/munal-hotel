@@ -44,7 +44,7 @@ class AppServiceProvider extends ServiceProvider
         $footer_services = Service::where('status', 1)->orderBy('order')->get() ?? [];
         View::Share('footer_services', $footer_services);
 
-        $rooms = Room::where('status', 1)->inRandomOrder()->take(4)->get();
+        $rooms = Room::where('status', 1)->inRandomOrder()->take(6)->get();
         View::Share('footer_rooms', $rooms);
 
         Paginator::useBootstrapFive();
