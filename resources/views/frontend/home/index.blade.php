@@ -41,8 +41,8 @@
                     <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">
                         {{ $about_us->title ?? 'About us' }} <span class="text-luxury-gold">Munal</span>
                     </h2>
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        {{ $about_us->description ?? '' }}
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed" style="">
+                        {!! $about_us->description ?? '' !!}
                     </p>
                 </div>
                 <div class="relative">
