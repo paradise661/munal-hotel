@@ -90,11 +90,10 @@
     <section class="py-20" id="rooms">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">Our Collection of <span
-                        class="text-luxury-gold">Dynamic Rooms</span></h2>
+                <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">{{ $settings['countries_title'] }} <span
+                        class="text-luxury-gold">{{ $settings['countries_subtitle'] }}</span></h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Each suite is thoughtfully crafted to deliver an unforgettable stay, featuring breathtaking views and
-                    exceptional, world-class amenities.
+                    {{ $settings['countries_description'] }}
                 </p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
