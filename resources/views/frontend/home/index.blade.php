@@ -42,7 +42,7 @@
                         {{ $about_us->title ?? 'About us' }} <span class="text-luxury-gold">Munal</span>
                     </h2>
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        {!! $about_us->description ?? '' !!}
+                        {{ $about_us->description ?? '' }}
                     </p>
                 </div>
                 <div class="relative">
