@@ -237,8 +237,8 @@
     <section class="py-20 bg-luxury-cream" id="testimonials">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">What Our Guests <span
-                        class="text-luxury-gold">Say</span></h2>
+                <h2 class="text-5xl font-playfair font-bold text-luxury-dark mb-6">{{ $settings['testioninal_title'] }} <span
+                        class="text-luxury-gold">{{ $settings['testioninal_subtitle'] }}</span></h2>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 @foreach ($testimonials as $testimonial)
