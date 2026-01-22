@@ -134,7 +134,7 @@
                             <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
                             <input
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-transparent"
-                                type="tel" name="phone" value="{{ old('phone') }}" placeholder="+977 98XXXXXXXX">
+                                type="tel" name="phone" value="{{ old('phone') }}" placeholder="+32 98XXXXXXXX">
                         </div>
 
                         <div>
