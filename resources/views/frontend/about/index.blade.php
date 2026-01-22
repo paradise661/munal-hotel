@@ -14,7 +14,7 @@
     <section class="relative h-[500px] flex items-center justify-center overflow-hidden mt-20" id="hero-about">
         <div class="absolute inset-0">
             <img class="w-full h-full object-cover"
-                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7fc5e578e1-ab2b3369a2e5b31b82f9.png"
+                src="{{ $about_us->banner_image }}"
                 alt="luxury hotel exterior facade with grand architecture, elegant entrance, manicured gardens, golden hour lighting" />
             <div class="absolute inset-0 bg-black/50"></div>
         </div>

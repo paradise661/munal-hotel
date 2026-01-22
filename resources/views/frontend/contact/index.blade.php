@@ -15,7 +15,7 @@
     <section class="relative h-[600px] flex items-center overflow-hidden mt-20" id="contact-hero">
         <div class="absolute inset-0">
             <img class="w-full h-full object-cover"
-                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/593ef5e757-ba88a81f433492c82200.png"
+                src="{{ $contact_page->banner_image }}"
                 alt="luxury hotel elegant reception lobby with marble desk, professional concierge staff, sophisticated interior design, warm lighting" />
             <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
         </div>
