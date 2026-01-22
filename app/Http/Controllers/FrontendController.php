@@ -76,12 +76,13 @@ class FrontendController extends Controller
         $about_us_banner = Page::where('status', 1)->where('slug', 'about-us_banner')->first();
         $our_vision = Page::where('status', 1)->where('slug', 'our-vision')->first();
         $our_mission = Page::where('status', 1)->where('slug', 'our-mission')->first();
+        $our_location = Page::where('status', 1)->where('slug', 'our-location')->first();
         $why_us = Page::where('status', 1)->where('slug', 'why-choose-us')->first();
         $commitment = Page::where('status', 1)->where('slug', 'commitment-to-sustainability')->first();
         $teams = Team::where('status', 1)->oldest("order")->get();
         $objectives = Page::where('status', 1)->where('slug', 'objectives')->first();
         $services = Service::where('status', 1)->oldest("order")->get();
-        return view('frontend.about.index', compact('about_us', 'commitment', 'objectives', 'services', 'our_vision', 'our_mission', 'why_us', 'teams'));
+        return view('frontend.about.index', compact('about_us', 'commitment', 'objectives', 'services', 'our_vision', 'our_mission', 'our_location', 'why_us', 'teams'));
     }
     public function service()
     {

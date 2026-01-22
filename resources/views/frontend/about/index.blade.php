@@ -1,13 +1,13 @@
 @section('seo')
     @include('frontend.seo', [
-        'name' => $about_us->seo_title ?? '',
-        'title' => $about_us->seo_title ?? $about_us->title,
-        'description' => $about_us->meta_description ?? '',
-        'keyword' => $about_us->meta_keywords ?? '',
-        'schema' => $about_us->seo_schema ?? '',
-        'created_at' => $about_us->created_at,
-        'updated_at' => $about_us->updated_at,
-    ])
+    'name' => $about_us->seo_title ?? '',
+    'title' => $about_us->seo_title ?? $about_us->title,
+    'description' => $about_us->meta_description ?? '',
+    'keyword' => $about_us->meta_keywords ?? '',
+    'schema' => $about_us->seo_schema ?? '',
+    'created_at' => $about_us->created_at,
+    'updated_at' => $about_us->updated_at,
+])
 @endsection
 @extends('layouts.frontend.master')
 @section('content')
@@ -64,7 +64,7 @@
                 <h2 class="text-4xl font-playfair font-bold text-luxury-dark mb-6">Our Mission & <span
                         class="text-luxury-gold">Vision</span></h2>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 <div class="bg-white rounded-2xl p-8 shadow-lg" id="mission-card">
                     <div class="w-16 h-16 bg-luxury-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-bullseye text-luxury-gold text-2xl"></i>
@@ -84,6 +84,16 @@
                     <p class="text-gray-600 text-center leading-relaxed">
                         {{ $our_vision->short_description }}
                     </p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg" id="vision-card">
+                        <div class="w-16 h-16 bg-luxury-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-map-marker-alt text-luxury-gold text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-playfair font-bold text-luxury-dark mb-4 text-center">{{ $our_location->title }}
+                        </h3>
+                        <p class="text-gray-600 text-center leading-relaxed">
+                            {{ $our_location->short_description }}
+                        </p>
                 </div>
             </div>
         </div>
