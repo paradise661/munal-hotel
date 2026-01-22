@@ -34,7 +34,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl lg:text-4xl font-playfair font-bold text-luxury-dark mb-4">
-                    Luxury <span class="text-luxury-gold">comforts</span>
+                    Quality <span class="text-luxury-gold">comforts</span>
                 </h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
                     The hotel’s luxury comforts ensure guests enjoy ultimate relaxation and convenience with every stay.
