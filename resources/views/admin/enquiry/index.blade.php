@@ -1,6 +1,6 @@
 @extends('layouts.admin.master')
 @php
-    $title = 'Enquiries';
+    $title = 'Bookings';
     $name = 'enquiry';
 @endphp
 

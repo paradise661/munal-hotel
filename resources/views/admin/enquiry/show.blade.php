@@ -1,6 +1,6 @@
 @extends('layouts.admin.master')
 @php
-    $title = 'Enquiries';
+    $title = 'Bookings';
     $name = 'enquiry';
 @endphp
 
@@ -89,7 +89,7 @@
                                 </tr>
 
 
-                                {{-- 
+                                {{--
                                 <tr>
                                     <td>Note</td>
                                     <td>{{ ${$name}->note ?? '-' }}</td>
@@ -183,8 +183,7 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <form action="{{ route($name . '.update', ${$name}->id) }}" method="post"
-                        enctype="multipart/form-data">
+                    <form action="{{ route($name . '.update', ${$name}->id) }}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 
@@ -208,7 +207,8 @@
                                 <option value="high" @if (old('priority', ${$name}->priority) == 'high') selected @endif>
                                     High
                                 </option>
-                                <option value="medium" @if (old('priority', ${$name}->priority) == 'medium') selected @endif>Medium
+                                <option value="medium" @if (old('priority', ${$name}->priority) == 'medium') selected @endif>
+                                    Medium
                                 </option>
                                 <option value="low" @if (old('priority', ${$name}->priority) == 'low') selected @endif>Low
                                 </option>
@@ -220,7 +220,8 @@
 
                         <div class="mb-4">
                             <label for="note" class="form-label">Note</label>
-                            <textarea class="form-control" id="note" name="note" placeholder="Note" rows="4">{{ old('note', ${$name}->note) }}</textarea>
+                            <textarea class="form-control" id="note" name="note" placeholder="Note"
+                                rows="4">{{ old('note', ${$name}->note) }}</textarea>
                             @error('note')
                                 <p class="text-danger">{{ $message }}</p>
                             @enderror
@@ -228,9 +229,10 @@
 
                         {{-- <div class="mb-4">
                             <label for="consultant" class="form-label">Consultant</label>
-                            <textarea class="form-control" id="consultant" name="consultant" placeholder="Consultant" rows="4">{{ old('consultant', ${$name}->consultant) }}</textarea>
+                            <textarea class="form-control" id="consultant" name="consultant" placeholder="Consultant"
+                                rows="4">{{ old('consultant', ${$name}->consultant) }}</textarea>
                             @error('consultant')
-                                <p class="text-danger">{{ $message }}</p>
+                            <p class="text-danger">{{ $message }}</p>
                             @enderror
                         </div> --}}
 
@@ -315,9 +317,9 @@
                         <tbody class="table-border-bottom-0">
                             <!-- Academic Qualification -->
                             {{-- <tr>
-                                    <td>Qualification</td>
-                                    <td>{{ ${$name}->qualification ?? '-' }}</td>
-                                </tr> --}}
+                                <td>Qualification</td>
+                                <td>{{ ${$name}->qualification ?? '-' }}</td>
+                            </tr> --}}
 
                             @if (!empty(${$name}->see_school_name) || !empty(${$name}->see_gpa) || !empty(${$name}->see_passed_year))
                                 <tr>
@@ -367,7 +369,7 @@
 
 @section('js')
     <script>
-        $('.delete_contactinquiry').click(function(e) {
+        $('.delete_contactinquiry').click(function (e) {
             e.preventDefault();
 
             Swal.fire({

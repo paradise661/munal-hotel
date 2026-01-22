@@ -9,6 +9,7 @@ use App\Models\Course;
 use App\Models\Enquiries;
 use App\Models\Page;
 use App\Models\Popup;
+use App\Models\Room;
 use App\Models\Service;
 use App\Models\Slider;
 use App\Models\Team;
@@ -22,7 +23,7 @@ class DashboardController extends Controller
     public function index()
     {
         //
-        $countries = Country::count();
+        $countries = Room::count();
         $courses = Course::count();
         $enquirys = Enquiries::count();
         $blogs = Blog::count();
@@ -37,9 +38,9 @@ class DashboardController extends Controller
         $pages = Page::count();
 
         $vars = [
-            'countries' => ['bx-globe-alt', 'country.index', $countries],
-            'courses' => ['bx-book', 'course.index', $courses],
-            'Student Enquiries' => ['bx-question-mark', 'enquiry.index', $enquirys],
+            'Rooms' => ['bx-globe-alt', 'country.index', $countries],
+            'Amenities' => ['bx-book', 'course.index', $courses],
+            'Bookings' => ['bx-question-mark', 'enquiry.index', $enquirys],
             'blogs' => ['bx-news', 'blog.index', $blogs],
             'pages' => ['bx-copy-alt', 'page.index', $pages],
             'inquiries' => ['bx-support', 'contactinquiry.index', $inquiries],

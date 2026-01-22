@@ -52,7 +52,7 @@
         <li class="menu-item {{ Request::segment(2) == 'enquiry' ? 'active' : '' }}">
             <a class="menu-link" href="{{ route('enquiry.index') }}">
                 <i class='menu-icon tf-icons bx bx-question-mark'></i>
-                Students Enquiry
+                Bookings
             </a>
         </li>
         </li>
