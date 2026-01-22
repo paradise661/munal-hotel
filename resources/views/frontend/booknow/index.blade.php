@@ -209,17 +209,7 @@
                             </div>
                         </div>
 
-                        <div class="bg-luxury-gold rounded-2xl p-6 mt-6 text-white">
-                            <div class="flex items-center space-x-3 mb-4">
-                                <i class="fas fa-gift text-3xl"></i>
-                                <div>
-                                    <h4 class="font-playfair font-bold text-lg">Special Offer</h4>
-                                    <p class="text-sm opacity-90">Book 3+ nights</p>
-                                </div>
-                            </div>
-                            <p class="text-sm mb-4">Get 15% off on your total booking when you stay for 3 nights or more!</p>
-                            <div class="text-xs opacity-75">Use code: STAY3</div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -268,55 +258,7 @@
                 </div>
             </div>
         </section>
-        <section class="py-16 bg-gray-50" id="payment-security">
-
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="bg-white rounded-2xl p-8 lg:p-12">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <h2 class="text-3xl font-playfair font-bold text-luxury-dark mb-6">
-                                Secure <span class="text-luxury-gold">Payment</span>
-                            </h2>
-                            <p class="text-gray-600 mb-6">Your payment information is protected with industry-standard
-                                encryption and security measures. We accept all major payment methods for your convenience.</p>
-
-                            <div class="space-y-4">
-                                <div class="flex items-center space-x-3">
-                                    <i class="fas fa-shield-alt text-luxury-gold text-xl"></i>
-                                    <span class="text-gray-700">SSL Encrypted Transactions</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <i class="fas fa-lock text-luxury-gold text-xl"></i>
-                                    <span class="text-gray-700">PCI DSS Compliant</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <i class="fas fa-check-circle text-luxury-gold text-xl"></i>
-                                    <span class="text-gray-700">No Hidden Fees</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 class="font-semibold text-gray-800 mb-4">We Accept</h3>
-                            <div class="grid grid-cols-4 gap-4">
-                                <div class="bg-gray-50 p-4 rounded-lg flex items-center justify-center">
-                                    <i class="fab fa-cc-visa text-4xl text-gray-600"></i>
-                                    </di v>
-                                    <div class="bg-gray-50 p-4 rounded-lg flex items-center justify-center">
-                                        <i class="fab fa-cc-mastercard text-4xl text-gray-600"></i>
-                                    </div>
-                                    <div class="bg-gray-50 p-4 rounded-lg flex items-center justify-center">
-                                        <i class="fab fa-cc-amex text-4xl text-gray-600"></i>
-                                    </div>
-                                    <div class="bg-gray-50 p-4 rounded-lg flex items-center justify-center">
-                                        <i class="fab fa-cc-paypal text-4xl text-gray-600"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
+        
         @if (session('success'))
             <script>
                 Toastify({

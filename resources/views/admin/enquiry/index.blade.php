@@ -25,11 +25,11 @@
                         <thead>
                             <tr>
                                 <th>SN</th>
-                                <th>Name</th>
-                                <th>Country</th>
-                                <th>Language Test</th>
-                                <th>Priority</th>
-                                <th>Status</th>
+                                <th>Full Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Check-In</th>
+                                <th>Check-Out</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -39,20 +39,15 @@
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
 
-                                    <td>{{ ${$name}->full_name }}</td>
+                                    <td>{{ ${$name}->first_name }} {{ ${$name}->last_name }}</td>
 
-                                    <td class="text-capitalize">{{ ${$name}->preferred_country }}</td>
+                                    <td class="text-capitalize">{{ ${$name}->email }}</td>
 
-                                    <td class="text-capitalize">{{ ${$name}->language_test }}</td>
+                                    <td class="text-capitalize">{{ ${$name}->phone }}</td>
 
-                                    <td class="text-capitalize">{{ ${$name}->priority }}</td>
-                                    <td>
-                                        @if (${$name}->status)
-                                            <span class="badge bg-label-success me-1">Checked</span>
-                                        @else
-                                            <span class="badge bg-label-danger me-1">Unchecked</span>
-                                        @endif
-                                    </td>
+                                    <td class="text-capitalize">{{ ${$name}->checkin_date }}</td>
+                                    <td class="text-capitalize">{{ ${$name}->checkout_date }}</td>
+
                                     <td class="">
                                         {{-- <a href="{{ route($name . '.edit', ${$name}->id) }}" type="button"
                                             class="btn btn-sm btn-icon btn-primary">

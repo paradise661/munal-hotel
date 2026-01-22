@@ -288,7 +288,7 @@ class FrontendController extends Controller
     public function registerstudent(Request $request)
     {
         $rules = [
-            'room_type' => 'required|string|max:100',
+            'room_type' => 'nullable|string|max:100',
 
             'checkin_date' => 'required|date|after_or_equal:today',
             'checkout_date' => 'required|date|after:checkin_date',
