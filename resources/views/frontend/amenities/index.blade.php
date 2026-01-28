@@ -62,7 +62,7 @@
             </div>
         </div>
     </section>
-    <section class="py-16" id="spa-details">
+    {{-- <section class="py-16" id="spa-details">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
@@ -96,7 +96,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section class="py-20 bg-luxury-dark" id="cta-section">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-playfair font-bold text-white mb-6">
