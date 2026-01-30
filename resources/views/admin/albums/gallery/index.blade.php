@@ -1,7 +1,7 @@
 @extends('layouts.admin.master')
 @php
-    $title = 'Album';
-    $name = 'album';
+$title = 'Album';
+$name = 'album';
 @endphp
 @section('content')
     <style>
@@ -78,40 +78,35 @@
     </div>
 @endsection
 
-@section('scripts')
+@section('js')
     <script>
-        $('.delete-single-document').click(function (e) {
+      $(document).on('click', '.delete-single-document', function (e) {
             e.preventDefault();
-            var id = $(this).attr('imageid');
-            var url = "{{ url('/admin/album/' . $album->id . '/gallery') }}/" + id + "/delete-file";
 
-            swal({
-                title: `Are you sure?`,
-                text: "If you delete this, it will be gone forever.",
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
-            })
-                .then((willDelete) => {
-                    if (willDelete) {
-                        $.ajax({
-                            url: url,
-                            type: "DELETE",
-                            data: {
-                                _token: '{{ csrf_token() }}' // important!
-                            },
-                            success: function (data) {
-                                toastr.success("Image Deleted Successfully!");
-                                setTimeout(function () {
-                                    location.reload();
-                                }, 1000);
-                            },
-                            error: function () {
-                                alert("An error occurred!");
-                            },
-                        });
-                    }
-                });
+            let id = $(this).attr('imageid');
+            let url = "{{ url('/admin/album/' . $album->id . '/gallery') }}/" + id + "/delete-file";
+
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    _method: 'DELETE'
+                },
+                success: function () {
+                    // simple page reload
+                    location.reload();
+                },
+                error: function (xhr) {
+                    console.log(xhr.responseText);
+                    alert('Delete failed');
+                }
+            });
         });
+
+
+
+
     </script>
+
 @endsection
