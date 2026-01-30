@@ -11,7 +11,7 @@
 @endsection
 @extends('layouts.frontend.master')
 @section('content')
-    <section class="relative h-[400px] flex items-center overflow-hidden mt-20" id="booking-hero">
+    <section class="relative h-[600px] flex items-center overflow-hidden mt-20" id="booking-hero">
         <div class="absolute inset-0">
             <img class="w-full h-full object-cover" src="{{ $register_banner->banner_image ?? '' }}"
                 alt="luxury hotel elegant reception lobby with marble desk, professional concierge staff, sophisticated interior design, warm lighting" />
