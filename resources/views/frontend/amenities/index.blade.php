@@ -40,16 +40,14 @@
                     The hotel’s luxury comforts ensure guests enjoy ultimate relaxation and convenience with every stay.
                 </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {{-- <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 @foreach ($amenities as $amenity)
                     <div class="relative group overflow-hidden rounded-2xl h-[300px]">
                         <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                             src="{{ asset($amenity->image) }}" alt="{{ $amenity->title }}" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                            {{-- <div class="w-12 h-12 bg-luxury-gold rounded-full flex items-center justify-center mb-3">
-                                <img src="" alt="">
-                            </div> --}}
+
                             <h3 class="text-xl font-playfair font-bold mb-2">
                                 {{ $amenity->title }}
                             </h3>
@@ -59,7 +57,7 @@
                         </div>
                     </div>
                 @endforeach
-            </div>
+            </div> --}}
         </div>
     </section>
     {{-- <section class="py-16" id="spa-details">
