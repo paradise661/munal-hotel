@@ -26,7 +26,7 @@
             <h1 class="text-5xl lg:text-6xl font-playfair font-bold text-white mb-4">
                 Reserve Your <span class="text-luxury-gold">Stay</span>
             </h1>
-            <p cl="text-xl text-white/90 max-w-2xl">
+            <p cl="text-xl text-white/90 max-w-2xl" style="color: white">
                 Experience luxury and comfort at Luxoria Hotel
             </p>
         </div>
