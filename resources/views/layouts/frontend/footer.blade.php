@@ -32,8 +32,8 @@
                     <li><a class="text-gray-400 hover:text-luxury-gold transition-colors"
                             href="{{ route('frontend.rooms') }}">Rooms &
                             Suites</a></li>
-                    <li><a class="text-gray-400 hover:text-luxury-gold transition-colors"
-                            href="{{ route('frontend.dinning') }}">Dining</a></li>
+                    {{-- <li><a class="text-gray-400 hover:text-luxury-gold transition-colors"
+                            href="{{ route('frontend.dinning') }}">Dining</a></li> --}}
                     {{-- <li><a href="#" class="text-gray-400 hover:text-luxury-gold transition-colors">Spa &
                             Wellness</a></li> --}}
                     <li><a class="text-gray-400 hover:text-luxury-gold transition-colors"
