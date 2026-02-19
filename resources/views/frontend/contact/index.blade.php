@@ -14,8 +14,7 @@
 @section('content')
     <section class="relative h-[600px] flex items-center overflow-hidden mt-20" id="contact-hero">
         <div class="absolute inset-0">
-            <img class="w-full h-full object-cover"
-                src="{{ $contact_page->banner_image }}"
+            <img class="w-full h-full object-cover" src="{{ $contact_page->banner_image }}"
                 alt="luxury hotel elegant reception lobby with marble desk, professional concierge staff, sophisticated interior design, warm lighting" />
             <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
         </div>
@@ -84,7 +83,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold text-luxury-dark">Quick Response</h4>
-                                <p class="text-gray-600">We respond to all inquiries within 24 hours</p>
+                                <p class="text-gray-600">We respond to all inquiries within 48 hours</p>
                             </div>
                         </div>
 
@@ -165,10 +164,8 @@
             </div>
             <div class="rounded-2xl h-96 flex items-center justify-center">
                 <div class="text-center">
-                    <iframe
-                        src="{{ $settings['site_location_url'] }}"
-                        width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="{{ $settings['site_location_url'] }}" width="900" height="450" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
