@@ -93,7 +93,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold text-luxury-dark">Multilingual Support</h4>
-                                <p class="text-gray-600">Available in English, Spanish, French, and Mandarin</p>
+                                <dclass="text-gray-600">Available in English, Dutch, and French</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-3" id="personal-assistance">
